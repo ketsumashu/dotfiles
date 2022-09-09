@@ -2,22 +2,22 @@
 -- Eviline config for lualine
 -- Author: shadmansaleh
 -- Credit: glepnir
-local lualine = require('lualine')
+local lualine = require 'lualine'
 
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  bg       = '#3b4252',
+  fg       = '#cdcecf',
+  yellow   = '#f0d399',
+  cyan     = '#93ccdc',
+  darkblue = '#81a1c1',
+  green    = '#b1d196',
+  orange   = '#c9826b',
+  violet   = '#b48ead',
+  magenta  = '#c895bf',
+  blue     = '#8cafd2',
+  red      = '#d06f79',
 }
 
 local conditions = {
@@ -90,7 +90,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -173,8 +173,8 @@ ins_left {
     end
     return msg
   end,
-  icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  icon = ' :',
+  color = { fg = colors.fg, gui = 'bold' },
 }
 
 -- Add components to right sections

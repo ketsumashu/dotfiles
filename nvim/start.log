@@ -1,0 +1,64 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.006  000.006: --- NVIM STARTING ---
+000.237  000.231: locale set
+000.498  000.261: inits 1
+000.511  000.013: window checked
+000.514  000.003: parsing arguments
+002.493  001.979: init lua interpreter
+002.640  000.147: expanding arguments
+002.662  000.022: inits 2
+003.021  000.359: init highlight
+003.023  000.001: waiting for UI
+003.745  000.722: done waiting for UI
+003.761  000.016: init screen for UI
+003.782  000.021: init default mappings
+003.819  000.037: init default autocommands
+004.468  000.054  000.054: sourcing /usr/share/nvim/runtime/ftplugin.vim
+004.573  000.027  000.027: sourcing /usr/share/nvim/runtime/indent.vim
+004.618  000.011  000.011: sourcing /usr/share/nvim/archlinux.vim
+004.621  000.028  000.017: sourcing /etc/xdg/nvim/sysinit.vim
+010.640  006.001  006.001: sourcing /home/mashu/.config/nvim/init.lua
+010.655  000.725: sourcing vimrc file(s)
+011.369  000.063  000.063: sourcing /usr/share/nvim/runtime/filetype.lua
+017.412  000.018  000.018: sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim
+017.645  006.253  006.236: sourcing /usr/share/nvim/runtime/filetype.vim
+017.892  000.085  000.085: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+018.002  000.313  000.228: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+018.793  000.034  000.034: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+018.823  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/health.vim
+018.844  000.009  000.009: sourcing /usr/share/nvim/runtime/plugin/man.vim
+018.867  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+018.890  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+018.929  000.028  000.028: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+019.118  000.011  000.011: sourcing /home/mashu/.local/share/nvim/rplugin.vim
+019.127  000.186  000.175: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+019.147  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+019.182  000.025  000.025: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+019.209  000.014  000.014: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+019.303  000.082  000.082: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+019.336  000.018  000.018: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+019.363  000.017  000.017: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+025.499  006.027  006.027: sourcing /home/mashu/.config/nvim/plugin/lspservers.lua
+048.615  003.737  003.737: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/nightfox.nvim/colors/nordfox.vim
+052.121  026.597  022.860: sourcing /home/mashu/.config/nvim/plugin/packer_compiled.lua
+052.308  001.941: loading rtp plugins
+052.715  000.171  000.171: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/hop.nvim/plugin/hop.vim
+053.548  000.730  000.730: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim/plugin/indent_blankline.vim
+053.740  000.027  000.027: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/nightfox.nvim/plugin/nightfox.vim
+053.998  000.147  000.147: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.lua
+055.122  001.045  001.045: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.lua
+055.224  000.035  000.035: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+055.327  000.028  000.028: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+055.462  000.971: loading packages
+055.615  000.086  000.086: sourcing /home/mashu/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua
+055.620  000.072: loading after plugins
+055.630  000.010: inits 3
+057.147  001.517: reading ShaDa
+057.594  000.447: opening buffers
+057.795  000.201: BufEnter autocommands
+057.799  000.003: editing files in windows

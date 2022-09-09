@@ -72,9 +72,11 @@ cmp.setup({
         ghost_text = true,
     },
 })
-require 'cmp'.setup.cmdline(':', {
+cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = {
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
         { name = 'cmdline' }
-    }
+    })
 })

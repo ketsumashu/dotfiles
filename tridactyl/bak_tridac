@@ -1,0 +1,14 @@
+" General Settings
+set update.lastchecktime 1662554441158
+set configversion 2.0
+set theme nord2
+set smoothscroll true
+set newtab https://online.bonjourr.fr/
+
+" Binds
+bind J tabnext
+bind K tabprev
+bind cl current_url
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl

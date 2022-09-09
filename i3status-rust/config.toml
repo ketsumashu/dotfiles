@@ -1,0 +1,66 @@
+[theme]
+name = "nord-dark"
+[theme.overrides]
+separator = " "
+
+[icons]
+name = "awesome6"
+
+[[block]]
+block = "focused_window"
+max_width = 55
+show_marks = "visible"
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#8cafd1"
+
+[[block]]
+block = "cpu"
+interval = 2
+format = "{utilization}"
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#d8dee9"
+
+[[block]]
+block = "custom"
+command = "~/bin/memfree"
+interval = 2
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#d8dee9"
+
+[[block]]
+block = "net"
+device = "eno1"
+format = "{speed_down;K*b} / {speed_up;K*b}"
+interval = 5
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#d8dee9"
+
+[[block]]
+block = "custom"
+command = "spt playback --format"
+interval = 3
+on_click = "spt playback --toggle"
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#b1d196"
+
+[[block]]
+block = "sound"
+on_click = "pavucontrol"
+format = "{volume}"
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#8cafd2"
+
+[[block]]
+block = "time"
+format = "%a %m/%d %H:%M:%S"
+interval = 1
+locale = "en_US"
+[block.theme_overrides]
+idle_bg = "#3b4252"
+idle_fg = "#b48ead"
