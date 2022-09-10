@@ -14,7 +14,6 @@ SETUVAR _fish_abbr_ll:exa\x20\x2d\x2dicons\x20\x2dla
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dicons\x20\x2dla
 SETUVAR _fish_abbr_lsbtr:sudo\x20btrfs\x20su\x20li\x20\x2dp\x20\x2e
 SETUVAR _fish_abbr_lsnap:sudo\x20snapper\x20\x2dc\x20root\x20list
-SETUVAR _fish_abbr_sudoedit:env\x20EDITOR\x3dnvim\x20sudoedit
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1epure\x2dfish/pure\x1ejethrokuan/z
