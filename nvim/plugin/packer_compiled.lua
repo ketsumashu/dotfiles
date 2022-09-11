@@ -281,14 +281,14 @@ time([[Config for toggleterm.nvim]], false)
 time([[Config for lualine.nvim]], true)
 require('config.lualine')
 time([[Config for lualine.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('config.alpha')
-time([[Config for alpha-nvim]], false)
 -- Config for: nightfox.nvim
 time([[Config for nightfox.nvim]], true)
 require('config.colorscheme')
 time([[Config for nightfox.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('config.alpha')
+time([[Config for alpha-nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -300,10 +300,10 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'hop.nvim', 'nvim-autopairs', 'which-key.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertCharPre * ++once lua require("packer.load")({'LuaSnip'}, { event = "InsertCharPre *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'hop.nvim', 'which-key.nvim', 'nvim-autopairs'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
