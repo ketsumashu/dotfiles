@@ -7,7 +7,7 @@ local lualine = require 'lualine'
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#3b4252',
+    bg       = '#2e3440',
     fg       = '#cdcecf',
     yellow   = '#f0d399',
     cyan     = '#93ccdc',
@@ -136,7 +136,6 @@ ins_left {
 }
 
 
-
 ins_left {
     'diagnostics',
     sources = { 'nvim_diagnostic' },
@@ -187,7 +186,7 @@ ins_right {
 ins_right {
     'fileformat',
     fmt = string.upper,
-    icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+    icons_enabled = false,
     color = { fg = colors.green, gui = 'bold' },
 }
 
