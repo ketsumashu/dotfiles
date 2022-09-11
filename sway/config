@@ -10,6 +10,8 @@ set $term wezterm
 exec_always autotiling
 exec "fcitx5 -rd"
 exec "yaskkserv2 --google-suggest /home/mashu/.config/ibus-skk/dict.yaskkserv2"
+exec_always ~/.azotebg
+
 bindsym $mod+b exec firefox
 bindsym $mod+ctrl+l exec gtklock
 
@@ -22,16 +24,12 @@ for_window [app_id="pavucontrol"] floating enable
 for_window [class="fcitx5-config-qt"] floating enable
 
 ### Output configuration
-output * bg /usr/share/backgrounds/nordic-wallpapers/nord_lake.png fill
-output HDMI-A-2 resolution 1920x1080 position 1920,0
+# output HDMI-A-2 resolution 1920x1080 position 1920,0
 
 ### Idle configuration
 exec ~/bin/lock.sh
 
 ### Input configuration
-#
-# Example configuration:
-#
    input "16700:8195:Dell_Dell_USB_Keyboard" {
    	xkb_layout "jp"
 	repeat_delay 300

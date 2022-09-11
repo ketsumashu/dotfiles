@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export BAT_THEME:Nord
 SETUVAR --export EDITOR:/bin/nvim
+SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2db\x20\x7c\x20bat\x20\x2dl\x20man\x20\x2dp\x27
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/mashu/\x2elocal/share/z/data
