@@ -103,6 +103,8 @@ require 'packer'.startup(function()
                 with_sync = true
             })
         end,
+        event = "bufRead",
+        config = [[require('config.treesitter')]]
     }
 
     ---------------------------------
