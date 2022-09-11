@@ -24,11 +24,17 @@ require("telescope").setup {
             ["n"] = {
                 ["q"] = actions.close
             },
+        },
+    },
+    pickers = {
+        find_files = {
+            hidden = true
         }
     },
     extensions = {
         file_browser = {
             hijack_netrw = true,
+            hidden = true,
             mappings = {
                 ["i"] = {
                     ["<C-]>"] = fbact.change_cwd,
@@ -45,3 +51,4 @@ require("telescope").setup {
 -- To get telescope-file-browser loaded and working with telescope,
 -- you need to call load_extension, somewhere after setup function:
 require("telescope").load_extension "file_browser"
+require("telescope").load_extension "frecency"

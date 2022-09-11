@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 require 'impatient'
-require 'plugins'
-require 'options'
-require 'keymaps'
-require 'cmd'
-require 'faster'
+require 'core.plugins'
+require 'core.options'
+require 'core.keymaps'
+require 'core.cmd'
+require 'core.faster'

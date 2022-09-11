@@ -5,7 +5,7 @@ local fn = vim.fn
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/opt/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system({
+    PACKjER_BOOTSTRAP = fn.system({
         "git",
         "clone",
         "--depth",
@@ -14,7 +14,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
         install_path,
     })
     print("Installing packer close and reopen Neovim...")
-    vim.cmd([[packadd packer.nvim]])
 end
 vim.cmd([[packadd packer.nvim]])
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -63,33 +62,33 @@ require 'packer'.startup(function()
     ---------- completion ----------
     --------------------------------
     use {
-        "hrsh7th/nvim-cmp",
+        'hrsh7th/nvim-cmp',
         requires = {
-            { "hrsh7th/cmp-path", after = 'nvim-cmp', },
-            { "hrsh7th/cmp-cmdline", after = 'nvim-cmp', },
-            "hrsh7th/cmp-nvim-lsp",
-            "onsails/lspkind.nvim",
+            { 'hrsh7th/cmp-path', after = 'nvim-cmp', },
+            { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp', },
+            'hrsh7th/cmp-nvim-lsp',
+            'onsails/lspkind.nvim',
         },
         event = { 'InsertEnter', 'CmdlineEnter' },
         wants = 'LuaSnip',
         config = [[require('config.cmp')]]
     }
     use {
-        "L3MON4D3/LuaSnip",
+        'L3MON4D3/LuaSnip',
         event = 'InsertCharPre',
     }
 
     ---------------------------------
     ---------- appearances ----------
     ---------------------------------
-    use "kyazdani42/nvim-web-devicons"
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'kyazdani42/nvim-web-devicons'
+    use 'lukas-reineke/indent-blankline.nvim'
     use {
-        "EdenEast/nightfox.nvim",
+        'EdenEast/nightfox.nvim',
         config = [[require('config.colorscheme')]]
     }
     use {
-        "akinsho/bufferline.nvim",
+        'akinsho/bufferline.nvim',
         tag = "v2*",
         config = [[require('config.tabline')]]
     }
@@ -110,31 +109,37 @@ require 'packer'.startup(function()
     ---------- other utils ----------
     ---------------------------------
     use {
-        "phaazon/hop.nvim",
+        'phaazon/hop.nvim',
         branch = 'v2',
         config = function()
             require 'hop'.setup()
-        end
+        end,
+        event = 'VimEnter'
     }
     use {
-        "windwp/nvim-autopairs",
+        'windwp/nvim-autopairs',
         config = function()
             require 'nvim-autopairs'.setup()
-        end
+        end,
+        event = 'VimEnter'
     }
     use {
-        "folke/which-key.nvim",
+        'folke/which-key.nvim',
         config = function()
             require 'which-key'.setup()
         end,
         event = 'VimEnter'
+    }
+    use {
+        'goolord/alpha-nvim',
+        config = [[require('config.alpha')]]
     }
 
     ----------------------------------------
     ---------- filer and terminal ----------
     ----------------------------------------
     use {
-        "akinsho/toggleterm.nvim",
+        'akinsho/toggleterm.nvim',
         tag = 'v2.*',
         config = [[require('config.term')]]
     }
@@ -145,5 +150,9 @@ require 'packer'.startup(function()
         cmd = 'Telescope',
         module = 'Telescope',
     }
-    use "nvim-telescope/telescope-file-browser.nvim"
+    use 'nvim-telescope/telescope-file-browser.nvim'
+    use {
+        'nvim-telescope/telescope-frecency.nvim',
+        requires = { 'kkharji/sqlite.lua' }
+    }
 end)

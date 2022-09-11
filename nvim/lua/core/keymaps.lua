@@ -19,15 +19,16 @@ vim.g.maplocalleader = " "
 --   command_mode = 'c',
 
 -- command --
+-- jj to esc
 keymap("c", "jj", "<ESC>", opts)
 
 -- Terminal --
 keymap("t", "jj", "<C-\\><C-n>", term_opts)
 -- Normal --
 -- file managements
-keymap("n", "<Leader>fe", ":Telescope file_browser hidden=true<CR>", opts)
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<Leader>fe", ":Telescope file_browser<CR>", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -43,10 +44,12 @@ keymap("n", "x", '"_x', opts)
 -- Delete a word backwards
 keymap("n", "dw", 'vb"_d', opts)
 
--- 行の端に行く
+-- move sursor
 keymap("n", "<Leader>h", "^", opts)
 keymap("n", "<Leader>l", "$", opts)
-keymap("n", "<Leader>j", ":HopWord<CR>", opts)
+
+-- improve word hop
+keymap("n", "f", ":HopWord<CR>", opts)
 
 -- 行末までのヤンクにする
 keymap("n", "Y", "y$", opts)
@@ -59,8 +62,5 @@ keymap("n", "<Leader>w", ":<C-u>w<Return>", opts)
 keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode
+-- jj to esc
 keymap("i", "jj", "<ESC>", opts)
-
--- コンマの後に自動的にスペースを挿入
-keymap("i", ",", ",<Space>", opts)

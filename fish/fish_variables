@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BAT_THEME:Nord
 SETUVAR --export EDITOR:/bin/nvim
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
@@ -7,8 +8,9 @@ SETUVAR Z_DATA:/home/mashu/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/mashu/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/mashu\x24
 SETUVAR __fish_initialized:3400
-SETUVAR _fish_abbr_cat:bat\x20\x2d\x2dtheme\x3dNord
+SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_df:sudo\x20btrfs\x20fi\x20usage\x20/
+SETUVAR _fish_abbr_imgcat:wezterm\x20imgcat
 SETUVAR _fish_abbr_la:exa\x20\x2d\x2dicons\x20\x2dla
 SETUVAR _fish_abbr_ll:exa\x20\x2d\x2dicons\x20\x2dla
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dicons\x20\x2dla
