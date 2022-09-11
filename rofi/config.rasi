@@ -1,1 +1,13 @@
-@theme "/home/mashu/.local/share/rofi/themes/nord.rasi"
+configuration {
+	font: "Cozette 10";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+@theme "/home/mashu/.local/share/rofi/themes/side.rasi"

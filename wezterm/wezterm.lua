@@ -14,16 +14,16 @@ return {
         {
             family = "Cozette",
             weight = "Medium",
-            stretch = "SemiExpanded",
+            stretch = "Normal",
             style = "Normal",
         },
         {
-            family = "Noto Sans CJK JP",
-            weight = "Medium",
+            family = "JF Dot Shinonome Gothic 12",
+            weight = "Regular",
             stretch = "Normal",
             style = "Normal"
         }
     },
-    font_size = 10.0,
+    font_size = 8.0,
     line_height = 1.3,
 }

@@ -87,11 +87,6 @@ require 'packer'.startup(function()
         config = [[require('config.colorscheme')]]
     }
     use {
-        'akinsho/bufferline.nvim',
-        tag = "v2*",
-        config = [[require('config.tabline')]]
-    }
-    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = [[require('config.lualine')]]
@@ -105,6 +100,7 @@ require 'packer'.startup(function()
         event = "bufRead",
         config = [[require('config.treesitter')]]
     }
+    use 'lukas-reineke/virt-column.nvim'
 
     ---------------------------------
     ---------- other utils ----------
