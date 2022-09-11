@@ -183,7 +183,8 @@ bar {
     position top
 
     status_command i3status-rs
-    font pango:FiraCode Nerd Font bold 9
+    #font pango:FiraCode Nerd Font bold 9
+    font pango:Cozette 10
     icon_theme Tela
     tray_output none
     colors {

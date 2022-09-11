@@ -54,7 +54,6 @@ dashboard.section.buttons.opts = {
     spacing = 1,
 }
 alpha.setup(dashboard.config)
-
 vim.cmd [[
 autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
 ]]

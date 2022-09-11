@@ -67,7 +67,6 @@ require 'packer'.startup(function()
             { 'hrsh7th/cmp-path', after = 'nvim-cmp', },
             { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp', },
             'hrsh7th/cmp-nvim-lsp',
-            'onsails/lspkind.nvim',
         },
         event = { 'InsertEnter', 'CmdlineEnter' },
         wants = 'LuaSnip',
