@@ -184,11 +184,7 @@ bar {
 
     status_command i3status-rs
     #font pango:FiraCode Nerd Font bold 9
-<<<<<<< HEAD
-    font pango:Cozette,"Fira Code Nerd Font Medium", "Noto Sans CJK JP Medium" 9
-=======
     font pango:Cozette,"mplus12" 9
->>>>>>> d0b99208fb71d0121b8b8bfe9a3564d8acc2cea5
     icon_theme Tela
     tray_output none
     colors {
