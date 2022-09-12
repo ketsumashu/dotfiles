@@ -8,16 +8,6 @@ local function footer()
     return date .. " " .. total .. "plugins"
 end
 
---dashboard.section.header.val = {
---    [[　　　  　　　　 　`ゝ]],
---    [[　　           _／/´  ]],
---    [[ 　　　 　　／ :;/'   ]],
---    [[ 　　　  ＿/@,;)ゞ    ]],
---    [[ 　　_／;@/￣         ]],
---    [[ 　 /",:;ン　　 　nvim]],
---    [[ __/,／               ]],
---    [[ `V                   ]],
---}
 dashboard.section.header.val = {
     "                                ",
     "                                ",
@@ -43,7 +33,6 @@ dashboard.section.header.val = {
     "                                ",
 }
 
-dashboard.section.header.opts.hl = "Conceal"
 
 dashboard.section.buttons.val = {
     dashboard.button("h", "   Recently opened", ":Telescope frecency<CR>"),

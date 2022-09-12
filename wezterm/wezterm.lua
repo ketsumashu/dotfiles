@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 return {
     default_prog = { '/usr/bin/fish', '-l' },
-    window_background_opacity = 1.0,
+    window_background_opacity = 0.95,
     use_ime = false,
     color_scheme = "nordfox",
     hide_tab_bar_if_only_one_tab = true,

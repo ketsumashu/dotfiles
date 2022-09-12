@@ -16,7 +16,6 @@ require('mason-lspconfig').setup_handlers({ function(server)
     require('lspconfig')[server].setup(opt)
 end })
 
-vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.format{async =true}<CR>')
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
