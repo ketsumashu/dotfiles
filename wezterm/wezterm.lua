@@ -18,7 +18,7 @@ return {
             style = "Normal",
         },
         {
-            family = "JF Dot Shinonome Gothic 12",
+            family = "mplus12",
             weight = "Regular",
             stretch = "Normal",
             style = "Normal"
