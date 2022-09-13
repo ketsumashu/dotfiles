@@ -5,4 +5,3 @@ require 'nightfox'.setup({
     },
 })
 vim.cmd [[colorscheme nordfox]]
-require 'virt-column'.setup()

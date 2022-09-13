@@ -66,15 +66,22 @@ require 'packer'.startup(function()
         requires = {
             { 'hrsh7th/cmp-path', after = 'nvim-cmp', },
             { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp', },
+            { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
             'hrsh7th/cmp-nvim-lsp',
         },
+        config = [[require('config.cmp')]],
         event = { 'InsertEnter', 'CmdlineEnter' },
         wants = 'LuaSnip',
-        config = [[require('config.cmp')]]
     }
     use {
-        'L3MON4D3/LuaSnip',
-        event = 'InsertCharPre',
+        {
+            'L3MON4D3/LuaSnip',
+            event = 'InsertEnter',
+            config = function()
+                require 'luasnip.loaders.from_vscode'.lazy_load()
+            end,
+        },
+        'rafamadriz/friendly-snippets',
     }
 
     ---------------------------------
@@ -100,7 +107,6 @@ require 'packer'.startup(function()
         event = "bufRead",
         config = [[require('config.treesitter')]]
     }
-    use 'lukas-reineke/virt-column.nvim'
 
     ---------------------------------
     ---------- other utils ----------
@@ -148,8 +154,4 @@ require 'packer'.startup(function()
         module = 'Telescope',
     }
     use 'nvim-telescope/telescope-file-browser.nvim'
-    use {
-        'nvim-telescope/telescope-frecency.nvim',
-        requires = { 'kkharji/sqlite.lua' }
-    }
 end)
