@@ -90,7 +90,8 @@ require 'packer'.startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use 'lukas-reineke/indent-blankline.nvim'
     use {
-        'EdenEast/nightfox.nvim',
+        'catppuccin/nvim',
+        as = "catppucin",
         config = [[require('config.colorscheme')]]
     }
     use {
@@ -123,13 +124,6 @@ require 'packer'.startup(function()
         'windwp/nvim-autopairs',
         config = function()
             require 'nvim-autopairs'.setup()
-        end,
-        event = 'VimEnter'
-    }
-    use {
-        'folke/which-key.nvim',
-        config = function()
-            require 'which-key'.setup()
         end,
         event = 'VimEnter'
     }

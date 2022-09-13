@@ -1,9 +1,9 @@
 local wezterm = require 'wezterm'
 return {
     default_prog = { '/usr/bin/fish', '-l' },
-    window_background_opacity = 0.95,
+    window_background_opacity = 1.0,
     use_ime = false,
-    color_scheme = "nordfox",
+    color_scheme = "Catppuccin Frappe",
     hide_tab_bar_if_only_one_tab = true,
     font = wezterm.font_with_fallback {
         --        { family = "FiraCode Nerd Font",
