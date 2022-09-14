@@ -7,17 +7,17 @@ local lualine = require 'lualine'
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#2e3440',
-    fg       = '#cdcecf',
-    yellow   = '#f0d399',
-    cyan     = '#93ccdc',
-    darkblue = '#81a1c1',
-    green    = '#b1d196',
-    orange   = '#c9826b',
-    violet   = '#b48ead',
-    magenta  = '#c895bf',
-    blue     = '#8cafd2',
-    red      = '#d06f79',
+    bg       = '#303446',
+    fg       = '#c6d0f5',
+    yellow   = '#e5c890',
+    cyan     = '#81c8be',
+    darkblue = '#8caaee',
+    green    = '#a6d189',
+    orange   = '#ef9f76',
+    violet   = '#babbf1',
+    magenta  = '#babbf1',
+    blue     = '#8caaee',
+    red      = '#e78284',
 }
 
 local conditions = {
@@ -79,18 +79,18 @@ local function ins_right(component)
     table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-    function()
-        return '▊'
-    end,
-    color = { fg = colors.blue }, -- Sets highlighting of component
-    padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+--ins_left {
+--    function()
+--        return '▊'
+--    end,
+--    color = { fg = colors.blue }, -- Sets highlighting of component
+--    padding = { left = 0, right = 1 }, -- We don't need space before this
+--}
 
 ins_left {
     -- mode component
     function()
-        return '▼'
+        return '▊'
     end,
     color = function()
         -- auto change color according to neovims mode
@@ -127,13 +127,6 @@ ins_left {
     color = { fg = colors.darkblue, gui = 'bold' },
 }
 
-ins_left { 'location' }
-
-ins_left {
-    -- filesize component
-    'filesize',
-    cond = conditions.buffer_not_empty,
-}
 
 
 ins_left {
@@ -207,15 +200,47 @@ ins_right {
     },
     cond = conditions.hide_in_width,
 }
+ins_right { 'location' }
 
 ins_right {
+    -- filesize component
+    'filesize',
+    cond = conditions.buffer_not_empty,
+}
+
+ins_right {
+    -- mode component
     function()
         return '▊'
     end,
-    color = { fg = colors.blue },
+    color = function()
+        -- auto change color according to neovims mode
+        local mode_color = {
+            n = colors.fg,
+            i = colors.blue,
+            v = colors.violet,
+            [''] = colors.blue,
+            V = colors.magenta,
+            c = colors.magenta,
+            no = colors.red,
+            s = colors.orange,
+            S = colors.orange,
+            [''] = colors.orange,
+            ic = colors.yellow,
+            R = colors.violet,
+            Rv = colors.violet,
+            cv = colors.red,
+            ce = colors.red,
+            r = colors.cyan,
+            rm = colors.cyan,
+            ['r?'] = colors.cyan,
+            ['!'] = colors.red,
+            t = colors.red,
+        }
+        return { fg = mode_color[vim.fn.mode()] }
+    end,
     padding = { left = 1 },
 }
 
 -- Now don't forget to initialize lualine
-lualine.setup(config)
 lualine.setup(config)

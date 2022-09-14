@@ -1,7 +1,7 @@
 " General Settings
 set update.lastchecktime 1662637071953
 set configversion 2.0
-colorscheme nord2
+colorscheme catppuccin
 set smoothscroll true
 bind J tabnext
 bind K tabprev

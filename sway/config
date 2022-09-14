@@ -168,9 +168,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #8FBCBB #3B4252 #D8DEE9 #8FBCBB   #285577
-client.focused_inactive #2E3440 #3B4252 #D8DEE9 #484E50   #5F676A
-client.unfocused        #2E3440 #3B4252 #D8DEE9 #292D2E   #222222
+client.focused          #8FBCBB #303446 #D8DEE9 #8FBCBB   #285577
+client.focused_inactive #2E3440 #303446 #D8DEE9 #484E50   #5F676A
+client.unfocused        #2E3440 #303446 #D8DEE9 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
@@ -188,17 +188,16 @@ bar {
     icon_theme Tela
     tray_output none
     colors {
-    	background #3B4252
+    	background #303446
     	statusline #D8DEE9
     	separator  #666666
 
-    	focused_workspace  #5E81AC #5E81AC #3B4252
+    	focused_workspace  #8CAAEE #8CAAEE #303446
     	active_workspace   #2E3440 #2E3440 #D8DEE9
     	inactive_workspace #2E3440 #2E3440 #D8DEE9
-    	urgent_workspace   #BF616A #BF616A #3B4252
-    	binding_mode       #2E3440 #BF616A #3B4252
+    	urgent_workspace   #BF616A #BF616A #303446
+    	binding_mode       #2E3440 #BF616A #303446
     }
 }
 
 include /etc/sway/config.d/*
-# vim: filetype=i3config

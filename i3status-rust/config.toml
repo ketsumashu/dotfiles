@@ -8,27 +8,28 @@ name = "awesome6"
 
 [[block]]
 block = "focused_window"
-max_width = 55
-show_marks = "visible"
+format = "{combo}"
+max_width = 50
+show_marks = "all"
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8fbcbb"
+idle_bg = "#303446"
+idle_fg = "#81c8be"
 
 [[block]]
 block = "cpu"
 interval = 2
 format = "{utilization}"
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8cafd1"
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
 
 [[block]]
 block = "custom"
 command = "~/bin/memfree"
 interval = 2
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8cafd1"
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
 
 [[block]]
 block = "net"
@@ -36,8 +37,8 @@ device = "eno1"
 format = "{speed_down;K*b} / {speed_up;K*b}"
 interval = 5
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8cafd1"
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
 
 [[block]]
 block = "custom"
@@ -45,16 +46,16 @@ command = "spt playback --format"
 interval = 3
 on_click = "spt playback --toggle"
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8cafd1"
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
 
 [[block]]
 block = "sound"
 on_click = "pavucontrol"
 format = "{volume}"
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#8cafd2"
+idle_bg = "#303446"
+idle_fg = "#85c1dc"
 
 [[block]]
 block = "time"
@@ -62,5 +63,5 @@ format = "%a %m/%d %H:%M:%S"
 interval = 1
 locale = "en_US"
 [block.theme_overrides]
-idle_bg = "#3b4252"
-idle_fg = "#b48ead"
+idle_bg = "#303446"
+idle_fg = "#babbf1"
