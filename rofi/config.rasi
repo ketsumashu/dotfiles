@@ -1,13 +1,18 @@
-configuration {
-	font: "Cozette 10";
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Tela";
+    show-icons: false;
+    terminal: "wezterm";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 﩯  Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
 }
-//@theme "/usr/share/rofi/themes/sidebar.rasi"
-@theme "/home/mashu/.local/share/rofi/themes/side.rasi"
+
+@theme "catppuccin-frappe"
+
