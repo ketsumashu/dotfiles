@@ -17,7 +17,7 @@ bindsym $mod+ctrl+l exec gtklock
 
 gaps outer 3
 gaps inner 4
-default_border pixel 3
+default_border pixel 1
 
 ### floating setting
 for_window [app_id="pavucontrol"] floating enable
