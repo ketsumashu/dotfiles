@@ -5,6 +5,8 @@ colorscheme catppuccin
 set smoothscroll true
 bind J tabnext
 bind K tabprev
+command fixamo_quiet jsb tri.excmds.setpref("privacy.resistFingerprinting.block_mozAddonManager", "true").then(tri.excmds.setpref("extensions.webextensions.restrictedDomains", '""'))
+fixamo_quiet
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl

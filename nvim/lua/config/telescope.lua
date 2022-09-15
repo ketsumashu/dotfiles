@@ -25,6 +25,9 @@ require("telescope").setup {
                 ["q"] = actions.close
             },
         },
+        file_ignore_patterns = {
+            "tmp"
+        }
     },
     pickers = {
         find_files = {
