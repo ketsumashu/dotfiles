@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-global, unused-local
 
 require('mason').setup()
 require('mason-lspconfig').setup_handlers({ function(server)
@@ -7,7 +7,7 @@ require('mason-lspconfig').setup_handlers({ function(server)
         on_attach = function(client, bufnr)
             local opts = { noremap = true, silent = true }
             vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-            vim.cmd 'autocmd BufWritePre * lua vim.lsp.buf.format({async=false})'
+            vim.cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()'
         end,
         capabilities = require('cmp_nvim_lsp').update_capabilities(
             vim.lsp.protocol.make_client_capabilities()

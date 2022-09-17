@@ -1,7 +1,10 @@
 require("toggleterm").setup {
     start_insert = true,
     insert_mappings = false,
+    auto_chdir = true,
+    auto_scroll = true,
     close_on_exit = true,
+    shading_factor = 2,
     hide_numbers = true,
     open_mapping = [[<Leader>t]],
     shell = '/usr/bin/fish -l',

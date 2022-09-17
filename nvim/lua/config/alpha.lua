@@ -27,7 +27,7 @@ dashboard.section.header.val = {
     "                             ",
     "                             ",
     [[         ／l、             ]],
-    [[       （ﾟ､ ｡ ７      ]],
+    [[       （ﾟ､ ｡ ７    ]],
     [[        l、  ~ヽ           ]],
     [[        じしf_, )ノ        ]],
 }
@@ -35,7 +35,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
     dashboard.button("h", "   Recently opened", ":Telescope oldfiles<CR>"),
-    dashboard.button("f", "   Find file", ":Telescope find_files<CR>"),
+    dashboard.button("f", "   Find file", ":Telescope file_browser<CR>"),
     dashboard.button("e", "   New file", ":enew<CR>"),
     dashboard.button("s",
         "   config dotfiles",

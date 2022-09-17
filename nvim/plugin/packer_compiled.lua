@@ -177,7 +177,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp-cmdline", "cmp_luasnip" },
+    after = { "cmp_luasnip", "cmp-path", "cmp-cmdline" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -266,22 +266,22 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require('config.term')
-time([[Config for toggleterm.nvim]], false)
--- Config for: catppucin
-time([[Config for catppucin]], true)
-require('config.colorscheme')
-time([[Config for catppucin]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config.alpha')
 time([[Config for alpha-nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('config.term')
+time([[Config for toggleterm.nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require('config.lualine')
 time([[Config for lualine.nvim]], false)
+-- Config for: catppucin
+time([[Config for catppucin]], true)
+require('config.colorscheme')
+time([[Config for catppucin]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -292,10 +292,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'LuaSnip', 'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-autopairs', 'hop.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'hop.nvim', 'nvim-autopairs'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

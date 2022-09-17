@@ -24,25 +24,21 @@ keymap("c", "jj", "<ESC>", opts)
 
 -- Terminal --
 keymap("t", "jj", "<C-\\><C-n>", term_opts)
+
 -- Normal --
 -- file managements
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fe", ":Telescope file_browser<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
--- move tab
-keymap("n", "gh", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "gl", ":BufferLineCycleNext<CR>", opts)
 
 -- Do not yank with x
 keymap("n", "x", '"_x', opts)
-
--- Delete a word backwards
-keymap("n", "dw", 'vb"_d', opts)
 
 -- move sursor
 keymap("n", "<Leader>h", "^", opts)
@@ -55,10 +51,10 @@ keymap("n", "f", ":HopWord<CR>", opts)
 keymap("n", "Y", "y$", opts)
 
 -- <Leader>q で強制終了
-keymap("n", "<Leader>q", ":bd<Return>", opts)
-keymap("n", "<Leader>w", ":<C-u>w<Return>", opts)
+keymap("n", "<Leader>q", ":bd<CR>", opts)
+keymap("n", "<Leader>w", ":<C-u>w<CR>", opts)
 
--- ESC*2 でハイライトやめる
+-- escesc to nohl
 keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 
 -- Insert --
