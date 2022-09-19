@@ -1,0 +1,86 @@
+[character]
+success_symbol = "[❯](bold fg:#babbf1)"
+error_symbol = "[❯](bold fg:#e78284)"
+
+[time]
+disabled = false
+style = "bold blue"
+format = "[$time]($style) "
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = ""
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = ""
+
+[nim]
+symbol = ""
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = "ﰮ"
+
+[python]
+symbol = ""
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
