@@ -1,0 +1,10 @@
+*{
+    font-family: Cozette;
+}
+label#clock  {
+    font-family: Cozette;
+    color: #303446;
+    font-size: 13px;
+    padding-right: 400px;
+    padding-bottom: 30px;
+}
