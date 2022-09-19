@@ -35,11 +35,11 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
     dashboard.button("h", "   Recently opened", ":Telescope oldfiles<CR>"),
-    dashboard.button("f", "   Find file", ":Telescope file_browser<CR>"),
+    dashboard.button("f", "   Find file", ":NvimTreeOpen<CR>"),
     dashboard.button("e", "   New file", ":enew<CR>"),
     dashboard.button("s",
         "   config dotfiles",
-        ":cd $HOME/dotfiles/ | Telescope file_browser<CR>"
+        ":cd $HOME/dotfiles/ | NvimTreeOpen<CR>"
     ),
     dashboard.button("p", "ﰮ   Update plugins", ":PackerSync<CR>"),
     dashboard.button("q", "   Exit", ":qa<CR>"),

@@ -11,6 +11,7 @@ exec_always autotiling
 exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/.config/ibus-skk/dict.yaskkserv2"
 exec "fcitx5 -rd"
 exec_always ~/.azotebg
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 bindsym $mod+b exec firefox
 bindsym $mod+ctrl+l exec gtklock
@@ -27,7 +28,7 @@ for_window [class="fcitx5-config-qt"] floating enable
 # output HDMI-A-2 resolution 1920x1080 position 1920,0
 
 ### Idle configuration
-exec ~/bin/lock.sh
+exec_always ~/bin/lock.sh
 
 ### Input configuration
    input "16700:8195:Dell_Dell_USB_Keyboard" {
@@ -192,8 +193,8 @@ bar {
     	statusline #D8DEE9
     	separator  #666666
 
-    	focused_workspace  #8CAAEE #8CAAEE #303446
-    	active_workspace   #2E3440 #2E3440 #D8DEE9
+    	focused_workspace  #303446 #303446 #8CAAEE
+    	active_workspace   #303446 #303446 #BBFBF1
     	inactive_workspace #2E3440 #2E3440 #D8DEE9
     	urgent_workspace   #BF616A #BF616A #303446
     	binding_mode       #2E3440 #BF616A #303446

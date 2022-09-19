@@ -1,6 +1,5 @@
 ---@diagnostic disable: undefined-global
 
-local fbact = require "telescope".extensions.file_browser.actions
 local actions = require "telescope.actions"
 require("telescope").setup {
     defaults = {
@@ -34,23 +33,4 @@ require("telescope").setup {
             hidden = true
         }
     },
-    extensions = {
-        file_browser = {
-            hijack_netrw = true,
-            hidden = true,
-            mappings = {
-                ["i"] = {
-                    ["<C-]>"] = fbact.change_cwd,
-                    ["<C-t>"] = actions.select_tab
-                },
-                ["n"] = {
-                    ["q"] = actions.close,
-                    ["<C-]>"] = fbact.change_cwd
-                },
-            },
-        },
-    },
 }
--- To get telescope-file-browser loaded and working with telescope,
--- you need to call load_extension, somewhere after setup function:
-require("telescope").load_extension "file_browser"

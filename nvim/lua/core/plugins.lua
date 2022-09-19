@@ -147,5 +147,13 @@ require 'packer'.startup(function()
         cmd = 'Telescope',
         module = 'Telescope',
     }
-    use 'nvim-telescope/telescope-file-browser.nvim'
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+            'kyazdani42/nvim-web-devicons',
+        },
+        tag = 'nightly',
+        Event = 'VimEnter',
+        config = [[require('config.nvimtree')]]
+    }
 end)

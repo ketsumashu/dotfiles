@@ -29,7 +29,7 @@ keymap("t", "jj", "<C-\\><C-n>", term_opts)
 -- file managements
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n", "<Leader>fe", ":Telescope file_browser<CR>", opts)
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
