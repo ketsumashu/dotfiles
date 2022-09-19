@@ -24,8 +24,11 @@ idle_bg = "#303446"
 idle_fg = "#85c1dc"
 
 [[block]]
-block = "custom"
-command = "~/bin/memfree"
+block = "memory"
+format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
+display_type = "memory"
+icons = true
+clickable = false
 interval = 2
 [block.theme_overrides]
 idle_bg = "#303446"
