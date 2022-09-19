@@ -30,6 +30,8 @@ keymap("t", "jj", "<C-\\><C-n>", term_opts)
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "gh", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "gl", ":BufferLineCycleNext<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -47,10 +49,10 @@ keymap("n", "<Leader>l", "$", opts)
 -- improve word hop
 keymap("n", "f", ":HopWord<CR>", opts)
 
--- 行末までのヤンクにする
+-- Y to yank entire line
 keymap("n", "Y", "y$", opts)
 
--- <Leader>q で強制終了
+-- save and quit
 keymap("n", "<Leader>q", ":bd<CR>", opts)
 keymap("n", "<Leader>w", ":<C-u>w<CR>", opts)
 

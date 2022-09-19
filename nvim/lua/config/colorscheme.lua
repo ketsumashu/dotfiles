@@ -39,6 +39,7 @@ require 'catppuccin'.setup({
                 information = { "underline" },
             },
         },
+        nvimtree = true,
     }
 })
 

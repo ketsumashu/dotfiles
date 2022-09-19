@@ -131,6 +131,13 @@ require 'packer'.startup(function()
         'goolord/alpha-nvim',
         config = [[require('config.alpha')]]
     }
+    use {
+        'akinsho/bufferline.nvim',
+        tag = 'v2.*',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = [[require('config.tab')]],
+        event = 'VimEnter'
+    }
 
     ----------------------------------------
     ---------- filer and terminal ----------

@@ -25,7 +25,8 @@ require("telescope").setup {
             },
         },
         file_ignore_patterns = {
-            "tmp"
+            "tmp",
+            ".git",
         }
     },
     pickers = {

@@ -67,6 +67,10 @@ local config = {
         lualine_c = {},
         lualine_x = {},
     },
+    extensions = {
+        'nvim-tree',
+        'toggleterm'
+    }
 }
 
 -- Inserts a component in lualine_c at left section

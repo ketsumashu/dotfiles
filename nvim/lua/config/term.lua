@@ -8,5 +8,5 @@ require("toggleterm").setup {
     hide_numbers = true,
     open_mapping = [[<Leader>t]],
     shell = '/usr/bin/fish -l',
-    direction = 'vertical',
+    direction = 'float',
 }
