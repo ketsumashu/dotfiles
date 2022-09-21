@@ -1,9 +1,9 @@
 *{
     font-family: Cozette;
 }
-label#clock  {
+#clock-label  {
     font-family: Cozette;
-    color: #303446;
+    color: #cecece;
     font-size: 13px;
     padding-right: 400px;
     padding-bottom: 30px;
