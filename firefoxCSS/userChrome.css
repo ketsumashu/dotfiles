@@ -27,3 +27,8 @@
 #TabsToolbar {
   visibility: collapse;
 }
+
+#statuspanel {
+  right: 0;
+  display: inline;
+}

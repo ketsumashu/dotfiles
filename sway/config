@@ -8,7 +8,7 @@ set $term wezterm
 
 ### startups
 exec_always autotiling
-exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/.config/ibus-skk/dict.yaskkserv2"
+exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/dotfiles/libskk/dict.yaskkserv2"
 exec "fcitx5 -rd"
 exec_always ~/.azotebg
 

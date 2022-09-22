@@ -1,14 +1,12 @@
 " General Settings
-set update.lastchecktime 1663378159656
+set update.lastchecktime 1663773550152
 set update.nag true
 set update.nagwait 7
 set update.lastnaggedversion 1.14.0
 set update.checkintervalsecs 86400
 set configversion 2.0
 set theme catppuccin
-colorscheme catppuccin
-set newtab https://online.bonjourr.fr/
-set homepages.0 https://online.bonjourr.fr/
+set newtab about:newtab
 set smoothscroll true
 set editorcmd wezterm start -- nvim %f
 
@@ -17,8 +15,6 @@ bind J tabnext
 bind K tabprev
 unbind <C-j>
 bind gh home true
-bind ;x hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool click 1")}
-bind ;X hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool keydown ctrl+shift; xdotool click 1; xdotool keyup ctrl+shift")}
 bind <A-p> pin
 bind <A-m> mute toggle
 bind <F1> help
@@ -193,7 +189,7 @@ alias tabgrouprename tgrouprename
 alias tabgroupswitch tgroupswitch
 alias tabnew tabopen
 alias tabm tabmove
-alias tabo tabonly
+alias tabo tabopen
 alias tn tabnext_gt
 alias bn tabnext_gt
 alias tnext tabnext_gt
@@ -252,6 +248,8 @@ alias prefremove removepref
 alias tabclosealltoright tabcloseallto right
 alias tabclosealltoleft tabcloseallto left
 alias reibadailty jumble
+
+" Autocmds
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl
