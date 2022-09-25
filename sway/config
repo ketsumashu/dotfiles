@@ -13,6 +13,7 @@ exec "fcitx5 -rd"
 exec_always ~/.azotebg
 
 bindsym $mod+b exec firefox
+bindsym $mod+ctrl+l exec swaylock
 
 gaps outer 3
 gaps inner 4
