@@ -5,11 +5,12 @@ set update.nagwait 7
 set update.lastnaggedversion 1.14.0
 set update.checkintervalsecs 86400
 set configversion 2.0
+set theme catppuccin
 set newtab about:blank
-set homepages ["about:blank"]
-colorscheme catppuccin
 set smoothscroll true
 set editorcmd wezterm start -- nvim %f
+set homepages.0 about:blank
+set profiledir /home/mashu/.mozilla/firefox/dyd2i8g9.default-release
 
 " Binds
 bind J tabnext
@@ -167,7 +168,11 @@ bind ` gobble 1 markjump
 bind cl current_url
 unbind ,o
 bind @o fillcmdline bmarks
+bindurl img.2chan.net --mode=ignore r reload
 unbindurl img.2chan.net r
+bindurl https://img.2chan.net --mode=ignore r reload
+bind --mode=ex <C-n> ex.next_completion
+bind --mode=ex <C-p> ex.nprev_completion
 
 " Aliases
 alias fixamo_quiet jsb tri.excmds.setpref("privacy.resistFingerprinting.block_mozAddonManager", "true").then(tri.excmds.setpref("extensions.webextensions.restrictedDomains", '""'))
