@@ -6,7 +6,7 @@ require("toggleterm").setup {
     close_on_exit = true,
     shading_factor = 2,
     hide_numbers = true,
-    open_mapping = [[<Leader>t]],
+    open_mapping = [[@t]],
     shell = '/usr/bin/fish -l',
     direction = 'float',
 }
