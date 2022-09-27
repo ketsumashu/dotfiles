@@ -155,12 +155,7 @@ require 'packer'.startup(function()
         module = 'Telescope',
     }
     use {
-        'kyazdani42/nvim-tree.lua',
-        requires = {
-            'kyazdani42/nvim-web-devicons',
-        },
-        tag = 'nightly',
-        Event = 'VimEnter',
-        config = [[require('config.nvimtree')]]
+        'nvim-telescope/telescope-file-browser.nvim',
+        event = 'VimEnter'
     }
 end)

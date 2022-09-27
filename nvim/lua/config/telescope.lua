@@ -34,4 +34,19 @@ require("telescope").setup {
             hidden = true
         }
     },
+    extensions = {
+        file_browser = {
+            theme = "dropdown",
+            hidden = true,
+            -- disables netrw and use telescope-file-browser in its place
+            hijack_netrw = false,
+            mappings = {
+                ["i"] = {
+                },
+                ["n"] = {
+                },
+            },
+        },
+    },
 }
+require 'telescope'.load_extension "file_browser"

@@ -1,6 +1,6 @@
 require("toggleterm").setup {
     start_insert = true,
-    insert_mappings = false,
+    terminal_mappings = false,
     auto_chdir = true,
     auto_scroll = true,
     close_on_exit = true,

@@ -6,9 +6,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+keymap("", "@", "<Nop>", opts)
+vim.g.mapleader = "@"
+vim.g.maplocalleader = "@"
 
 -- Modes
 --   normal_mode = 'n',
@@ -29,7 +29,7 @@ keymap("t", "jj", "<C-\\><C-n>", term_opts)
 -- file managements
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
-keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>e", ":Telescope file_browser<CR>", opts)
 keymap("n", "gh", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "gl", ":BufferLineCycleNext<CR>", opts)
 

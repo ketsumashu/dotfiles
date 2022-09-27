@@ -23,23 +23,16 @@ dashboard.section.header.val = {
     "                             ",
     "                             ",
     "                             ",
-    "              nvim           ",
-    "                             ",
-    "                             ",
-    [[         ／l、             ]],
-    [[       （ﾟ､ ｡ ７    ]],
-    [[        l、  ~ヽ           ]],
-    [[        じしf_, )ノ        ]],
 }
 
 
 dashboard.section.buttons.val = {
     dashboard.button("h", "   Recently opened", ":Telescope oldfiles<CR>"),
-    dashboard.button("f", "   Find file", ":NvimTreeOpen<CR>"),
+    dashboard.button("f", "   Find file", ":Telescope fd<CR>"),
     dashboard.button("e", "   New file", ":enew<CR>"),
     dashboard.button("s",
         "   config dotfiles",
-        ":cd $HOME/dotfiles/ | NvimTreeOpen<CR>"
+        ":cd $HOME/dotfiles/ | Telescope file_browser<CR>"
     ),
     dashboard.button("p", "ﰮ   Update plugins", ":PackerSync<CR>"),
     dashboard.button("q", "   Exit", ":qa<CR>"),
