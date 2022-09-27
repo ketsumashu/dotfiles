@@ -43,15 +43,6 @@ interval = 5
 idle_bg = "#303446"
 idle_fg = "#85c1dc"
 
-#[[block]]
-#block = "custom"
-#command = "spt playback --format"
-#interval = 3
-#on_click = "spt playback --toggle"
-#[block.theme_overrides]
-#idle_bg = "#303446"
-#idle_fg = "#85c1dc"
-
 [[block]]
 block = "sound"
 on_click = "pavucontrol"
