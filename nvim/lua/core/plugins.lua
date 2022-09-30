@@ -95,6 +95,10 @@ require 'packer'.startup(function()
         config = [[require('config.colorscheme')]]
     }
     use {
+        'olivercederborg/poimandres.nvim',
+        config = [[require('config.colorscheme')]]
+    }
+    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = [[require('config.lualine')]]
@@ -131,22 +135,10 @@ require 'packer'.startup(function()
         'goolord/alpha-nvim',
         config = [[require('config.alpha')]]
     }
-    use {
-        'akinsho/bufferline.nvim',
-        tag = 'v2.*',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = [[require('config.tab')]],
-        event = 'VimEnter'
-    }
 
     ----------------------------------------
     ---------- filer and terminal ----------
     ----------------------------------------
-    use {
-        'akinsho/toggleterm.nvim',
-        tag = 'v2.*',
-        config = [[require('config.term')]]
-    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { 'nvim-lua/plenary.nvim' },

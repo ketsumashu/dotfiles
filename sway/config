@@ -22,6 +22,7 @@ default_border pixel 1
 ### floating setting
 for_window [app_id="pavucontrol"] floating enable
 for_window [class="fcitx5-config-qt"] floating enable
+for_window [title="Firefox — Sharing Indicator"] floating enable
 
 ### Output configuration
 # output HDMI-A-2 resolution 1920x1080 position 1920,0

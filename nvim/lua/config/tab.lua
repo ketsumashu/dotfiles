@@ -22,15 +22,5 @@ require 'bufferline'.setup({
         show_buffer_close_icons = false,
         show_tab_indicators = true,
         separator_style = "thin",
-        offsets = {
-            {
-                filetype = 'NvimTree',
-                text = function()
-                    return vim.fn.getcwd()
-                end,
-                highlight = "Directory",
-                text_align = 'left'
-            }
-        }
     }
 })

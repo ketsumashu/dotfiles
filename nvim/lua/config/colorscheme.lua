@@ -39,13 +39,7 @@ require 'catppuccin'.setup({
                 information = { "underline" },
             },
         },
-        nvimtree = true,
     }
 })
 
---require("poimandres").setup({
---    disable_background = false,
---    disable_italics = true,
---})
 vim.cmd [[colorscheme catppuccin]]
---vim.cmd [[colorscheme poimandres]]
