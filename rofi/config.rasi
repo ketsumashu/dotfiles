@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "drun";
     icon-theme: "Tela";
     show-icons: false;
     terminal: "wezterm";
@@ -8,10 +8,6 @@ configuration{
     disable-history: false;
     hide-scrollbar: true;
     display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  Window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
 }
 
 @theme "catppuccin-frappe"

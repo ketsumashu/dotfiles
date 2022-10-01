@@ -15,10 +15,12 @@ exec_always ~/.azotebg
 bindsym $mod+b exec firefox
 bindsym $mod+ctrl+l exec swaylock
 
-gaps outer 3
+gaps outer 2
 gaps inner 4
-default_border pixel 1
-
+default_border pixel 2
+font pango:DejaVu Sans Mono 0
+titlebar_border_thickness 2
+titlebar_padding 2
 ### floating setting
 for_window [app_id="pavucontrol"] floating enable
 for_window [class="fcitx5-config-qt"] floating enable
@@ -132,11 +134,6 @@ exec swayidle -w \
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+ctrl+space floating toggle
 
-    # Swap focus between the tiling area and the floating area
-
-    # Move focus to the parent container
-    bindsym $mod+a focus parent
-
 #
 # Scratchpad:
 #
@@ -174,8 +171,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #8FBCBB #303446 #D8DEE9 #8FBCBB   #285577
-client.focused_inactive #2E3440 #303446 #D8DEE9 #484E50   #5F676A
+client.focused          #8FBCBB #303446 #D8DEE9 #8FBCBB   #8FBCBB
+client.focused_inactive #303446 #303446 #D8DEE9 #484E50   #303446
 client.unfocused        #2E3440 #303446 #D8DEE9 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C

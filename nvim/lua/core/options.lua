@@ -5,7 +5,7 @@ local options = {
     title = false,
     backup = false,
     clipboard = "unnamedplus",
-    cmdheight = 1,
+    cmdheight = 0,
     laststatus = 3,
     hlsearch = true,
     ignorecase = true,
@@ -32,6 +32,7 @@ local options = {
     sidescrolloff = 8,
     splitbelow = true,
     splitright = true,
+    shell = "fish"
 }
 
 vim.opt.shortmess:append("c")
