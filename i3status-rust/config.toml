@@ -1,10 +1,10 @@
 [theme]
 name = "nord-dark"
 [theme.overrides]
-separator = " "
+separator = "   "
 
 [icons]
-name = "awesome6"
+name = "none"
 
 [[block]]
 block = "focused_window"
@@ -12,47 +12,55 @@ format = "{combo}"
 max_width = 50
 show_marks = "all"
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#81c8be"
+idle_bg = "#191c25"
+idle_fg = "#cdb6dd"
+
+#[[block]]
+#block = "cpu"
+#interval = 2
+#format = "{utilization}"
+#[block.theme_overrides]
+#idle_bg = "#191c25"
+#idle_fg = "#77adb1"
 
 [[block]]
-block = "cpu"
+block = "custom"
+command = "/home/mashu/bin/cpuusage"
 interval = 2
-format = "{utilization}"
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#85c1dc"
+idle_bg = "#191c25"
+idle_fg = "#77adb1"
 
 [[block]]
 block = "custom"
 command = "/home/mashu/bin/memfree"
 interval = 2
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#85c1dc"
+idle_bg = "#191c25"
+idle_fg = "#77adb1"
 
 [[block]]
 block = "net"
 device = "eno1"
-format = "{speed_down;K*b} / {speed_up;K*b}"
-interval = 5
+format = "{speed_down;M*b} / {speed_up;M*b}"
+interval = 1
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#85c1dc"
+idle_bg = "#191c25"
+idle_fg = "#77adb1"
 
 [[block]]
 block = "sound"
 on_click = "pavucontrol"
 format = "{volume}"
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#85c1dc"
+idle_bg = "#191c25"
+idle_fg = "#94cdd1"
 
 [[block]]
 block = "time"
 format = "%a %m/%d %H:%M:%S"
 interval = 1
-locale = "en_US"
+locale = "en_GB"
 [block.theme_overrides]
-idle_bg = "#303446"
-idle_fg = "#babbf1"
+idle_bg = "#191c25"
+idle_fg = "#889bb4"

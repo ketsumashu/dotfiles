@@ -11,12 +11,12 @@ icons=1
 max-icon-size=64
 default-timeout=7000
 ignore-timeout=1
-font=Cozette,mplus12 10
+font=TerminessTTF Nerd Font,mplus12 12px
 
-background-color=#303446
-text-color=#c6d0f5
-border-color=#8caaee
-progress-color=over #414559
+background-color=#191c25
+text-color=#c5c4d4
+border-color=#cdb6dd
+progress-color=over #889bb4
 
 [urgency=high]
-border-color=#ef9f76
+border-color=#a994b8

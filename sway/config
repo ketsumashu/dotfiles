@@ -4,10 +4,10 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term wezterm
+set $term foot
 
 ### startups
-exec_always autotiling
+exec_always autotiling-rs
 exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/dotfiles/libskk/dict.yaskkserv2"
 exec "fcitx5 -rd"
 exec_always ~/.azotebg
@@ -171,9 +171,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #8FBCBB #303446 #D8DEE9 #8FBCBB   #8FBCBB
-client.focused_inactive #303446 #303446 #D8DEE9 #484E50   #303446
-client.unfocused        #2E3440 #303446 #D8DEE9 #292D2E   #222222
+client.focused          #cdb6dd #191c25 #D8DEE9 #cdb6dd   #cdb6dd
+client.focused_inactive #191c25 #191c25 #D8DEE9 #484E50   #191c25
+client.unfocused        #2E3440 #191c25 #D8DEE9 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
@@ -184,22 +184,19 @@ client.background       #d8dee9
 #
 bar {
     position top
-
     status_command i3status-rs
-    #font pango:FiraCode Nerd Font bold 9
-    font pango:Cozette,mplus12,blobmoji 10
-    icon_theme Tela
+    font pango:TerminessTTF Nerd Font,mplus12,Blobmoji 12px
     tray_output none
     colors {
-    	background #303446
+    	background #191c25
     	statusline #D8DEE9
     	separator  #666666
 
-    	focused_workspace  #303446 #303446 #8CAAEE
-    	active_workspace   #303446 #303446 #BBFBF1
-    	inactive_workspace #2E3440 #2E3440 #D8DEE9
-    	urgent_workspace   #BF616A #BF616A #303446
-    	binding_mode       #2E3440 #BF616A #303446
+    	focused_workspace  #191c25 #191c25 #889bb4
+    	active_workspace   #191c25 #191c25 #BBFBF1
+    	inactive_workspace #191c25 #191c25 #D8DEE9
+    	urgent_workspace   #BF616A #BF616A #191c25
+    	binding_mode       #2E3440 #BF616A #191c25
     }
 }
 

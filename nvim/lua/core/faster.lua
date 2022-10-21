@@ -3,7 +3,6 @@ local disabled_built_ins = {
     'gzip',
     'man',
     'matchit',
-    'matchparen',
     'shada_plugin',
     'tarPlugin',
     'tar',
@@ -12,6 +11,6 @@ local disabled_built_ins = {
     'netrwplugin'
 }
 
-for i = 1, 10 do
+for i = 1, 9 do
     g['loaded_' .. disabled_built_ins[i]] = 1
 end

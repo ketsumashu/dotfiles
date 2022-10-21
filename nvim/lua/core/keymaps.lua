@@ -4,7 +4,7 @@ local term_opts = { silent = true }
 
 --local keymap = vim.keymap
 local keymap = vim.api.nvim_set_keymap
-
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 -- Modes
 --   normal_mode = 'n',
@@ -23,15 +23,15 @@ keymap("t", "jj", "<C-\\><C-n>", term_opts)
 
 -- Normal --
 -- file managements
-keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
+keymap("n", "<Leader>b", ":Telescope buffers<CR>", opts)
 keymap("n", "<Leader>e", ":Telescope file_browser<CR>", opts)
+keymap("n", "<Leader>t", ":ToggleTerm<CR>", opts)
 keymap("n", "gh", ":bp<CR>", opts)
 keymap("n", "gl", ":bn<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
@@ -43,13 +43,13 @@ keymap("n", "<Leader>h", "^", opts)
 keymap("n", "<Leader>l", "$", opts)
 
 -- improve word hop
-keymap("n", "f", ":HopWord<CR>", opts)
+keymap("n", "f", ":HopAnywhere<CR>", opts)
 
 -- Y to yank entire line
 keymap("n", "Y", "y$", opts)
 
 -- save and quit
-keymap("n", "<Leader>q", ":bd<CR>", opts)
+keymap("n", "<Leader>q", ":BufDel<CR>", opts)
 keymap("n", "<Leader>w", ":<C-u>w<CR>", opts)
 
 -- escesc to nohl

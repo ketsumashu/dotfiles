@@ -54,7 +54,10 @@ require 'packer'.startup(function()
     ---------------------------------
     ---------- lsp-configs ----------
     ---------------------------------
-    use 'neovim/nvim-lspconfig'
+    use {
+        'neovim/nvim-lspconfig',
+        config = [[require('config.lspservers')]]
+    }
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
@@ -74,34 +77,29 @@ require 'packer'.startup(function()
         wants = 'LuaSnip',
     }
     use {
-        {
-            'L3MON4D3/LuaSnip',
-            event = 'InsertEnter',
-            config = function()
-                require 'luasnip.loaders.from_vscode'.lazy_load()
-            end,
-        },
-        'rafamadriz/friendly-snippets',
+        'L3MON4D3/LuaSnip',
+        event = 'InsertEnter',
+        config = function()
+            require 'luasnip.loaders.from_vscode'.lazy_load()
+        end,
     }
 
     ---------------------------------
     ---------- appearances ----------
     ---------------------------------
-    use 'kyazdani42/nvim-web-devicons'
     use 'lukas-reineke/indent-blankline.nvim'
     use {
-        'catppuccin/nvim',
-        as = "catppucin",
-        config = [[require('config.colorscheme')]]
-    }
-    use {
-        'olivercederborg/poimandres.nvim',
-        config = [[require('config.colorscheme')]]
-    }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = [[require('config.lualine')]]
+        'kvrohit/substrata.nvim',
+        event = 'VimEnter',
+        config = function()
+            vim.g.substrata_italic_functions = false
+            vim.g.substrata_italic_keywords = false
+            vim.g.substrata_italic_booleans = false
+            vim.g.substrata_italic_comments = false
+            vim.g.substrata_italic_variables = false
+            vim.g.substrata_variant = "brighter"
+            vim.cmd [[colorscheme substrata]]
+        end
     }
     use { 'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -129,13 +127,23 @@ require 'packer'.startup(function()
         config = function()
             require 'nvim-autopairs'.setup()
         end,
-        event = 'VimEnter'
-    }
-    use {
-        'goolord/alpha-nvim',
-        config = [[require('config.alpha')]]
+        event = 'InsertEnter'
     }
 
+    use {
+        'goolord/alpha-nvim',
+        config = [[require('config.alpha')]],
+    }
+    use {
+        'ojroques/nvim-bufdel',
+        config = function()
+            require 'bufdel'.setup({
+                quit = true,
+                next = 'tabs'
+            })
+        end,
+        event = 'VimEnter'
+    }
     ----------------------------------------
     ---------- filer and terminal ----------
     ----------------------------------------
@@ -148,6 +156,12 @@ require 'packer'.startup(function()
     }
     use {
         'nvim-telescope/telescope-file-browser.nvim',
+        cmd = 'Telescope',
+    }
+    use {
+        'akinsho/toggleterm.nvim',
+        tag = "*",
+        config = [[require('config.term')]],
         event = 'VimEnter'
     }
 end)

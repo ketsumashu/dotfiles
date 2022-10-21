@@ -1,86 +1,148 @@
 [character]
-success_symbol = "[❯](bold fg:#babbf1)"
-error_symbol = "[❯](bold fg:#e78284)"
+success_symbol = "[>](bold fg:#cdb6dd)"
+error_symbol = "[x](bold fg:#d59076)"
 
 [time]
 disabled = false
 style = "bold blue"
 format = "[$time]($style) "
 
-[aws]
-symbol = "  "
+[git_commit]
+tag_symbol = " tag "
 
-[buf]
-symbol = ""
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+[aws]
+symbol = "aws "
+
+[bun]
+symbol = "bun "
 
 [c]
-symbol = " "
+symbol = "C "
+
+[cobol]
+symbol = "cobol "
 
 [conda]
-symbol = " "
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
 
 [dart]
-symbol = " "
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
 
 [directory]
-read_only = " "
+read_only = " ro"
 
 [docker_context]
-symbol = " "
+symbol = "docker "
 
 [elixir]
-symbol = " "
+symbol = "exs "
 
 [elm]
-symbol = " "
+symbol = "elm "
 
 [git_branch]
-symbol = " "
+symbol = "git "
 
 [golang]
-symbol = " "
-
-[haskell]
-symbol = " "
+symbol = "go "
 
 [hg_branch]
-symbol = " "
+symbol = "hg "
 
 [java]
-symbol = " "
+symbol = "java "
 
 [julia]
-symbol = " "
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
 
 [lua]
-symbol = " "
-
-[memory_usage]
-symbol = ""
-
-[nim]
-symbol = ""
-
-[nix_shell]
-symbol = " "
+symbol = "lua "
 
 [nodejs]
-symbol = " "
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[meson]
+symbol = "meson "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
 
 [package]
-symbol = "ﰮ"
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
 
 [python]
-symbol = ""
+symbol = "py "
 
-[rlang]
-symbol = "ﳒ "
+[raku]
+symbol = "raku "
 
 [ruby]
-symbol = " "
+symbol = "rb "
 
 [rust]
-symbol = " "
+symbol = "rs "
+
+[scala]
+symbol = "scala "
 
 [spack]
-symbol = "🅢 "
+symbol = "spack "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
+
+[terraform]
+symbol = "terraform "
+
+[zig]
+symbol = "zig "
+

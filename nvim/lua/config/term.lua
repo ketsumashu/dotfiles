@@ -1,12 +1,10 @@
-require("toggleterm").setup {
-    start_insert = true,
-    terminal_mappings = false,
-    auto_chdir = true,
-    auto_scroll = true,
-    close_on_exit = true,
-    shading_factor = 2,
+require 'toggleterm'.setup({
+    size = 20,
+    autochdir = true,
     hide_numbers = true,
-    open_mapping = [[@t]],
-    shell = '/usr/bin/fish -l',
     direction = 'float',
-}
+    shell = 'fish -l',
+    start_in_insert = true,
+    insert_mappings = false,
+    terminal_mappings = true,
+})

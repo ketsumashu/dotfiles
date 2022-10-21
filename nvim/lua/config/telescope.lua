@@ -17,8 +17,7 @@ require("telescope").setup {
             preview_cutoff = 120,
         },
         winblend = 0,
-        color_devicons = true,
-        --set_env = { ["COLORTERM"] = "truecolor" },
+        set_env = { ["COLORTERM"] = "truecolor" },
         mappings = {
             ["n"] = {
                 ["q"] = actions.close
@@ -27,19 +26,22 @@ require("telescope").setup {
         file_ignore_patterns = {
             "tmp",
             ".git",
+            ".rustup",
+            ".npm",
         }
     },
     pickers = {
         find_files = {
-            hidden = true
+            hidden = true,
+            disable_devicons = true,
         }
     },
     extensions = {
         file_browser = {
             theme = "dropdown",
             hidden = true,
-            -- disables netrw and use telescope-file-browser in its place
-            hijack_netrw = false,
+            hijack_netrw = true,
+            disable_devicons = true,
             mappings = {
                 ["i"] = {
                 },

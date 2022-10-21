@@ -1,10 +1,10 @@
 :root {
     /* Generic */
-    --tridactyl-font-family: Cozette,mplus12;
-    --tridactyl-font-family-sans: Cozette,mplus12;
-    --tridactyl-font-size: 10pt;
+    --tridactyl-font-family: TerminessTTF Nerd Font,mplus12;
+    --tridactyl-font-family-sans: TerminessTTF Nerd Font,mplus12;
+    --tridactyl-font-size: 12px;
     --tridactyl-small-font-size: 12px;
-    --tridactyl-bg: #303446;
+    --tridactyl-bg: #191c25;
     --tridactyl-fg: #babbf1;
     --tridactyl-logo: url("moz-extension://__MSG_@@extension_id__/static/logo/Tridactyl_64px.png");
     --tridactyl-scrollbar-color: auto;
@@ -14,7 +14,7 @@
     --tridactyl-status-font-size: var(--tridactyl-small-font-size);
     --tridactyl-status-bg: var(--tridactyl-bg);
     --tridactyl-status-fg: var(--tridactyl-fg);
-    --tridactyl-status-border: 1px #303446 solid;
+    --tridactyl-status-border: 1px #191c25 solid;
     --tridactyl-status-border-radius: 0px;
 
     /* Search highlight */
@@ -26,7 +26,7 @@
     --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
     --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
     --tridactyl-hintspan-font-weight: bold;
-    --tridactyl-hintspan-fg: #303446;
+    --tridactyl-hintspan-fg: #191c25;
     --tridactyl-hintspan-bg: #8caaee;
     --tridactyl-hintspan-border-color: ButtonShadow;
     --tridactyl-hintspan-border-width: 0px;
@@ -34,10 +34,9 @@
     --tridactyl-hintspan-js-background: rgba(76, 86, 106, 0);
 
     /* Element highlights */
-    --tridactyl-hint-active-fg: #303446;
+    --tridactyl-hint-active-fg: #191c25;
     --tridactyl-hint-active-bg: rgba(76, 86, 106, 1);
     --tridactyl-hint-active-outline: 1px solid #5e81ac;
-
     --tridactyl-hint-bg: rgba(129, 161, 193, 0);
     --tridactyl-hint-outline: 1px solid #8caaee;
 
@@ -51,16 +50,16 @@
     --tridactyl-cmdl-bg: var(--tridactyl-bg);
     --tridactyl-cmdl-fg: var(--tridactyl-fg);
     --tridactyl-cmdl-line-height: 1.5;
-    --tridactyl-cmdl-font-family: Cozette,mplus12;
-    --tridactyl-cmdl-font-size: 10pt;
+    --tridactyl-cmdl-font-family: TerminessTTF Nerd Font,mplus12;
+    --tridactyl-cmdl-font-size: 12px;
 
     /*completions*/
 
-    --tridactyl-cmplt-option-height: 1.2em;
+    --tridactyl-cmplt-option-height: 1.24em;
     --tridactyl-cmplt-fg: var(--tridactyl-fg);
     --tridactyl-cmplt-bg: var(--tridactyl-bg);
-    --tridactyl-cmplt-font-size: 10pt;
-    --tridactyl-cmplt-font-family: Cozette, mplus12;
+    --tridactyl-cmplt-font-size: 14px;
+    --tridactyl-cmplt-font-family: TerminessTTF Nerd Font, mplus12;
     /* i don't think 0.5px is redered */
     --tridactyl-cmplt-border-top: 1px solid grey;
 
@@ -73,9 +72,9 @@
 
     /*sectionHeader*/
 
-    --tridactyl-header-first-bg: #303446;
-    --tridactyl-header-second-bg: #303446;
-    --tridactyl-header-third-bg: #303446;
+    --tridactyl-header-first-bg: #191c25;
+    --tridactyl-header-second-bg: #191c25;
+    --tridactyl-header-third-bg: #191c25;
 
 
     --tridactyl-header-font-size: inherit;
@@ -92,7 +91,7 @@
 
     /*option focused*/
 
-    --tridactyl-of-fg: #303446;
+    --tridactyl-of-fg: #191c25;
     --tridactyl-of-bg: #8caaee;
 
     /*new tab spoiler box*/
