@@ -88,12 +88,6 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  catppucin = {
-    config = { "require('config.colorscheme')" },
-    loaded = true,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/catppucin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-cmdline"] = {
     after_files = { "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
     load_after = {
@@ -129,11 +123,6 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["hop.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bhop\frequire\0" },
     loaded = false,
@@ -151,12 +140,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["lualine.nvim"] = {
-    config = { "require('config.lualine')" },
-    loaded = true,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -176,8 +159,16 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-bufdel"] = {
+    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\tquit\2\tnext\ttabs\nsetup\vbufdel\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/nvim-bufdel",
+    url = "https://github.com/ojroques/nvim-bufdel"
+  },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp-cmdline", "cmp_luasnip" },
+    after = { "cmp-cmdline", "cmp_luasnip", "cmp-path" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -187,6 +178,7 @@ _G.packer_plugins = {
     wants = { "LuaSnip" }
   },
   ["nvim-lspconfig"] = {
+    config = { "require('config.lspservers')" },
     loaded = true,
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
@@ -199,11 +191,6 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -215,13 +202,16 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["poimandres.nvim"] = {
-    config = { "require('config.colorscheme')" },
-    loaded = true,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
-    url = "https://github.com/olivercederborg/poimandres.nvim"
+  ["substrata.nvim"] = {
+    config = { "\27LJ\2\nº\2\0\0\3\0\v\0\0296\0\0\0009\0\1\0+\1\1\0=\1\2\0006\0\0\0009\0\1\0+\1\1\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\0\0009\0\1\0+\1\1\0=\1\5\0006\0\0\0009\0\1\0+\1\1\0=\1\6\0006\0\0\0009\0\1\0'\1\b\0=\1\a\0006\0\0\0009\0\t\0'\2\n\0B\0\2\1K\0\1\0\26colorscheme substrata\bcmd\rbrighter\22substrata_variant\31substrata_italic_variables\30substrata_italic_comments\30substrata_italic_booleans\30substrata_italic_keywords\31substrata_italic_functions\6g\bvim\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/substrata.nvim",
+    url = "https://github.com/kvrohit/substrata.nvim"
   },
   ["telescope-file-browser.nvim"] = {
+    commands = { "Telescope" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -236,6 +226,14 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    config = { "require('config.term')" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   }
 }
 
@@ -268,36 +266,28 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: catppucin
-time([[Config for catppucin]], true)
-require('config.colorscheme')
-time([[Config for catppucin]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config.alpha')
 time([[Config for alpha-nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config.lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: poimandres.nvim
-time([[Config for poimandres.nvim]], true)
-require('config.colorscheme')
-time([[Config for poimandres.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require('config.lspservers')
+time([[Config for nvim-lspconfig]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Telescope lua require("packer.load")({'telescope.nvim'}, { cmd = "Telescope", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Telescope lua require("packer.load")({'telescope-file-browser.nvim', 'telescope.nvim'}, { cmd = "Telescope", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'LuaSnip', 'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-bufdel', 'toggleterm.nvim', 'substrata.nvim', 'hop.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'telescope-file-browser.nvim', 'hop.nvim', 'nvim-autopairs'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-cmp', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

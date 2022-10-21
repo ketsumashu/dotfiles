@@ -8,7 +8,7 @@
     fg-col2: #e78284;
     grey: #737994;
 
-    width: 600;
+    width: 320;
     font: "Cozette 10";
 }
 
@@ -39,7 +39,7 @@ prompt {
     background-color: @blue;
     padding: 6px;
     text-color: @bg-col;
-    border-radius: 3px;
+    border-radius: 0px;
     margin: 20px 0px 0px 20px;
 }
 
