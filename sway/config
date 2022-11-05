@@ -4,21 +4,21 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
-
+set $term alacritty
+set $menu tofi-run | xargs swaymsg exec --
 ### startups
 exec_always autotiling-rs
 exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/dotfiles/libskk/dict.yaskkserv2"
 exec "fcitx5 -rd"
 exec_always ~/.azotebg
 
-bindsym $mod+b exec firefox
+bindsym $mod+b exec "vivaldi-stable"
 bindsym $mod+ctrl+l exec swaylock
 
 gaps outer 2
 gaps inner 4
 default_border pixel 2
-font pango:DejaVu Sans Mono 0
+font pango:Noto Sans CJK JP 0
 titlebar_border_thickness 2
 titlebar_padding 2
 ### floating setting
@@ -40,7 +40,7 @@ exec swayidle -w \
 ### Input configuration
    input "16700:8195:Dell_Dell_USB_Keyboard" {
    	xkb_layout "jp"
-	repeat_delay 300
+	repeat_delay 400
 	repeat_rate 50
    }
 
@@ -58,7 +58,7 @@ exec swayidle -w \
     bindsym $mod+x kill
 
     # Start your launcher
-    bindsym $mod+Space exec "rofi -modi drun, -show drun"
+    bindsym $mod+Space exec $menu
 
     # mouse button for dragging.
     floating_modifier $mod normal
@@ -185,7 +185,7 @@ client.background       #d8dee9
 bar {
     position top
     status_command i3status-rs
-    font pango:TerminessTTF Nerd Font,mplus12,Blobmoji 12px
+    font pango:Terminus-ja,Blobmoji 12px
     tray_output none
     colors {
     	background #191c25

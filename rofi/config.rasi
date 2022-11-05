@@ -1,9 +1,9 @@
 configuration{
     modi: "drun";
-    icon-theme: "Tela";
+    icon-theme: "Adwaita";
     show-icons: false;
-    terminal: "wezterm";
-    drun-display-format: "{icon} {name}";
+    terminal: "foot";
+    drun-display-format: "{name}";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;

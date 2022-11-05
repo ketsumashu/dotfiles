@@ -1,7 +1,8 @@
 [theme]
-name = "nord-dark"
+name = "plain"
 [theme.overrides]
-separator = "   "
+separator = " "
+separator_bg = "#191c25"
 
 [icons]
 name = "none"

@@ -1,9 +1,9 @@
 :root {
     /* Generic */
-    --tridactyl-font-family: Terminus-jp;
-    --tridactyl-font-family-sans: Terminus-jp;
-    --tridactyl-font-size: 12px;
-    --tridactyl-small-font-size: 12px;
+    --tridactyl-font-family: TerminessTTF Nerd font,mplus12;
+    --tridactyl-font-family-sans: TerminessTTF Nerd font,mplus12;
+    --tridactyl-font-size: 13px;
+    --tridactyl-small-font-size: 13px;
     --tridactyl-bg: #191c25;
     --tridactyl-fg: #babbf1;
     --tridactyl-logo: url("moz-extension://__MSG_@@extension_id__/static/logo/Tridactyl_64px.png");
@@ -11,7 +11,7 @@
 
     /* Mode indicator */
     --tridactyl-status-font-family: var(--tridactyl-font-family);
-    --tridactyl-status-font-size: var(--tridactyl-small-font-size);
+    --tridactyl-status-font-size: var(--tridactyl-font-size);
     --tridactyl-status-bg: var(--tridactyl-bg);
     --tridactyl-status-fg: var(--tridactyl-fg);
     --tridactyl-status-border: 1px #191c25 solid;
@@ -50,16 +50,16 @@
     --tridactyl-cmdl-bg: var(--tridactyl-bg);
     --tridactyl-cmdl-fg: var(--tridactyl-fg);
     --tridactyl-cmdl-line-height: 1.5;
-    --tridactyl-cmdl-font-family: Terminus-jp;
-    --tridactyl-cmdl-font-size: 12px;
+    --tridactyl-cmdl-font-family: TerminessTTF Nerd font,mplus12;
+    --tridactyl-cmdl-font-size: 13px;
 
     /*completions*/
 
     --tridactyl-cmplt-option-height: 1.24em;
     --tridactyl-cmplt-fg: var(--tridactyl-fg);
     --tridactyl-cmplt-bg: var(--tridactyl-bg);
-    --tridactyl-cmplt-font-size: 12px;
-    --tridactyl-cmplt-font-family: TerminessTTF Nerd Font, mplus12;
+    --tridactyl-cmplt-font-size: 13px;
+    --tridactyl-cmplt-font-family: TerminessTTF Nerd font,mplus12;
     /* i don't think 0.5px is redered */
     --tridactyl-cmplt-border-top: 0.5px solid grey;
 

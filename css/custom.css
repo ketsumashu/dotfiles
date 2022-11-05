@@ -1,0 +1,13 @@
+#header {
+  min-height: auto;
+}
+
+#header > .tabless > .window-buttongroup {
+  visibility: collapse;
+}
+
+* {
+    font-family: Terminus-ja;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
