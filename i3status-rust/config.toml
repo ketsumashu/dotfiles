@@ -42,7 +42,7 @@ idle_fg = "#77adb1"
 
 [[block]]
 block = "net"
-device = "eno1"
+device = "wlan0"
 format = "{speed_down;M*b} / {speed_up;M*b}"
 interval = 1
 [block.theme_overrides]

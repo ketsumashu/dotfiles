@@ -5,7 +5,7 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu tofi-run | xargs swaymsg exec --
+set $menu bemenu-run --fn 'Terminus-ja 10'
 ### startups
 exec_always autotiling-rs
 exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/dotfiles/libskk/dict.yaskkserv2"
@@ -27,7 +27,8 @@ for_window [class="fcitx5-config-qt"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
 
 ### Output configuration
-# output HDMI-A-2 resolution 1920x1080 position 1920,0
+output DP-1 resolution 3840x2160 position 3840,0 scale 2
+output HDMI-A-2 resolution 2560x1440
 
 ### Idle configuration
 exec swayidle -w \
