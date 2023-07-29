@@ -168,7 +168,7 @@ _G.packer_plugins = {
     url = "https://github.com/ojroques/nvim-bufdel"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-cmdline", "cmp-path", "cmp_luasnip" },
+    after = { "cmp-path", "cmp-cmdline", "cmp_luasnip" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -281,7 +281,7 @@ pcall(vim.api.nvim_create_user_command, 'Telescope', function(cmdargs)
           require('packer.load')({'telescope-file-browser.nvim', 'telescope.nvim'}, { cmd = 'Telescope', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'telescope-file-browser.nvim', 'telescope.nvim'}, { cmd = 'Telescope' }, _G.packer_plugins)
+          require('packer.load')({'telescope-file-browser.nvim', 'telescope.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('Telescope ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
@@ -290,9 +290,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-bufdel', 'hop.nvim', 'substrata.nvim', 'toggleterm.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp', 'nvim-autopairs', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'toggleterm.nvim', 'substrata.nvim', 'hop.nvim', 'nvim-bufdel'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'LuaSnip', 'nvim-cmp', 'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")

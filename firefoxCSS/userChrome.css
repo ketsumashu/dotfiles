@@ -1,34 +1,59 @@
-#sidebar-header {
-  visibility: collapse;
+/* Title bar */
+.titlebar-buttonbox {
+    display: none !important;
 }
 
-:root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) #nav-bar {
-  max-height: 3;
-  min-height: 0!important;
-  --tridactyl-auto-show-zone: 10px;
-  margin-bottom: calc(-1 * var(--tridactyl-auto-show-zone));
-  opacity: 0;
+.titlebar-spacer {
+    display: none !important;
 }
 
-:root:not([customizing]) #navigator-toolbox:not(:hover):not(:focus-within) {
-  max-height: 3px;
-  min-height: calc(0px);
-  overflow: hidden;
-}
-
-#navigator-toolbox::after {
-  display: none !important;
-}
-
-#titlebar {
-  display: none !important;
+/* Tab bar */
+#navigator-toolbox {
+    border: 0px !important;
 }
 
 #TabsToolbar {
-  visibility: collapse;
+    margin-left: 40vw !important;
 }
 
-#statuspanel {
-  right: 0;
-  display: inline;
+/* Nav bar*/
+#nav-bar {
+    background: transparent !important;
+    margin-right: 60vw !important;
+    margin-top: -36px !important;
+}
+
+/* URL bar */
+#back-button {
+    display: none !important;
+}
+
+#forward-button {
+    display: none !important;
+}
+
+#tracking-protection-icon-container {
+    display: none !important;
+}
+
+#urlbar-container {
+    width: auto !important;
+}
+
+#urlbar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#urlbar[breakout-extend] {
+    width: 100vw !important;
+}
+
+#page-action-buttons {
+    display: none !important;
+}
+
+#PanelUI-button {
+    display: none !important;
 }

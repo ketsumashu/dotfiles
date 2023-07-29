@@ -1,17 +1,15 @@
 [theme]
-name = "plain"
+theme = "plain"
 [theme.overrides]
 separator = " "
 separator_bg = "#191c25"
 
 [icons]
-name = "none"
+icons = "none"
 
 [[block]]
 block = "focused_window"
-format = "{combo}"
-max_width = 50
-show_marks = "all"
+format = " $title.str(max_w:100) | "
 [block.theme_overrides]
 idle_bg = "#191c25"
 idle_fg = "#cdb6dd"
@@ -24,13 +22,13 @@ idle_fg = "#cdb6dd"
 #idle_bg = "#191c25"
 #idle_fg = "#77adb1"
 
-[[block]]
-block = "custom"
-command = "/home/mashu/bin/cpuusage"
-interval = 2
-[block.theme_overrides]
-idle_bg = "#191c25"
-idle_fg = "#77adb1"
+#[[block]]
+#block = "custom"
+#command = "/home/mashu/bin/cpuusage"
+#interval = 2
+#[block.theme_overrides]
+#idle_bg = "#191c25"
+#idle_fg = "#77adb1"
 
 [[block]]
 block = "custom"
@@ -41,9 +39,23 @@ idle_bg = "#191c25"
 idle_fg = "#77adb1"
 
 [[block]]
+block = "temperature"
+format = "$average avg, $max max"
+chip = "k10temp-pci-00c3"
+[block.theme_overrides]
+idle_bg = "#191c25"
+idle_fg = "#77adb1"
+good_bg = "#191c25"
+good_fg = "#77adb1"
+info_bg = "#191c25"
+info_fg = "#77adb1"
+warning_bg = "#191c25"
+interval = 1
+
+[[block]]
 block = "net"
 device = "wlan0"
-format = "{speed_down;M*b} / {speed_up;M*b}"
+format = " $speed_down.eng(prefix:M)/$speed_up.eng(prefix:M) "
 interval = 1
 [block.theme_overrides]
 idle_bg = "#191c25"
@@ -51,17 +63,16 @@ idle_fg = "#77adb1"
 
 [[block]]
 block = "sound"
-on_click = "pavucontrol"
-format = "{volume}"
+show_volume_when_muted = true
+format = " {$volume.eng(w:2)} "
 [block.theme_overrides]
 idle_bg = "#191c25"
 idle_fg = "#94cdd1"
 
 [[block]]
 block = "time"
-format = "%a %m/%d %H:%M:%S"
+format = " $timestamp.datetime(f:%X) "
 interval = 1
-locale = "en_GB"
 [block.theme_overrides]
 idle_bg = "#191c25"
 idle_fg = "#889bb4"

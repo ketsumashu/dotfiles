@@ -1,0 +1,95 @@
+// Originally from: https://github.com/ketsumashu/dots/blob/master/waybar/config
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 16, // Waybar height (to be removed for auto height)
+    //  "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "memory", "temperature", "network", "clock", "tray"],
+    // Modules configuration
+     "sway/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "current-only": false,
+         //"format": "{icon}",
+         "format-icons": {
+             "1": "BRO",
+             "2": "GAM",
+             "3": "DSC",
+             "4": "WRK2",
+             "5": "WRK3",
+             "6": "WRK4",
+             "7": "WRK5",
+             //"urgent": "",
+             //"focused": "",
+             //"default": ""
+         }
+         // TODO: have option showing which workspaces have fullscreen, and which have audio playing (audio seems a lot harder)
+     },
+    "sway/mode": {
+        "format": " {} "
+    },
+    "sway/workspaces": {
+        "format": "{icon}",
+    },
+    "sway/window": {
+        "max-length": 49
+    },
+
+    "temperature":{
+        "format": "TEMP {temperatureC}°C",
+        "hwmon-path":"/sys/class/hwmon/hwmon1/temp3_input"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 5
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        // TODO: add date/time to tooltip
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+       // "format-alt": "{:%Y-%m-%d}"
+	  "interval": 1,
+          "format": " {:%X}",
+          "max-length": 25
+    },
+
+    "network": {
+        "interface": "enp2s0",
+        "interval": 1,
+        "format": "NET {bandwidthDownBits} / {bandwidthUpBits}",
+        "format-disconnected": "OFFLINE",
+        "tooltip-format": "{ifname}: {ipaddr}",
+    },
+
+    "memory": {
+       // "format": "{}% "
+          "format": "MEM {used:0.1f}G/{total:0.1f}G",
+          "interval": 5,
+          "on-click": "alacritty -e bottom"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "VOL {volume}% {format_source}",
+        "format-bluetooth": "VOL {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "MUTED {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+

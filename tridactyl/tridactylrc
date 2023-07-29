@@ -11,7 +11,7 @@ set newtab about:blank
 set smoothscroll true
 set editorcmd foot -e nvim %f
 set homepages.0 about:blank
-set profiledir /home/mashu/.mozilla/firefox/dyd2i8g9.default-release
+set profiledir /home/mashu/.mozilla/firefox/c3zq9og2.default-release/
 
 " Binds
 bind J tabnext

@@ -5,14 +5,17 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu bemenu-run --fn 'Terminus-ja 10'
+set $menu "rofi -show drun"
 ### startups
 exec_always autotiling-rs
-exec "/home/mashu/bin/yaskkserv2 --google-suggest /home/mashu/dotfiles/libskk/dict.yaskkserv2"
-exec "fcitx5 -rd"
 exec_always ~/.azotebg
-
-bindsym $mod+b exec "vivaldi-stable"
+exec "yaskkserv2 --google-suggest ~/dotfiles/libskk/dict.yaskkserv2"
+exec "fcitx5 -rd"
+exec "discord --start-minimized"
+exec sway-audio-idle-inhibit
+exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+bindsym $mod+b exec firefox
 bindsym $mod+ctrl+l exec swaylock
 
 gaps outer 2
@@ -24,11 +27,25 @@ titlebar_padding 2
 ### floating setting
 for_window [app_id="pavucontrol"] floating enable
 for_window [class="fcitx5-config-qt"] floating enable
-for_window [title="Firefox — Sharing Indicator"] floating enable
+for_window [title="Firefox — Sharing Indicator"] kill
+for_window [title="Firefox — Sharing Indicator"] kill
+for_window [title = "About Mozilla Firefox"] floating enable
+for_window [window_role = "About"] floating enable
+for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
 
+for_window [class="^steam$" title="^Friends$"] floating enable
+for_window [class="^steam$" title="Steam - News"] floating enable
+for_window [class="^steam$" title=".* - Chat"] floating enable
+for_window [class="^steam$" title="^Settings$"] floating enable
+for_window [class="^steam$" title=".* - event started"] floating enable
+for_window [class="^steam$" title=".* CD key"] floating enable
+for_window [class="^steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
 ### Output configuration
-output DP-1 resolution 3840x2160 position 3840,0 scale 2
-output HDMI-A-2 resolution 2560x1440
+output DP-1 resolution 3840x2160 position 3840,0 scale 1
+output HDMI-A-1 resolution 1920x1080@74.973Hz scale 1
 
 ### Idle configuration
 exec swayidle -w \
@@ -39,7 +56,7 @@ exec swayidle -w \
 
 
 ### Input configuration
-   input "16700:8195:Dell_Dell_USB_Keyboard" {
+   input "*" {
    	xkb_layout "jp"
 	repeat_delay 400
 	repeat_rate 50
@@ -183,22 +200,23 @@ client.background       #d8dee9
 #
 # Status Bar:
 #
-bar {
-    position top
-    status_command i3status-rs
-    font pango:Terminus-ja,Blobmoji 12px
-    tray_output none
-    colors {
-    	background #191c25
-    	statusline #D8DEE9
-    	separator  #666666
-
-    	focused_workspace  #191c25 #191c25 #889bb4
-    	active_workspace   #191c25 #191c25 #BBFBF1
-    	inactive_workspace #191c25 #191c25 #D8DEE9
-    	urgent_workspace   #BF616A #BF616A #191c25
-    	binding_mode       #2E3440 #BF616A #191c25
-    }
-}
+#bar {
+#    position top
+#    status_command waybar
+#    font pango:Fira Code,Blobmoji 12px
+#    tray_output *
+#    colors {
+#    	background #191c25
+#    	statusline #D8DEE9
+#    	separator  #666666
+#
+#    	focused_workspace  #191c25 #191c25 #889bb4
+#    	active_workspace   #191c25 #191c25 #BBFBF1
+#    	inactive_workspace #191c25 #191c25 #D8DEE9
+#    	urgent_workspace   #BF616A #BF616A #191c25
+#    	binding_mode       #2E3440 #BF616A #191c25
+#    }
+#}
+bar swaybar_command waybar
 
 include /etc/sway/config.d/*

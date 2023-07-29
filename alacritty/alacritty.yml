@@ -2,12 +2,12 @@
     padding:
       x: 10
       y: 5
-    opacity: 1
+    opacity: 0.9
 
   font:
     normal:
-      family: Terminus-ja
-    size: 11.0
+      family: Fira Code
+    size: 12.0
     builtin_box_drawing: true
     offset:
       x: 0
