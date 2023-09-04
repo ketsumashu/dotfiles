@@ -6,42 +6,26 @@
     //  "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["wlr/workspaces", "sway/mode"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "memory", "temperature", "network", "clock", "tray"],
     // Modules configuration
-     "sway/workspaces": {
-         "disable-scroll": false,
-         "all-outputs": true,
-         "current-only": false,
-         //"format": "{icon}",
-         "format-icons": {
-             "1": "BRO",
-             "2": "GAM",
-             "3": "DSC",
-             "4": "WRK2",
-             "5": "WRK3",
-             "6": "WRK4",
-             "7": "WRK5",
-             //"urgent": "",
-             //"focused": "",
-             //"default": ""
-         }
-         // TODO: have option showing which workspaces have fullscreen, and which have audio playing (audio seems a lot harder)
-     },
     "sway/mode": {
         "format": " {} "
     },
-    "sway/workspaces": {
+    "wlr/workspaces": {
         "format": "{icon}",
+        "on-scroll-up"  : "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1"
     },
-    "sway/window": {
+    "hyprland/window": {
         "max-length": 49
     },
 
     "temperature":{
         "format": "TEMP {temperatureC}°C",
-        "hwmon-path":"/sys/class/hwmon/hwmon1/temp3_input"
+        "hwmon-path":"/sys/class/hwmon/hwmon2/temp1_input",
+        "interval": 1,
     },
 
     "tray": {
@@ -69,8 +53,8 @@
     "memory": {
        // "format": "{}% "
           "format": "MEM {used:0.1f}G/{total:0.1f}G",
-          "interval": 5,
-          "on-click": "alacritty -e bottom"
+          "interval": 1,
+          "on-click": "wezterm start btop"
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mashu/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mashu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/mashu/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/mashu/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mashu/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -88,6 +88,16 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["cmp-buffer"] = {
+    after_files = { "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-cmdline"] = {
     after_files = { "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
     load_after = {
@@ -113,6 +123,16 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-skkeleton"] = {
+    after_files = { "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-skkeleton/after/plugin/cmp_skkeleton.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp-skkeleton",
+    url = "https://github.com/rinx/cmp-skkeleton"
+  },
   cmp_luasnip = {
     after_files = { "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
     load_after = {
@@ -122,6 +142,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["denops.vim"] = {
+    loaded = true,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/denops.vim",
+    url = "https://github.com/vim-denops/denops.vim"
   },
   ["hop.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bhop\frequire\0" },
@@ -160,7 +185,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-bufdel"] = {
-    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\tnext\ttabs\tquit\2\nsetup\vbufdel\frequire\0" },
+    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\tquit\2\tnext\ttabs\nsetup\vbufdel\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -168,7 +193,7 @@ _G.packer_plugins = {
     url = "https://github.com/ojroques/nvim-bufdel"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp_luasnip", "cmp-cmdline" },
+    after = { "cmp_luasnip", "cmp-skkeleton", "cmp-path", "cmp-buffer", "cmp-cmdline" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -202,6 +227,20 @@ _G.packer_plugins = {
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  skkeleton = {
+    after = { "cmp-skkeleton" },
+    config = { "\27LJ\2\n˜\5\0\0\4\0\5\0\r6\0\0\0009\0\1\0009\0\2\0'\2\3\0+\3\1\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\4\0+\3\1\0B\0\3\1K\0\1\0]                call skkeleton#register_keymap('input', ';', 'henkanPoint')\n            õ\3                call skkeleton#config({\n                    \\  'eggLikeNewline': v:true,\n                    \\  'useSkkServer': v:true,\n                    \\  'markerHenkan': \">\",\n                    \\  'markerHenkanSelect': \">>\",\n                    \\  'globalJisyo': \"/home/mashu/dotfiles/libskk/SKK-JISYO.L\",\n                    \\  'showCandidatesCount': 2,\n                    \\  'registerConvertResult': v:true,\n                    \\  'keepState': v:true\n                    \\})\n            \14nvim_exec\bapi\bvim\0" },
+    loaded = true,
+    only_config = true,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/skkeleton",
+    url = "https://github.com/vim-skk/skkeleton"
+  },
+  ["skkeleton_indicator.nvim"] = {
+    config = { "\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\16hankanaText\bhkn\reijiText\aen\rkataText\akt\16hankataText\bhkt\16zenkakuText\b2en\rhiraText\akn\nsetup\24skkeleton_indicator\frequire\0" },
+    loaded = true,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/skkeleton_indicator.nvim",
+    url = "https://github.com/delphinus/skkeleton_indicator.nvim"
+  },
   ["substrata.nvim"] = {
     config = { "\27LJ\2\nà\2\0\0\3\0\f\0!6\0\0\0009\0\1\0+\1\1\0=\1\2\0006\0\0\0009\0\1\0+\1\1\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\0\0009\0\1\0+\1\1\0=\1\5\0006\0\0\0009\0\1\0+\1\1\0=\1\6\0006\0\0\0009\0\1\0+\1\2\0=\1\a\0006\0\0\0009\0\1\0'\1\t\0=\1\b\0006\0\0\0009\0\n\0'\2\v\0B\0\2\1K\0\1\0\26colorscheme substrata\bcmd\rbrighter\22substrata_variant\26substrata_transparent\31substrata_italic_variables\30substrata_italic_comments\30substrata_italic_booleans\30substrata_italic_keywords\31substrata_italic_functions\6g\bvim\0" },
     loaded = false,
@@ -211,11 +250,8 @@ _G.packer_plugins = {
     url = "https://github.com/kvrohit/substrata.nvim"
   },
   ["telescope-file-browser.nvim"] = {
-    commands = { "Telescope" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/mashu/.local/share/nvim/site/pack/packer/opt/telescope-file-browser.nvim",
+    loaded = true,
+    path = "/home/mashu/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
@@ -266,22 +302,30 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require('config.lspservers')
-time([[Config for nvim-lspconfig]], false)
+-- Config for: skkeleton
+time([[Config for skkeleton]], true)
+try_loadstring("\27LJ\2\n˜\5\0\0\4\0\5\0\r6\0\0\0009\0\1\0009\0\2\0'\2\3\0+\3\1\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\4\0+\3\1\0B\0\3\1K\0\1\0]                call skkeleton#register_keymap('input', ';', 'henkanPoint')\n            õ\3                call skkeleton#config({\n                    \\  'eggLikeNewline': v:true,\n                    \\  'useSkkServer': v:true,\n                    \\  'markerHenkan': \">\",\n                    \\  'markerHenkanSelect': \">>\",\n                    \\  'globalJisyo': \"/home/mashu/dotfiles/libskk/SKK-JISYO.L\",\n                    \\  'showCandidatesCount': 2,\n                    \\  'registerConvertResult': v:true,\n                    \\  'keepState': v:true\n                    \\})\n            \14nvim_exec\bapi\bvim\0", "config", "skkeleton")
+time([[Config for skkeleton]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config.alpha')
 time([[Config for alpha-nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require('config.lspservers')
+time([[Config for nvim-lspconfig]], false)
+-- Config for: skkeleton_indicator.nvim
+time([[Config for skkeleton_indicator.nvim]], true)
+try_loadstring("\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\16hankanaText\bhkn\reijiText\aen\rkataText\akt\16hankataText\bhkt\16zenkakuText\b2en\rhiraText\akn\nsetup\24skkeleton_indicator\frequire\0", "config", "skkeleton_indicator.nvim")
+time([[Config for skkeleton_indicator.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
 pcall(vim.api.nvim_create_user_command, 'Telescope', function(cmdargs)
-          require('packer.load')({'telescope.nvim', 'telescope-file-browser.nvim'}, { cmd = 'Telescope', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+          require('packer.load')({'telescope.nvim'}, { cmd = 'Telescope', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'telescope.nvim', 'telescope-file-browser.nvim'}, {}, _G.packer_plugins)
+          require('packer.load')({'telescope.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('Telescope ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
@@ -290,10 +334,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-cmp', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'substrata.nvim', 'hop.nvim', 'toggleterm.nvim', 'nvim-bufdel'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp', 'nvim-autopairs', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'hop.nvim', 'substrata.nvim', 'toggleterm.nvim', 'nvim-bufdel'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

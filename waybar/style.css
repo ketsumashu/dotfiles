@@ -3,7 +3,7 @@
     border: none;
     /* `otf-font-awesome` is required to be installed for icons */
     border-radius: 0px;
-    font-family: "Fira Code";
+    font-family: "CozetteHiDpi","mplus12";
     font-size: 13px;
     min-height: 0;
     margin: 1.4px;
@@ -54,7 +54,7 @@ window#waybar.chromium {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: #191c25;
     color: #659ea2;
 }
@@ -67,7 +67,7 @@ window#waybar.chromium {
 #mode {
     background-color: #cf8164;
     color: #191c25;
-    font-weight:bold;
+    /*font-weight:bold;*/
     margin: 0 4px;
 }
 
@@ -79,13 +79,13 @@ window#waybar.chromium {
     padding: 0 10px;
     background-color:#191c25;
     color:#a18daf;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 
 #window{
     background-color:#191c25;
     color:#b5b4c9;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 #workspaces {
     margin: 0 4px;
@@ -104,7 +104,7 @@ window#waybar.chromium {
 #clock {
     /*background-color: #f5f5f5;*/
     color: #659ea2;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 @keyframes blink {
@@ -126,7 +126,6 @@ label:focus {
 #pulseaudio {
     /*background-color: #f5f5f5;*/
     color: #a18daf;
-    font-weight: bold;
 }
 
 #pulseaudio.muted {

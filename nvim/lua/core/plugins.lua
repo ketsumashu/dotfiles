@@ -68,8 +68,10 @@ require 'packer'.startup(function()
         'hrsh7th/nvim-cmp',
         requires = {
             { 'hrsh7th/cmp-path', after = 'nvim-cmp', },
+            { 'hrsh7th/cmp-buffer', after = 'nvim-cmp', },
             { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp', },
             { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
+            { 'rinx/cmp-skkeleton', after = {'nvim-cmp', 'skkeleton'} },
             'hrsh7th/cmp-nvim-lsp',
         },
         config = [[require('config.cmp')]],
@@ -83,7 +85,42 @@ require 'packer'.startup(function()
             require 'luasnip.loaders.from_vscode'.lazy_load()
         end,
     }
-
+    use {
+        'vim-skk/skkeleton',
+        requires = {
+            'vim-denops/denops.vim'
+        },
+        config = function()
+            vim.api.nvim_exec([[
+                call skkeleton#config({
+                    \  'eggLikeNewline': v:true,
+                    \  'useSkkServer': v:true,
+                    \  'markerHenkan': ">",
+                    \  'markerHenkanSelect': ">>",
+                    \  'globalJisyo': "/home/mashu/dotfiles/libskk/SKK-JISYO.L",
+                    \  'showCandidatesCount': 2,
+                    \  'registerConvertResult': v:true,
+                    \  'keepState': v:true
+                    \})
+            ]], false)
+            vim.api.nvim_exec([[
+                call skkeleton#register_keymap('input', ';', 'henkanPoint')
+            ]], false)
+        end,
+    }
+    use{
+        'delphinus/skkeleton_indicator.nvim',
+        config = function ()
+            require 'skkeleton_indicator'.setup({
+                eijiText = "en",
+                hiraText = "kn",
+                kataText = "kt",
+                hankataText = "hkt",
+                hankanaText = "hkn",
+                zenkakuText = "2en",
+            })
+        end,
+    }
     ---------------------------------
     ---------- appearances ----------
     ---------------------------------
@@ -149,7 +186,7 @@ require 'packer'.startup(function()
     ---------- filer and terminal ----------
     ----------------------------------------
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
         requires = { 'nvim-lua/plenary.nvim' },
         config = [[require('config.telescope')]],
         cmd = 'Telescope',
@@ -157,7 +194,6 @@ require 'packer'.startup(function()
     }
     use {
         'nvim-telescope/telescope-file-browser.nvim',
-        cmd = 'Telescope',
     }
     use {
         'akinsho/toggleterm.nvim',

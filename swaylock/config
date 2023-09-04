@@ -7,7 +7,7 @@ clock
 timestr=%I:%M %p
 indicator-caps-lock
 effect-vignette=0.2:0.2
-font=TerminessTTF Nerd Font
+font=CozettehiDpi
 font-size=32
 indicator-radius=130
 indicator-thickness=10

@@ -2,7 +2,7 @@ configuration{
     modi: "drun";
     icon-theme: "Adwaita";
     show-icons: false;
-    terminal: "alacritty";
+    terminal: "wezterm";
     drun-display-format: "{name}";
     location: 0;
     disable-history: false;
@@ -10,5 +10,6 @@ configuration{
     display-drun: " Apps ";
 }
 
-@theme "catppuccin-frappe"
+//@theme "catppuccin-frappe"
 
+@theme "/home/mashu/.local/share/rofi/themes/catppuccin-frappe.rasi"

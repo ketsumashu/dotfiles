@@ -58,3 +58,9 @@ keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 -- Insert --
 -- jj to esc
 keymap("i", "jj", "<ESC>", opts)
+
+-- activate SKK
+keymap("i", "<C-j>", "<Plug>(skkeleton-toggle)", opts)
+keymap("c", "<C-j>", "<Plug>(skkeleton-toggle)", opts)
+
+

@@ -9,7 +9,7 @@
     grey: #737994;
 
     width: 320;
-    font: "Cozette 10";
+    font: "Cozette 26";
 }
 
 element-text, element-icon , mode-switcher {

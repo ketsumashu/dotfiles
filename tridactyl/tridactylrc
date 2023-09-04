@@ -1,17 +1,13 @@
 " General Settings
-set update.lastchecktime 1663773550152
 set update.nag true
 set update.nagwait 7
-set update.lastnaggedversion 1.14.0
-set update.checkintervalsecs 86400
 set configversion 2.0
 set theme substrata
 colorscheme substrata
 set newtab about:blank
 set smoothscroll true
-set editorcmd foot -e nvim %f
+set editorcmd alacritty -e nvim %f
 set homepages.0 about:blank
-set profiledir /home/mashu/.mozilla/firefox/c3zq9og2.default-release/
 
 " Binds
 bind J tabnext
