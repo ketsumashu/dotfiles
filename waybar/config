@@ -1,31 +1,39 @@
 // Originally from: https://github.com/ketsumashu/dots/blob/master/waybar/config
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 16, // Waybar height (to be removed for auto height)
-    //  "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "position": "left", // Waybar position (top|bottom|left|right)
+    "height": 1440, // Waybar height (to be removed for auto height)
+    "width": 54, // Waybar width
+    "margin-right": 3,
+    "spacing": 30, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "sway/mode"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "memory", "temperature", "network", "clock", "tray"],
+    "modules-left": [],
+    "modules-center": ["hyprland/workspaces",],
+    "modules-right": ["hyprland/window","pulseaudio", "memory", "temperature", "clock", "tray"],
     // Modules configuration
     "sway/mode": {
         "format": " {} "
     },
-    "wlr/workspaces": {
-        "format": "{icon}",
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "all-outputs": false,
+        "persistent_workspaces" : {
+            "*": 6,
+        },
         "on-scroll-up"  : "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1"
     },
     "hyprland/window": {
-        "max-length": 49
+        "format": "{class}",
+        "max-length": 49,
+        "rotate": 270,
     },
 
     "temperature":{
-        "format": "TEMP {temperatureC}°C",
+        "format": "{temperatureC}°C",
         "hwmon-path":"/sys/class/hwmon/hwmon2/temp1_input",
         "interval": 1,
+        "rotate": 0,
     },
 
     "tray": {
@@ -38,30 +46,33 @@
           "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
        // "format-alt": "{:%Y-%m-%d}"
 	  "interval": 1,
-          "format": " {:%X}",
+          "format": "{:%H:%M}",
+        "rotate": 0,
           "max-length": 25
     },
 
     "network": {
         "interface": "enp2s0",
         "interval": 1,
-        "format": "NET {bandwidthDownBits} / {bandwidthUpBits}",
+        "format": "{bandwidthDownBits} \n{bandwidthUpBits}",
         "format-disconnected": "OFFLINE",
         "tooltip-format": "{ifname}: {ipaddr}",
+        "rotate": 0,
     },
 
     "memory": {
        // "format": "{}% "
-          "format": "MEM {used:0.1f}G/{total:0.1f}G",
+          "format": " {used:0.1f}G\n ---- \n{total:0.1f}G",
           "interval": 1,
-          "on-click": "wezterm start btop"
+          "on-click": "wezterm start btop",
+        "rotate": 0,
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
-        "format": "VOL {volume}% {format_source}",
-        "format-bluetooth": "VOL {volume}% {format_source}",
+        "format": " vol\n----\n {volume}%",
+        "format-bluetooth": "vol.{volume}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "MUTED {format_source}",
+        "format-muted": "MUTED",
         "format-source": "{volume}%",
         "format-source-muted": "",
         "format-icons": {
@@ -73,6 +84,7 @@
             "car": "",
             "default": ["", "", ""]
         },
+        "rotate": 0,
         "on-click": "pavucontrol"
     }
 }

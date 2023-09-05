@@ -1,3 +1,4 @@
+screenshots
 ignore-empty-password
 show-failed-attempts
 fade-in=0.25
@@ -5,18 +6,21 @@ daemonize
 indicator
 clock
 timestr=%I:%M %p
+datestr=
 indicator-caps-lock
-effect-vignette=0.2:0.2
+indicator-caps-lock
+effect-vignette=0.8:2
+effect-blur=10x3
 font=CozettehiDpi
-font-size=32
-indicator-radius=130
-indicator-thickness=10
+font-size=26
+indicator-radius=160
+indicator-thickness=5
 bs-hl-color=889bb4
-key-hl-color=889bb4
+key-hl-color=77adb1
 caps-lock-bs-hl-color=889bb4
 caps-lock-key-hl-color=889bb4
 inside-color=191c25
-color=191c25
+color=77adb1
 inside-clear-color=191c25
 inside-caps-lock-color=191c25
 inside-ver-color=191c25
@@ -32,8 +36,8 @@ ring-caps-lock-color=cdb6dd
 ring-ver-color=a6e3a1
 ring-wrong-color=f38ba8
 separator-color=00000000
-text-color=889bb4
-text-clear-color=889bb4
-text-ver-color=889bb4
-text-wrong-color=889bb4
-text-caps-lock-color=889bb4
+text-color=bfbed0
+text-clear-color=bfbed0
+text-ver-color=bfbed0
+text-wrong-color=bfbed0
+text-caps-lock-color=bfbed0

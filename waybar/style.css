@@ -1,19 +1,24 @@
 /* originally from: https://github.com/NOOBDY/dotfiles/blob/master/waybar/style.css */
 * {
-    border: none;
+    border: 0px;
     /* `otf-font-awesome` is required to be installed for icons */
-    border-radius: 0px;
     font-family: "CozetteHiDpi","mplus12";
     font-size: 13px;
     min-height: 0;
-    margin: 1.4px;
+    padding: 0 0;
+    margin: 0px;
     /*margin-bottom: 0px;*/
 }
 
 window#waybar {
     /*background-color: rgba(0, 0, 0, 0);*/
     background-color: #191c25;
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    border-top-right-radius:0rem;
+    border-bottom-right-radius:0rem;
+    border-bottom-left-radius:0.1rem;
+    border-top-left-radius:0.1rem;
+    opacity: 1;
+    border-left: 0px solid rgba(25, 28, 37, 0);
     /*color: rgba(0, 0, 0, 0);*/
     transition-property: background-color;
     transition-duration: .5s;
@@ -42,8 +47,16 @@ window#waybar.chromium {
 }
 
 #workspaces button {
-    padding: 0px;
-    background-color: #191c25;
+    padding:  10px 0px;
+    background-color: transparent;
+    color: #b5b4c9;
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+}
+
+#workspaces button.persistent {
+    padding:  10px 0px;
+    background-color: transparent;
     color: #b5b4c9;
     /* Use box-shadow instead of border so the text isn't offset */
     /* box-shadow: inset 0 -3px transparent; */
@@ -76,7 +89,7 @@ window#waybar.chromium {
 #pulseaudio,
 #cpu,
 #temperature{
-    padding: 0 10px;
+    padding: 0 0px;
     background-color:#191c25;
     color:#a18daf;
     /*font-weight:bold;*/
@@ -85,10 +98,11 @@ window#waybar.chromium {
 #window{
     background-color:#191c25;
     color:#b5b4c9;
+    padding: 0 20px;
     /*font-weight:bold;*/
 }
 #workspaces {
-    margin: 0 4px;
+    margin: 0 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -145,7 +159,7 @@ label:focus {
 
 #tray {
     color: #f5f5f5;
-    padding:0 10px;
+    padding:20px 0px;
 }
 
 #idle_inhibitor {
