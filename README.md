@@ -1,2 +1,2 @@
 # dotfiles
-my dotfiles for nvim, sway, etc
+my dotfiles for nvim, hyprland,terminal etc...
