@@ -185,7 +185,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-bufdel"] = {
-    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\tnext\ttabs\tquit\2\nsetup\vbufdel\frequire\0" },
+    config = { "\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\tquit\2\tnext\ttabs\nsetup\vbufdel\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -193,7 +193,7 @@ _G.packer_plugins = {
     url = "https://github.com/ojroques/nvim-bufdel"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-path", "cmp-buffer", "cmp-cmdline", "cmp-skkeleton", "cmp_luasnip" },
+    after = { "cmp_luasnip", "cmp-buffer", "cmp-cmdline", "cmp-path", "cmp-skkeleton" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -236,7 +236,7 @@ _G.packer_plugins = {
     url = "https://github.com/vim-skk/skkeleton"
   },
   ["skkeleton_indicator.nvim"] = {
-    config = { "\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\reijiText\aen\rhiraText\akn\16hankataText\bhkt\16hankanaText\bhkn\rkataText\akt\16zenkakuText\b2en\nsetup\24skkeleton_indicator\frequire\0" },
+    config = { "\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\rkataText\akt\reijiText\aen\16zenkakuText\b2en\16hankataText\bhkt\rhiraText\akn\16hankanaText\bhkn\nsetup\24skkeleton_indicator\frequire\0" },
     loaded = true,
     path = "/home/mashu/.local/share/nvim/site/pack/packer/start/skkeleton_indicator.nvim",
     url = "https://github.com/delphinus/skkeleton_indicator.nvim"
@@ -306,18 +306,18 @@ end
 time([[Config for skkeleton]], true)
 try_loadstring("\27LJ\2\n˜\5\0\0\4\0\5\0\r6\0\0\0009\0\1\0009\0\2\0'\2\3\0+\3\1\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\4\0+\3\1\0B\0\3\1K\0\1\0]                call skkeleton#register_keymap('input', ';', 'henkanPoint')\n            õ\3                call skkeleton#config({\n                    \\  'eggLikeNewline': v:true,\n                    \\  'useSkkServer': v:true,\n                    \\  'markerHenkan': \">\",\n                    \\  'markerHenkanSelect': \">>\",\n                    \\  'globalJisyo': \"/home/mashu/dotfiles/libskk/SKK-JISYO.L\",\n                    \\  'showCandidatesCount': 2,\n                    \\  'registerConvertResult': v:true,\n                    \\  'keepState': v:true\n                    \\})\n            \14nvim_exec\bapi\bvim\0", "config", "skkeleton")
 time([[Config for skkeleton]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('config.alpha')
-time([[Config for alpha-nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require('config.lspservers')
 time([[Config for nvim-lspconfig]], false)
 -- Config for: skkeleton_indicator.nvim
 time([[Config for skkeleton_indicator.nvim]], true)
-try_loadstring("\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\reijiText\aen\rhiraText\akn\16hankataText\bhkt\16hankanaText\bhkn\rkataText\akt\16zenkakuText\b2en\nsetup\24skkeleton_indicator\frequire\0", "config", "skkeleton_indicator.nvim")
+try_loadstring("\27LJ\2\nœ\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\6\rkataText\akt\reijiText\aen\16zenkakuText\b2en\16hankataText\bhkt\rhiraText\akn\16hankanaText\bhkn\nsetup\24skkeleton_indicator\frequire\0", "config", "skkeleton_indicator.nvim")
 time([[Config for skkeleton_indicator.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('config.alpha')
+time([[Config for alpha-nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -334,10 +334,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp', 'nvim-autopairs', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au bufRead * ++once lua require("packer.load")({'nvim-treesitter'}, { event = "bufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-bufdel', 'hop.nvim', 'substrata.nvim', 'toggleterm.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp', 'LuaSnip', 'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-bufdel', 'substrata.nvim', 'hop.nvim', 'toggleterm.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
