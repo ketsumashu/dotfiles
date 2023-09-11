@@ -2,7 +2,6 @@
 set update.nag true
 set update.nagwait 7
 set configversion 2.0
-set theme substrata
 colorscheme substrata
 set smoothscroll true
 set editorcmd wezterm start nvim %f
