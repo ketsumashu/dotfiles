@@ -1,0 +1,491 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/content/hinting&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../interfaces/_src_content_hinting_.hintables.html" class="tsd-kind-icon">Hintables</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focusbottomhint" class="tsd-kind-icon">focus<wbr>Bottom<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focuslefthint" class="tsd-kind-icon">focus<wbr>Left<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focusnexthint" class="tsd-kind-icon">focus<wbr>Next<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focusprevioushint" class="tsd-kind-icon">focus<wbr>Previous<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focusrighthint" class="tsd-kind-icon">focus<wbr>Right<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#focustophint" class="tsd-kind-icon">focus<wbr>Top<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_content_hinting_.html#hintelements" class="tsd-kind-icon">hint<wbr>Elements</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#popkey" class="tsd-kind-icon">pop<wbr>Key</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#pushkey" class="tsd-kind-icon">push<wbr>Key</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#pushkeycodepoint" class="tsd-kind-icon">push<wbr>Key<wbr>Code<wbr>Point</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#pushspace" class="tsd-kind-icon">push<wbr>Space</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#reset" class="tsd-kind-icon">reset</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_content_hinting_.html#selectfocusedhint" class="tsd-kind-icon">select<wbr>Focused<wbr>Hint</a>
+		</li>
+		<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+			<a href="_src_content_hinting_.html#vimphelper" class="tsd-kind-icon">vimp<wbr>Helper</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<a href="#hint-mode-functions" id="hint-mode-functions" style="color: inherit; text-decoration: none;">
+						<h1>Hint mode functions</h1>
+					</a>
+				</div>
+				<p>This file contains functions to interact with hint mode.</p>
+				<p>If you want to bind them to keyboard shortcuts, be sure to prefix them with &quot;hint.&quot;. For example, if you want to bind control-[ to <code>reset</code>, use:</p>
+				<pre><code>bind --mode=<span class="hljs-keyword">hint</span> &lt;C-[&gt; <span class="hljs-keyword">hint</span>.reset
+</code></pre>
+				<p>Contrary to the main tridactyl help page, this one doesn&#39;t tell you whether a specific function is bound to something. For now, you&#39;ll have to make do with <code>:bind</code> and <code>:viewconfig</code>.</p>
+			</div>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Interfaces</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/_src_content_hinting_.hintables.html" class="tsd-kind-icon">Hintables</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focusbottomhint" class="tsd-kind-icon">focus<wbr>Bottom<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focuslefthint" class="tsd-kind-icon">focus<wbr>Left<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focusnexthint" class="tsd-kind-icon">focus<wbr>Next<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focusprevioushint" class="tsd-kind-icon">focus<wbr>Previous<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focusrighthint" class="tsd-kind-icon">focus<wbr>Right<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#focustophint" class="tsd-kind-icon">focus<wbr>Top<wbr>Hint</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_content_hinting_.html#hintelements" class="tsd-kind-icon">hint<wbr>Elements</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#popkey" class="tsd-kind-icon">pop<wbr>Key</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#pushkey" class="tsd-kind-icon">push<wbr>Key</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#pushkeycodepoint" class="tsd-kind-icon">push<wbr>Key<wbr>Code<wbr>Point</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#pushspace" class="tsd-kind-icon">push<wbr>Space</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#reset" class="tsd-kind-icon">reset</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_content_hinting_.html#selectfocusedhint" class="tsd-kind-icon">select<wbr>Focused<wbr>Hint</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Object literals</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-object-literal tsd-parent-kind-module"><a href="_src_content_hinting_.html#vimphelper" class="tsd-kind-icon">vimp<wbr>Helper</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focusbottomhint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Bottom<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Bottom<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1244">src/content/hinting.ts:1244</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focuslefthint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Left<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Left<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1249">src/content/hinting.ts:1249</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focusnexthint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Next<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Next<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1229">src/content/hinting.ts:1229</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focusprevioushint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Previous<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Previous<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1234">src/content/hinting.ts:1234</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focusrighthint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Right<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Right<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1254">src/content/hinting.ts:1254</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="focustophint" class="tsd-anchor"></a>
+				<h3>focus<wbr>Top<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">focus<wbr>Top<wbr>Hint<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1239">src/content/hinting.ts:1239</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="hintelements" class="tsd-anchor"></a>
+				<h3>hint<wbr>Elements</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">hint<wbr>Elements<span class="tsd-signature-symbol">(</span>elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span>, option<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AsyncGenerator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L415">src/content/hinting.ts:415</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>A convenient javascript interface to hint on specified html elements.
+									The return value is a promise resolving to the selected element,
+								or an AsyncIterator resolving to the selected elements in rapid mode.</p>
+							</div>
+							<p>Example usage:</p>
+							<p><code>tri.hinting_content.hintElements(...).then(element =&gt; {tri.dom.simulateClick(element))</code></p>
+							<p><code>for (await e of tri.hinting_content.hintElements(..., {rapid: true}){tri.dom.simulateClick(e)})</code></p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>elements: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>a iterator yield html elements</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> option: <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>a option object. The <code>option.rapid</code> specify whether hint in rapid mode. Default value is false. The <code>option.callback</code> is executed when a hint is selected if specified. The default callback is a no-op.</p>
+								</div>
+								<ul class="tsd-parameters">
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AsyncGenerator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>promise resolve to the selected element, or a async iterator in rapid mode.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="popkey" class="tsd-anchor"></a>
+				<h3>pop<wbr>Key</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">pop<wbr>Key<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1037">src/content/hinting.ts:1037</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="pushkey" class="tsd-anchor"></a>
+				<h3>push<wbr>Key</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">push<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1043">src/content/hinting.ts:1043</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Add key to filtstr and filter</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="pushkeycodepoint" class="tsd-anchor"></a>
+				<h3>push<wbr>Key<wbr>Code<wbr>Point</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">push<wbr>Key<wbr>Code<wbr>Point<span class="tsd-signature-symbol">(</span>codepoint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1057">src/content/hinting.ts:1057</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Covert to char and pushKey(). This is needed because ex commands ignore whitespace.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>codepoint: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="pushspace" class="tsd-anchor"></a>
+				<h3>push<wbr>Space</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">push<wbr>Space<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1066">src/content/hinting.ts:1066</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Just run pushKey(&quot; &quot;). This is needed because ex commands ignore whitespace.</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="reset" class="tsd-anchor"></a>
+				<h3>reset</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1028">src/content/hinting.ts:1028</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Remove all hints, reset STATE.</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="selectfocusedhint" class="tsd-anchor"></a>
+				<h3>select<wbr>Focused<wbr>Hint</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">select<wbr>Focused<wbr>Hint<span class="tsd-signature-symbol">(</span>delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L1217">src/content/hinting.ts:1217</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> delay: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Object literals</h2>
+			<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-module">
+				<a name="vimphelper" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> vimp<wbr>Helper</h3>
+				<div class="tsd-signature tsd-kind-icon">vimp<wbr>Helper<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L840">src/content/hinting.ts:840</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Helper for vimperator hinting.</p>
+					</div>
+					<p>Allow customize vimperator hinting filter by overriding functions of the
+					helper object.</p>
+				</div>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="vimphelper.filterabletextfilter" class="tsd-anchor"></a>
+					<h3>filterable<wbr>Text<wbr>Filter</h3>
+					<div class="tsd-signature tsd-kind-icon">filterable<wbr>Text<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L841">src/content/hinting.ts:841</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+					<a name="vimphelper.matchhint" class="tsd-anchor"></a>
+					<h3>match<wbr>Hint</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+						<li class="tsd-signature tsd-kind-icon">match<wbr>Hint<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L861">src/content/hinting.ts:861</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+					<a name="vimphelper.sanitisehinttext" class="tsd-anchor"></a>
+					<h3>sanitise<wbr>Hint<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+						<li class="tsd-signature tsd-kind-icon">sanitise<wbr>Hint<wbr>Text<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/content/hinting.ts#L842">src/content/hinting.ts:842</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

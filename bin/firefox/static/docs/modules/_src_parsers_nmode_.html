@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/parsers/nmode&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../classes/_src_parsers_nmode_.nmodestate.html" class="tsd-kind-icon">NMode<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_parsers_nmode_.html#modestate" class="tsd-kind-icon">mode<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_parsers_nmode_.html#init" class="tsd-kind-icon">init</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_parsers_nmode_.html#parser" class="tsd-kind-icon">parser</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Classes</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/_src_parsers_nmode_.nmodestate.html" class="tsd-kind-icon">NMode<wbr>State</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_parsers_nmode_.html#modestate" class="tsd-kind-icon">mode<wbr>State</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_parsers_nmode_.html#init" class="tsd-kind-icon">init</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_parsers_nmode_.html#parser" class="tsd-kind-icon">parser</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="modestate" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagLet">Let</span> mode<wbr>State</h3>
+				<div class="tsd-signature tsd-kind-icon">mode<wbr>State<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_parsers_nmode_.nmodestate.html" class="tsd-signature-type">NModeState</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/parsers/nmode.ts#L15">src/parsers/nmode.ts:15</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="init" class="tsd-anchor"></a>
+				<h3>init</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>endCommand<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mode<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, numCommands<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/parsers/nmode.ts#L19">src/parsers/nmode.ts:19</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Init n [mode] mode. After parsing the defined number of commands, execute
+								<code>endCmd</code>. <code>Escape</code> cancels the mode and executes <code>endCmd</code>.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>endCommand: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mode: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;normal&quot;</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> numCommands: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="parser" class="tsd-anchor"></a>
+				<h3>parser</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbol">(</span>keys<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-signature-type">ParserResponse</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/parsers/nmode.ts#L28">src/parsers/nmode.ts:28</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Receive keypress. If applicable, execute a command.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keys: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-signature-type">ParserResponse</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

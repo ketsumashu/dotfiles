@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" class="TridactylOwnNamespace">
+    <head>
+        <meta charset="utf-8">
+        <title>Tridactyl Tutorial</title>
+        <link rel="stylesheet" href="../css/newtab.css">
+        <link rel="stylesheet" href="../css/content.css">
+        <link rel="stylesheet" href="../css/hint.css">
+        <link rel="stylesheet" href="../css/viewsource.css">
+        <link rel="shortcut icon" href="../logo/Tridactyl_64px.png">
+    </head>
+    <body>
+<h1 id="tridactyl-tutorial">Tridactyl tutorial</h1>
+<p>Hello. If you&#39;ve just installed Tridactyl for the first time, welcome! Tridactyl has something of a learning cliff. If you haven&#39;t used an add-on like it before, such as Pentadactyl or Vimperator, we strongly recommend you spend the 10-15 minutes it will take you to read through this tutorial. If you&#39;re already familiar with add-ons like this, we still suggest you skim through everything as there are a few things we do differently. Without further ado:</p>
+<p>Welcome to the Tridactyl tutorial. Here, you will learn how to get started with this extension. If you ever want to get back to this page, just type <code>:tutor</code>.</p>
+<p>It will not cover advanced topics. For those, <a href="../docs/modules/_src_excmds_.html"><code>:help</code></a> is always at hand. You might also find the <a href="https://app.memrise.com/course/5995499/tridactyls-main-shortcuts/">unofficial Tridactyl Memrise course</a> useful for memorising binds.</p>
+<hr>
+<h2 id="basics">Basics</h2>
+<p>The idea behind Tridactyl is to allow you to navigate the web more efficiently with just the keyboard. Tridactyl turns Firefox into a modal browser, meaning it has several different modes of operation, like Vim. Each tab can only ever be in one mode at a time and each of these modes could have a wildly different operation. You can think of it a bit like a Transformer, if you like. There are five main modes you will want to be familiar with:</p>
+<ul>
+<li>Normal mode<ul>
+<li>This mode is used for navigating around single pages and starting other modes.</li>
+<li>Tabs are usually in this mode. You can enter normal mode from the other modes by pressing <code>Escape</code>.</li>
+</ul>
+</li>
+<li>Hint mode<ul>
+<li>This mode highlights elements on the web page and performs actions on those elements.</li>
+<li>This is most often used for following links, but it has many other submodes.</li>
+<li>You can enter this mode with <code>f</code> and exit it with <code>Escape</code> or <code>Ctrl-[</code>.</li>
+<li>Hint characters are displayed as uppercase letters, but you should type the lowercase letter.</li>
+</ul>
+</li>
+<li>Visual mode (experimental)<ul>
+<li>This mode allows you to select text on the web page and copy it to the clipboard or search for it using <code>s</code> and <code>S</code>.</li>
+<li>You can enter this mode with <code>v</code>, by selecting text with the mouse, <code>;h</code> hint mode, <code>/</code> searching or by using Firefox&#39;s &quot;caret&quot; mode on <code>F7</code> and exit it with <code>Escape</code> or <code>Ctrl-[</code>.</li>
+</ul>
+</li>
+<li>Command mode (&quot;ex-mode&quot;)<ul>
+<li>This mode allows you to execute more complicated commands by typing them out manually.</li>
+<li>It is commonly used for binding keys and accessing help.</li>
+<li>You can enter this mode with <code>:</code> and exit it with <code>Escape</code> or <code>Enter</code>.</li>
+</ul>
+</li>
+<li>Ignore mode<ul>
+<li>This mode passes all keypresses through to the web page. It is useful for websites that have their own keybinds, such as games and Gmail.</li>
+<li>You can toggle the mode with <code>Shift-Insert</code>, <code>Ctrl-Alt-Escape</code>, <code>Ctrl-Alt-Backtick</code>, or <code>Shift-Esc</code>.</li>
+<li>While in ignore mode, you can execute a single normal mode binding by pressing <code>&lt;C-o&gt;</code> followed by the keys for the binding.</li>
+<li>While in normal mode, you can enter ignore mode for one keypress / key combination by pressing <code>&lt;C-v&gt;</code>.</li>
+<li>Tridactyl can be configured to enter ignore mode for specified URLs. Run <code>:blacklistadd [url]</code> to put Tridactyl in ignore mode on the provided URL. Use the command <code>:blacklistremove [url]</code> to remove the URL from the blacklist.</li>
+</ul>
+</li>
+</ul>
+<p>Almost all of the modes are controlled by series of keypresses. In this tutorial, a sequence of keys such as <code>zz</code> should be entered by pressing the key <code>z</code>, letting go, and then pressing the key <code>z</code>. There is no need to hold both keys at once, if that were even possible. (<code>zz</code> resets the zoom level to the default, so it probably didn&#39;t seem to do anything). Sometimes <code>help</code> refers to a command that must be entered in command mode; it should hopefully always be clear from context which we mean.</p>
+<h3 id="note-for-users-of-other-vim-style-browser-tools">Note for users of other Vim-style browser tools</h3>
+<p>Tridactyl defaults to using <code>J</code> to switch to the previous tab and <code>K</code> to switch to the next tab, which may be different from what you&#39;re used to if you&#39;re coming from Vimperator/Pentadactyl, qutebrowser, or similar projects. You can run <code>:bind J tabnext</code> and <code>:bind K tabprev</code> to switch the two around if you prefer.</p>
+<hr>
+<h2 id="normal-mode">Normal mode</h2>
+<p>The tutorial for normal mode starts on the <a href="./2-normal_mode.html">next page</a>. You could try following the link by using hint mode: press <code>f</code> (if there is only a single link on the screen, it will be followed; otherwise type the characters that appear above the desired link, in lower case. They are only displayed in upper case for ease of reading).</p>
+
+    </body>
+    <script src="../../content.js"></script>
+</html>

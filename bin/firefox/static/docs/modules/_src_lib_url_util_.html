@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/lib/url_util&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#deletequery" class="tsd-kind-icon">delete<wbr>Query</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#getabsoluteurl" class="tsd-kind-icon">get<wbr>AbsoluteURL</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#getdownloadfilenameforurl" class="tsd-kind-icon">get<wbr>Download<wbr>Filename<wbr>For<wbr>Url</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_url_util_.html#getextensionformimetype" class="tsd-kind-icon">get<wbr>Extension<wbr>For<wbr>Mimetype</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#geturlparent" class="tsd-kind-icon">get<wbr>Url<wbr>Parent</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_url_util_.html#geturlqueries" class="tsd-kind-icon">get<wbr>Url<wbr>Queries</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#geturlroot" class="tsd-kind-icon">get<wbr>Url<wbr>Root</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#grafturlpath" class="tsd-kind-icon">graft<wbr>Url<wbr>Path</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#incrementurl" class="tsd-kind-icon">increment<wbr>Url</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#interpolatesearchitem" class="tsd-kind-icon">interpolate<wbr>Search<wbr>Item</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#replacequeryvalue" class="tsd-kind-icon">replace<wbr>Query<wbr>Value</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_url_util_.html#setqueryvalue" class="tsd-kind-icon">set<wbr>Query<wbr>Value</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_url_util_.html#seturlqueries" class="tsd-kind-icon">set<wbr>Url<wbr>Queries</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>URL handling utlity functions</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#deletequery" class="tsd-kind-icon">delete<wbr>Query</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#getabsoluteurl" class="tsd-kind-icon">get<wbr>AbsoluteURL</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#getdownloadfilenameforurl" class="tsd-kind-icon">get<wbr>Download<wbr>Filename<wbr>For<wbr>Url</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_url_util_.html#getextensionformimetype" class="tsd-kind-icon">get<wbr>Extension<wbr>For<wbr>Mimetype</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#geturlparent" class="tsd-kind-icon">get<wbr>Url<wbr>Parent</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_url_util_.html#geturlqueries" class="tsd-kind-icon">get<wbr>Url<wbr>Queries</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#geturlroot" class="tsd-kind-icon">get<wbr>Url<wbr>Root</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#grafturlpath" class="tsd-kind-icon">graft<wbr>Url<wbr>Path</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#incrementurl" class="tsd-kind-icon">increment<wbr>Url</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#interpolatesearchitem" class="tsd-kind-icon">interpolate<wbr>Search<wbr>Item</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#replacequeryvalue" class="tsd-kind-icon">replace<wbr>Query<wbr>Value</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_url_util_.html#setqueryvalue" class="tsd-kind-icon">set<wbr>Query<wbr>Value</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_url_util_.html#seturlqueries" class="tsd-kind-icon">set<wbr>Url<wbr>Queries</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="deletequery" class="tsd-anchor"></a>
+				<h3>delete<wbr>Query</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">delete<wbr>Query<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, matchQuery<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L254">src/lib/url_util.ts:254</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Delete a query (and its value) in a URL</p>
+							</div>
+							<p>If a query appears multiple times (which is a bit odd),
+							all instances are removed</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to act on</p>
+								</div>
+							</li>
+							<li>
+								<h5>matchQuery: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+						<p>the modified URL</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getabsoluteurl" class="tsd-anchor"></a>
+				<h3>get<wbr>AbsoluteURL</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>AbsoluteURL<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, baseURI<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L436">src/lib/url_util.ts:436</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>May be either an absolute or a relative URL.</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> baseURI: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = document.baseURI</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The URL the absolute URL should be relative to. This is
+									usually the URL of the current page.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getdownloadfilenameforurl" class="tsd-anchor"></a>
+				<h3>get<wbr>Download<wbr>Filename<wbr>For<wbr>Url</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Download<wbr>Filename<wbr>For<wbr>Url<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L169">src/lib/url_util.ts:169</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get a suitable default filename for a given URL</p>
+							</div>
+							<p>If the URL:</p>
+							<ul>
+								<li>is a data URL, construct from the data and mimetype</li>
+								<li>has a path, use the last part of that (eg image.png, index.html)</li>
+								<li>otherwise, use the hostname of the URL</li>
+								<li>if that fails, &quot;download&quot;</li>
+							</ul>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>the filename according to the above rules</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="getextensionformimetype" class="tsd-anchor"></a>
+				<h3>get<wbr>Extension<wbr>For<wbr>Mimetype</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Extension<wbr>For<wbr>Mimetype<span class="tsd-signature-symbol">(</span>mime<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L129">src/lib/url_util.ts:129</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Very incomplete lookup of extension for common mime types that might be
+									encountered when saving elements on a page. There are NPM libs for this,
+								but this should cover 99% of basic cases</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mime: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>mime type to get extension for (eg &#39;image/png&#39;)</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>an extension for that mimetype, or undefined if that type is not
+						supported</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="geturlparent" class="tsd-anchor"></a>
+				<h3>get<wbr>Url<wbr>Parent</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Parent<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, trailingSlash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L67">src/lib/url_util.ts:67</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the parent of the current URL. Parent is determined as:</p>
+							</div>
+							<ul>
+								<li>if there is a hash fragment, strip that, or</li>
+								<li>If there is a query string, strip that, or</li>
+								<li>Remove one level from the path if there is one, or</li>
+								<li>Remove one subdomain from the front if there is one</li>
+							</ul>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to get the parent of</p>
+								</div>
+							</li>
+							<li>
+								<h5>trailingSlash: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>whether the returned URL has a trailing slash</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> count: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>how many &quot;generations&quot; you wish to go back (1 = parent, 2 = grandparent, etc.)</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						<p>the parent of the URL, or null if there is no parent</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="geturlqueries" class="tsd-anchor"></a>
+				<h3>get<wbr>Url<wbr>Queries</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Queries<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L220">src/lib/url_util.ts:220</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get an Array of the queries in a URL.</p>
+							</div>
+							<p>These could be like &quot;query&quot; or &quot;query=val&quot;</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="geturlroot" class="tsd-anchor"></a>
+				<h3>get<wbr>Url<wbr>Root</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Root<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L45">src/lib/url_util.ts:45</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the root of a URL</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the url to find the root of</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+						<p>the root of the URL, or the original URL when the URL isn&#39;t
+						suitable for finding the root of.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="grafturlpath" class="tsd-anchor"></a>
+				<h3>graft<wbr>Url<wbr>Path</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">graft<wbr>Url<wbr>Path<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, newTail<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L346">src/lib/url_util.ts:346</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Graft a new path onto some parent of the current URL</p>
+							</div>
+							<p>E.g. grafting &quot;by-name/foobar&quot; onto the 2nd parent path:
+							example.com/items/by-id/42 -&gt; example.com/items/by-name/foobar</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to modify</p>
+								</div>
+							</li>
+							<li>
+								<h5>newTail: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the new &quot;grafted&quot; URL path tail</p>
+								</div>
+							</li>
+							<li>
+								<h5>level: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the graft point in terms of path levels
+										&gt;= 0: start at / and count right
+									&lt;0: start at the current path and count left</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="incrementurl" class="tsd-anchor"></a>
+				<h3>increment<wbr>Url</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">increment<wbr>Url<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L13">src/lib/url_util.ts:13</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Increment the last number in a URL.</p>
+							</div>
+							<p>(perhaps this could be made so you can select the &quot;nth&quot; number in a
+							URL rather than just the last one?)</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to increment</p>
+								</div>
+							</li>
+							<li>
+								<h5>count: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>increment step to advance by (can be negative)</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						<p>the incremented URL, or null if cannot be incremented</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="interpolatesearchitem" class="tsd-anchor"></a>
+				<h3>interpolate<wbr>Search<wbr>Item</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">interpolate<wbr>Search<wbr>Item<span class="tsd-signature-symbol">(</span>urlPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L389">src/lib/url_util.ts:389</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Interpolates a query or other search item into a URL</p>
+							</div>
+							<p>If the URL pattern contains &quot;%s&quot;, the query is interpolated there. If not,
+							it is appended to the end of the pattern.</p>
+							<p>If the interpolation point is in the query string of the URL, it is
+							percent encoded, otherwise it is is inserted verbatim.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>urlPattern: <span class="tsd-signature-type">URL</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>a URL to interpolate/append a query to</p>
+								</div>
+							</li>
+							<li>
+								<h5>query: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>a query to interpolate/append into the URL</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+						<p>the URL with the query encoded (if needed) and
+						inserted at the relevant point</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="replacequeryvalue" class="tsd-anchor"></a>
+				<h3>replace<wbr>Query<wbr>Value</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">replace<wbr>Query<wbr>Value<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, matchQuery<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L302">src/lib/url_util.ts:302</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Replace the value of a query in a URL with a new one</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to act on</p>
+								</div>
+							</li>
+							<li>
+								<h5>matchQuery: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the query key to replace the value for</p>
+								</div>
+							</li>
+							<li>
+								<h5>newVal: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the new value to use</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="setqueryvalue" class="tsd-anchor"></a>
+				<h3>set<wbr>Query<wbr>Value</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Query<wbr>Value<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, matchQuery<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L273">src/lib/url_util.ts:273</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Sets the value of a query in a URL with a specific one</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the URL to act on</p>
+								</div>
+							</li>
+							<li>
+								<h5>matchQuery: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the query key to set the value for</p>
+								</div>
+							</li>
+							<li>
+								<h5>value: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the value to use</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">URL</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="seturlqueries" class="tsd-anchor"></a>
+				<h3>set<wbr>Url<wbr>Queries</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Url<wbr>Queries<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span>, qys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/url_util.ts#L234">src/lib/url_util.ts:234</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Update a URL with a new array of queries</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>url: <span class="tsd-signature-type">URL</span></h5>
+							</li>
+							<li>
+								<h5>qys: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

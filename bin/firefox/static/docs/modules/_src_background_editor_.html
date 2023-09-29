@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/background/editor&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
+			<a href="_src_background_editor_.html#argumentstype" class="tsd-kind-icon">Arguments<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_background_editor_.html#cmdstype" class="tsd-kind-icon">cmds<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_background_editor_.html#editorcmds" class="tsd-kind-icon">Editor<wbr>Cmds</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Type aliases</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="_src_background_editor_.html#argumentstype" class="tsd-kind-icon">Arguments<wbr>Type</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_src_background_editor_.html#cmdstype" class="tsd-kind-icon">cmds<wbr>Type</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_background_editor_.html#editorcmds" class="tsd-kind-icon">Editor<wbr>Cmds</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
+				<a name="argumentstype" class="tsd-anchor"></a>
+				<h3>Arguments<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">Arguments<wbr>Type&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span>elem<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> U<span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/background/editor.ts#L5">src/background/editor.ts:5</a></li>
+					</ul>
+				</aside>
+				<h4 class="tsd-type-parameters-title">Type parameters</h4>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+				<a name="cmdstype" class="tsd-anchor"></a>
+				<h3>cmds<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">cmds<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">_EditorCmds</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/background/editor.ts#L4">src/background/editor.ts:4</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="editorcmds" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> Editor<wbr>Cmds</h3>
+				<div class="tsd-signature tsd-kind-icon">Editor<wbr>Cmds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = new Proxy(_EditorCmds as any, {get(target, property) {if (target[property]) {return (...args) &#x3D;&gt;messageActiveTab(&quot;editorfn_content&quot;, property as string, args)}return target[property]},}) as {[k in keyof cmdsType]: (...args: ArgumentsType&lt;cmdsType[k]&gt;) &#x3D;&gt; Promise&lt;ReturnType&lt;cmdsType[k]&gt;&gt;}</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/background/editor.ts#L7">src/background/editor.ts:7</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+					</ul>
+				</div>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

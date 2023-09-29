@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="TridactylOwnNamespace">
+    <head>
+        <meta charset="utf-8">
+        <title>Tridactyl Tutorial</title>
+        <link rel="stylesheet" href="../css/newtab.css">
+        <link rel="stylesheet" href="../css/content.css">
+        <link rel="stylesheet" href="../css/hint.css">
+        <link rel="stylesheet" href="../css/viewsource.css">
+        <link rel="shortcut icon" href="../logo/Tridactyl_64px.png">
+    </head>
+    <body>
+<h1 id="normal-mode-tutorial">Normal mode tutorial</h1>
+<p>Normal mode is where you will spend most of your time.</p>
+<p>You can scroll up and down pages using <code>k</code> and <code>j</code>, and left and right with <code>h</code> and <code>l</code>; <code>gg</code> takes you to the top of the page and <code>G</code> to the bottom.</p>
+<p><code>H</code> and <code>L</code> navigate backwards and forwards in history.</p>
+<p>Use <code>.</code> to repeat the last action.</p>
+<p>Many keypresses in normal mode take you into another mode. <code>t</code>, for example, puts you into command mode prefilled with the command for opening a new tab; <code>F</code> puts you into hinting mode to open a link in a background tab; <code>gi</code> focuses the first text box on the page and allows you to press <code>Tab</code> to switch between text boxes.</p>
+<p>Tridactyl uses a similar notation to Vim for keys with modifiers: <code>&lt;C-x&gt;</code> means press Ctrl, tap x, release Ctrl; i.e. <code>Ctrl-x</code>. <code>&lt;C-</code> almost always means a literal Ctrl key, even on Macs: <code>&lt;M-</code> means the Meta (&quot;splat&quot;) key. The exception is when describing default Firefox binds for Macintosh: then <code>&lt;C-</code> means Meta. This arises most often for find mode where the <code>&lt;C-g&gt;</code>, <code>&lt;C-G&gt;</code> and <code>&lt;C-f&gt;</code> default binds are all in fact <code>&lt;M-g&gt;</code>, <code>&lt;M-G&gt;</code> and <code>&lt;M-f&gt;</code>.</p>
+<h2 id="useful-normal-mode-keybinds">Useful normal mode keybinds</h2>
+<ul>
+<li><code>b</code> brings up a list of your current tabs. Press <code>Tab</code>/<code>Shift-Tab</code> to cycle through them and enter to select. You can also type to filter down the tabs based on their titles, URLs or status (pinned, audible, muted, or discarded)</li>
+<li>Opening web pages:<ul>
+<li><code>w</code> opens URLs in new windows</li>
+<li><code>o</code> in the current tab</li>
+<li><code>t</code> in a new tab</li>
+<li>Using a capital letter in place of any of the previous commands opens the command with the current URL pasted into it, i.e, <code>W</code>,<code>O</code>,<code>T</code></li>
+<li><code>s</code> lets you easily start a search with your default search engine in the current tab and <code>S</code> does so in a new tab.</li>
+<li>in general, you can search many search engines straight from these prompts by simply starting your query with the search engine, such as <code>bing</code> <code>duckduckgo</code> or <code>scholar</code></li>
+</ul>
+</li>
+<li>Navigate history with <code>H</code> and <code>L</code></li>
+<li><code>yy</code> copies the current URL to your clipboard</li>
+<li><code>p</code> opens the clipboard contents as a web page, or searches for it, in the current tab. <code>P</code> opens it in a new tab<ul>
+<li>Protip: quickly search for the source of a quote by using <code>;p</code> to copy a paragraph, and <code>P</code> to search the internet for it</li>
+</ul>
+</li>
+<li><code>zi</code>,<code>zo</code>,<code>zz</code> zoom in, out and return to the default zoom</li>
+<li>Search text with Firefox&#39;s standard <code>/</code> binding, jump from match to match with <code>&lt;C-g&gt;</code> or <code>&lt;C-G&gt;</code> (note that it isn&#39;t possible to rebind searching/jumping between matches for now). If you want to use Firefox&#39;s <code>&lt;C-f&gt;</code> search you&#39;ll have to run <code>unbind &lt;C-f&gt;</code> (unless you&#39;re on a Mac where Firefox&#39;s find mode is bound to <code>&lt;M-f&gt;</code>).</li>
+</ul>
+<ul>
+<li><code>&lt;C-v&gt;</code> sends the next keystroke to the current website, bypassing bindings</li>
+</ul>
+<p>All the keys in normal mode are bound to commands; for example, <code>j</code> is bound to <code>scrolline 10</code>. If you are ever curious as to what a key sequence does in normal mode, you can simply use <code>:bind [keys]</code> and the command line will tell you to which command they are bound.</p>
+<h2 id="browser-wide-binds">Browser-wide binds</h2>
+<p>By default, there are three browser &quot;mode&quot; binds: <code>&lt;C-,&gt;</code> to <code>:escapehatch</code>, and <code>&lt;C-6&gt;</code> and <code>&lt;CS-6&gt;</code> to <code>:tab #</code>. These binds are accessible in all modes and anywhere within Firefox - even on pages where Tridactyl cannot run. New browser mode binds can be added with <code>:bind --mode=browser [ex command]</code>. Note that any ex-commands which require access to the page you are on will fail to run if Tridactyl does not have access to that page. The best thing to do is to try it and see.</p>
+<p>There are quite a few caveats with these binds - see <code>:help bind</code> for more details.</p>
+<p>Unbind the binds with <code>unbind --mode=browser [key]</code>.</p>
+<hr>
+<p>The <a href="./3-hint_mode.html">next page</a> will explain how to use some of the various hint modes. This time try <code>]]</code> (guess the next page) to follow the link.</p>
+<p><a href='./1-tutor.html' rel="prev"></a></p>
+
+    </body>
+    <script src="../../content.js"></script>
+</html>

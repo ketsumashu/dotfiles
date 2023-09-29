@@ -1,7 +1,9 @@
 " General Settings
+set update.lastchecktime 1695218778379
 set update.nag true
 set update.nagwait 7
 set configversion 2.0
+set theme substrata
 colorscheme substrata
 set smoothscroll true
 set editorcmd wezterm start nvim %f
@@ -80,6 +82,7 @@ bind ga tabaudio
 bind gr reader
 bind gu urlparent
 bind gU urlroot
+unbind gf
 bind : fillcmdline_notrail
 bind s fillcmdline open search
 bind S fillcmdline tabopen search
@@ -155,11 +158,15 @@ bind zz zoom 1
 bind zI zoom 3
 bind zO zoom 0.3
 bind . repeat
+bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
 bind m gobble 1 markadd
 bind ` gobble 1 markjump
 bind cl current_url
 unbind ,o
 bind @o fillcmdline bmarks
+bind gnP tabopen moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
+bind goP open moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
+bind gwP winopen moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
 bindurl img.2chan.net --mode=ignore r reload
 unbindurl img.2chan.net r
 bindurl https://img.2chan.net --mode=ignore r reload

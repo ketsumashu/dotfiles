@@ -1,0 +1,896 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/lib/keyseq&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-class tsd-parent-kind-module">
+			<a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-kind-icon">Minimal<wbr>Key</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-module">
+			<a href="../interfaces/_src_lib_keyseq_.keymodifiers.html" class="tsd-kind-icon">Key<wbr>Modifiers</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-module">
+			<a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-kind-icon">Parser<wbr>Response</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#keyeventlike" class="tsd-kind-icon">Key<wbr>Event<wbr>Like</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#keymap" class="tsd-kind-icon">Key<wbr>Map</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#maptarget" class="tsd-kind-icon">Map<wbr>Target</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#keycodetranslatemap" class="tsd-kind-icon">KEYCODETRANSLATEMAP</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#keymap_cache" class="tsd-kind-icon">KEYMAP_<wbr>CACHE</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#bracketexpr_grammar" class="tsd-kind-icon">bracketexpr_<wbr>grammar</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#bracketexpr_parser" class="tsd-kind-icon">bracketexpr_<wbr>parser</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#modifiers" class="tsd-kind-icon">modifiers</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#bracketexprtokey" class="tsd-kind-icon">bracketexpr<wbr>ToKey</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#canonicalisemapstr" class="tsd-kind-icon">canonicalise<wbr>Mapstr</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#completions" class="tsd-kind-icon">completions</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#expandaliases" class="tsd-kind-icon">expand<wbr>Aliases</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#hasmodifiers" class="tsd-kind-icon">has<wbr>Modifiers</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#hasnonshiftmodifiers" class="tsd-kind-icon">has<wbr>Non<wbr>Shift<wbr>Modifiers</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#keymap-1" class="tsd-kind-icon">key<wbr>Map</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#mapstrmaptokeymap" class="tsd-kind-icon">mapstr<wbr>Map<wbr>ToKey<wbr>Map</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#mapstrtokeyseq" class="tsd-kind-icon">mapstr<wbr>ToKeyseq</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#minimalkeyfromkeyboardevent" class="tsd-kind-icon">minimal<wbr>Key<wbr>From<wbr>Keyboard<wbr>Event</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#minimalkeytomozmap" class="tsd-kind-icon">minimal<wbr>Key<wbr>ToMoz<wbr>Map</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#mozmaptominimalkey" class="tsd-kind-icon">moz<wbr>Map<wbr>ToMinimal<wbr>Key</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#numericprefixtoexstrsuffix" class="tsd-kind-icon">numeric<wbr>Prefix<wbr>ToExstr<wbr>Suffix</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#parse" class="tsd-kind-icon">parse</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#prefixes" class="tsd-kind-icon">prefixes</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#splitnumericprefix" class="tsd-kind-icon">split<wbr>Numeric<wbr>Prefix</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#striponlymodifiers" class="tsd-kind-icon">strip<wbr>Only<wbr>Modifiers</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_keyseq_.html#updatebaselayout" class="tsd-kind-icon">update<wbr>Base<wbr>Layout</a>
+		</li>
+		<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+			<a href="_src_lib_keyseq_.html#commandkey2jskey" class="tsd-kind-icon">command<wbr>Key2js<wbr>Key</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Key-sequence parser</p>
+				</div>
+				<p>If <code>map</code> is a Map of <code>MinimalKey[]</code> to objects (exstrs or callbacks)
+				and <code>keyseq</code> is an array of <a href="../classes/_src_lib_keyseq_.minimalkey.html">MinimalKey</a> compatible objects...</p>
+				<ul>
+					<li><code>parse(keyseq, map)</code> returns the mapped object and a count OR a prefix
+						of <code>MinimalKey[]</code> (possibly empty) that, if more keys are pressed, could
+					map to an object.</li>
+					<li><code>completions(keyseq, map)</code> returns the fragment of <code>map</code> that keyseq is
+					a valid prefix of.</li>
+					<li><code>mapstrToKeySeq</code> generates KeySequences for the rest of the API.</li>
+				</ul>
+				<p>No key sequence in a <code>map</code> may be a prefix of another key sequence in that
+					map. This is a point of difference from Vim that removes any time-dependence
+					in the parser. Vimperator, Pentadactyl, saka-key, etc, all share this
+				limitation.</p>
+				<p>If a key is represented by a single character then the shift modifier state
+				is ignored unless other modifiers are also present.</p>
+			</div>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Classes</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-kind-icon">Minimal<wbr>Key</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Interfaces</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_src_lib_keyseq_.keymodifiers.html" class="tsd-kind-icon">Key<wbr>Modifiers</a></li>
+							<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-kind-icon">Parser<wbr>Response</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Type aliases</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#keyeventlike" class="tsd-kind-icon">Key<wbr>Event<wbr>Like</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#keymap" class="tsd-kind-icon">Key<wbr>Map</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#maptarget" class="tsd-kind-icon">Map<wbr>Target</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#keycodetranslatemap" class="tsd-kind-icon">KEYCODETRANSLATEMAP</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#keymap_cache" class="tsd-kind-icon">KEYMAP_<wbr>CACHE</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#bracketexpr_grammar" class="tsd-kind-icon">bracketexpr_<wbr>grammar</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#bracketexpr_parser" class="tsd-kind-icon">bracketexpr_<wbr>parser</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#modifiers" class="tsd-kind-icon">modifiers</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#bracketexprtokey" class="tsd-kind-icon">bracketexpr<wbr>ToKey</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#canonicalisemapstr" class="tsd-kind-icon">canonicalise<wbr>Mapstr</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#completions" class="tsd-kind-icon">completions</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#expandaliases" class="tsd-kind-icon">expand<wbr>Aliases</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#hasmodifiers" class="tsd-kind-icon">has<wbr>Modifiers</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#hasnonshiftmodifiers" class="tsd-kind-icon">has<wbr>Non<wbr>Shift<wbr>Modifiers</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#keymap-1" class="tsd-kind-icon">key<wbr>Map</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#mapstrmaptokeymap" class="tsd-kind-icon">mapstr<wbr>Map<wbr>ToKey<wbr>Map</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#mapstrtokeyseq" class="tsd-kind-icon">mapstr<wbr>ToKeyseq</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#minimalkeyfromkeyboardevent" class="tsd-kind-icon">minimal<wbr>Key<wbr>From<wbr>Keyboard<wbr>Event</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#minimalkeytomozmap" class="tsd-kind-icon">minimal<wbr>Key<wbr>ToMoz<wbr>Map</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#mozmaptominimalkey" class="tsd-kind-icon">moz<wbr>Map<wbr>ToMinimal<wbr>Key</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#numericprefixtoexstrsuffix" class="tsd-kind-icon">numeric<wbr>Prefix<wbr>ToExstr<wbr>Suffix</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#parse" class="tsd-kind-icon">parse</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#prefixes" class="tsd-kind-icon">prefixes</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#splitnumericprefix" class="tsd-kind-icon">split<wbr>Numeric<wbr>Prefix</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#striponlymodifiers" class="tsd-kind-icon">strip<wbr>Only<wbr>Modifiers</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_keyseq_.html#updatebaselayout" class="tsd-kind-icon">update<wbr>Base<wbr>Layout</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Object literals</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-object-literal tsd-parent-kind-module"><a href="_src_lib_keyseq_.html#commandkey2jskey" class="tsd-kind-icon">command<wbr>Key2js<wbr>Key</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+				<a name="keyeventlike" class="tsd-anchor"></a>
+				<h3>Key<wbr>Event<wbr>Like</h3>
+				<div class="tsd-signature tsd-kind-icon">Key<wbr>Event<wbr>Like<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">KeyboardEvent</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L125">src/lib/keyseq.ts:125</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+				<a name="keymap" class="tsd-anchor"></a>
+				<h3>Key<wbr>Map</h3>
+				<div class="tsd-signature tsd-kind-icon">Key<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_requests_.defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="_src_lib_keyseq_.html#maptarget" class="tsd-signature-type">MapTarget</a><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L132">src/lib/keyseq.ts:132</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+				<a name="maptarget" class="tsd-anchor"></a>
+				<h3>Map<wbr>Target</h3>
+				<div class="tsd-signature tsd-kind-icon">Map<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L131">src/lib/keyseq.ts:131</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="keycodetranslatemap" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagLet">Let</span> KEYCODETRANSLATEMAP</h3>
+				<div class="tsd-signature tsd-kind-icon">KEYCODETRANSLATEMAP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L32">src/lib/keyseq.ts:32</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="keymap_cache" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagLet">Let</span> KEYMAP_<wbr>CACHE</h3>
+				<div class="tsd-signature tsd-kind-icon">KEYMAP_<wbr>CACHE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L434">src/lib/keyseq.ts:434</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="bracketexpr_grammar" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> bracketexpr_<wbr>grammar</h3>
+				<div class="tsd-signature tsd-kind-icon">bracketexpr_<wbr>grammar<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_src_grammars__bracketexpr_generated_.grammar.html" class="tsd-signature-type">Grammar</a><span class="tsd-signature-symbol"> = grammar</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L29">src/lib/keyseq.ts:29</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="bracketexpr_parser" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> bracketexpr_<wbr>parser</h3>
+				<div class="tsd-signature tsd-kind-icon">bracketexpr_<wbr>parser<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_nearley_utils_.parser.html" class="tsd-signature-type">Parser</a><span class="tsd-signature-symbol"> = new Parser(bracketexpr_grammar)</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L30">src/lib/keyseq.ts:30</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="modifiers" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> modifiers</h3>
+				<div class="tsd-signature tsd-kind-icon">modifiers<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_requests_.defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map([[&quot;A&quot;, &quot;altKey&quot;],[&quot;C&quot;, &quot;ctrlKey&quot;],[&quot;M&quot;, &quot;metaKey&quot;],[&quot;S&quot;, &quot;shiftKey&quot;],])</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L44">src/lib/keyseq.ts:44</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="bracketexprtokey" class="tsd-anchor"></a>
+				<h3>bracketexpr<wbr>ToKey</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">bracketexpr<wbr>ToKey<span class="tsd-signature-symbol">(</span>inputStr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L317">src/lib/keyseq.ts:317</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>String starting with a <code>&lt;</code> to MinimalKey and remainder.</p>
+							</div>
+							<p>Bracket expressions generally start with a <code>&lt;</code> contain no angle brackets or
+								whitespace and end with a <code>&gt;.</code> These special-cased expressions are also
+							permitted: <code>&lt;{modifier}&lt;&gt;</code>, <code>&lt;{modifier}&gt;&gt;</code>, and <code>&lt;{modifier}-&gt;</code>.</p>
+							<p>If the string passed does not match this definition, it is treated as a
+							literal <code>&lt;.</code></p>
+							<p>Backus Naur approximation:</p>
+							<pre><code>- bracketexpr ::= <span class="hljs-string">&#x27;&lt;&#x27;</span> modifier? key <span class="hljs-string">&#x27;&gt;&#x27;</span>
+- modifier ::= <span class="hljs-string">&#x27;m&#x27;</span>|<span class="hljs-string">&#x27;s&#x27;</span>|<span class="hljs-string">&#x27;a&#x27;</span>|<span class="hljs-string">&#x27;c&#x27;</span> <span class="hljs-string">&#x27;-&#x27;</span>
+- key ::= <span class="hljs-string">&#x27;&lt;&#x27;</span>|<span class="hljs-string">&#x27;&gt;&#x27;</span>|/[^\s&lt;&gt;-]+/
+</code></pre>
+							<p>See <code>src/grammars/bracketExpr.ne</code> for the canonical definition.</p>
+							<p>Modifiers are case insensitive.</p>
+							<p>Some case insensitive vim compatibility aliases are also defined, see
+							<a href="_src_lib_keyseq_.html#expandaliases">expandAliases</a>.</p>
+							<p>Compatibility breaks:</p>
+							<p>Shift + key must use the correct capitalisation of key:
+							<code>&lt;S-j&gt; != J, &lt;S-J&gt; == J</code>.</p>
+							<p>In Vim <code>&lt;A-x&gt; == &lt;M-x&gt;</code> on most systems. Not so here: we can&#39;t detect
+							platform, so just have to use what the browser gives us.</p>
+							<p>Vim has a predefined list of special key sequences, we don&#39;t: there are too
+							many (and they&#39;re non-standard) <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">1</a>.</p>
+							<p>In the future, we may just use the names as defined in keyNameList.h <a href="https://searchfox.org/mozilla-central/source/dom/events/KeyNameList.h">2</a>.</p>
+							<p>In Vim, you&#39;re still allowed to use <code>&lt;lt&gt;</code> within angled brackets:
+								<code>&lt;M-&lt;&gt; == &lt;M-lt&gt; == &lt;M-&lt;lt&gt;&gt;</code>
+							Here only the first two will work.</p>
+							<p>Restrictions:</p>
+							<p>It is not possible to map to a keyevent that actually sends the key value
+								of any of the aliases or to any multi-character sequence containing a space
+							or <code>&gt;.</code> It is unlikely that browsers will ever do either of those things.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>inputStr: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="canonicalisemapstr" class="tsd-anchor"></a>
+				<h3>canonicalise<wbr>Mapstr</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">canonicalise<wbr>Mapstr<span class="tsd-signature-symbol">(</span>mapstr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L373">src/lib/keyseq.ts:373</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mapstr: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="completions" class="tsd-anchor"></a>
+				<h3>completions</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">completions<span class="tsd-signature-symbol">(</span>keyseq<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span>, map<span class="tsd-signature-symbol">: </span><a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L235">src/lib/keyseq.ts:235</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>returns the fragment of <code>map</code> that keyseq is a valid prefix of.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyseq: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>map: <a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="expandaliases" class="tsd-anchor"></a>
+				<h3>expand<wbr>Aliases</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">expand<wbr>Aliases<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L249">src/lib/keyseq.ts:249</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Expand special key aliases that Vim provides to canonical values</p>
+							</div>
+							<p>Vim aliases are case insensitive.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="hasmodifiers" class="tsd-anchor"></a>
+				<h3>has<wbr>Modifiers</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">has<wbr>Modifiers<span class="tsd-signature-symbol">(</span>keyEvent<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L461">src/lib/keyseq.ts:461</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyEvent: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="hasnonshiftmodifiers" class="tsd-anchor"></a>
+				<h3>has<wbr>Non<wbr>Shift<wbr>Modifiers</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">has<wbr>Non<wbr>Shift<wbr>Modifiers<span class="tsd-signature-symbol">(</span>keyEvent<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L471">src/lib/keyseq.ts:471</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>shiftKey is true for any capital letter, most numbers, etc. Generally care about other modifiers.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyEvent: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="keymap-1" class="tsd-anchor"></a>
+				<h3>key<wbr>Map</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">key<wbr>Map<span class="tsd-signature-symbol">(</span>conf<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L439">src/lib/keyseq.ts:439</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Return a &quot;*maps&quot; config converted into sequences of minimalkeys (e.g. &quot;nmaps&quot;)</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>conf: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="mapstrmaptokeymap" class="tsd-anchor"></a>
+				<h3>mapstr<wbr>Map<wbr>ToKey<wbr>Map</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">mapstr<wbr>Map<wbr>ToKey<wbr>Map<span class="tsd-signature-symbol">(</span>mapstrMap<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_requests_.defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_src_lib_keyseq_.html#maptarget" class="tsd-signature-type">MapTarget</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L426">src/lib/keyseq.ts:426</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Convert a map of mapstrs (e.g. from config) to a KeyMap</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mapstrMap: <a href="../classes/_src_lib_requests_.defaultmap.html#map" class="tsd-signature-type">Map</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_src_lib_keyseq_.html#maptarget" class="tsd-signature-type">MapTarget</a><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="mapstrtokeyseq" class="tsd-anchor"></a>
+				<h3>mapstr<wbr>ToKeyseq</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">mapstr<wbr>ToKeyseq<span class="tsd-signature-symbol">(</span>mapstr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L357">src/lib/keyseq.ts:357</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Generate KeySequences for the rest of the API.</p>
+							</div>
+							<p>A map expression is something like:</p>
+							<pre><code><span class="hljs-attribute">j</span> scrollline <span class="hljs-number">10</span>
+<span class="hljs-section">&lt;C-f&gt;</span> <span class="hljs-attribute">scrollpage</span> <span class="hljs-number">0</span>.<span class="hljs-number">5</span>
+<span class="hljs-section">&lt;C-d&gt;</span> <span class="hljs-attribute">scrollpage</span> <span class="hljs-number">0</span>.<span class="hljs-number">5</span>
+<span class="hljs-section">&lt;C-/&gt;</span><span class="hljs-section">&lt;C-n&gt;</span> <span class="hljs-attribute">mode</span> normal
+</code></pre>
+							<p>A mapstr is the bit before the space.</p>
+							<p>mapstrToKeyseq turns a mapstr into a keySequence that looks like this:</p>
+							<pre><code>[MinimalKey {<span class="hljs-attr">key:</span> <span class="hljs-string">&#x27;j&#x27;</span>}]
+[MinimalKey {<span class="hljs-attr">key:</span> <span class="hljs-string">&#x27;f&#x27;</span>, <span class="hljs-attr">ctrlKey:</span> <span class="hljs-literal">true</span>}]
+[MinimalKey {<span class="hljs-attr">key:</span> <span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-attr">ctrlKey:</span> <span class="hljs-literal">true</span>}]
+[MinimalKey {<span class="hljs-attr">key:</span> <span class="hljs-string">&#x27;/&#x27;</span>, <span class="hljs-attr">ctrlKey:</span> <span class="hljs-literal">true</span>}, MinimalKey {<span class="hljs-attr">key:</span> <span class="hljs-string">&#x27;n&#x27;</span>, <span class="hljs-attr">ctrlKey:</span> <span class="hljs-literal">true</span>}]
+</code></pre>
+							<p>(All four {modifier}Key flags are actually provided on all MinimalKeys)</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mapstr: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="minimalkeyfromkeyboardevent" class="tsd-anchor"></a>
+				<h3>minimal<wbr>Key<wbr>From<wbr>Keyboard<wbr>Event</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">minimal<wbr>Key<wbr>From<wbr>Keyboard<wbr>Event<span class="tsd-signature-symbol">(</span>keyEvent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">KeyboardEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L488">src/lib/keyseq.ts:488</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Convert keyboardEvent to internal type MinimalKey
+									for further use. Key is obtained through layout-independent
+								code if config says so.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyEvent: <span class="tsd-signature-type">KeyboardEvent</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="minimalkeytomozmap" class="tsd-anchor"></a>
+				<h3>minimal<wbr>Key<wbr>ToMoz<wbr>Map</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">minimal<wbr>Key<wbr>ToMoz<wbr>Map<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L412">src/lib/keyseq.ts:412</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>key: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="mozmaptominimalkey" class="tsd-anchor"></a>
+				<h3>moz<wbr>Map<wbr>ToMinimal<wbr>Key</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">moz<wbr>Map<wbr>ToMinimal<wbr>Key<span class="tsd-signature-symbol">(</span>mozmap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L392">src/lib/keyseq.ts:392</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mozmap: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="numericprefixtoexstrsuffix" class="tsd-anchor"></a>
+				<h3>numeric<wbr>Prefix<wbr>ToExstr<wbr>Suffix</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">numeric<wbr>Prefix<wbr>ToExstr<wbr>Suffix<span class="tsd-signature-symbol">(</span>numericPrefix<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L475">src/lib/keyseq.ts:475</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>numericPrefix: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="parse" class="tsd-anchor"></a>
+				<h3>parse</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbol">(</span>keyseq<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span>, map<span class="tsd-signature-symbol">: </span><a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-signature-type">ParserResponse</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L173">src/lib/keyseq.ts:173</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyseq: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>map: <a href="_src_lib_keyseq_.html#keymap" class="tsd-signature-type">KeyMap</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/_src_lib_keyseq_.parserresponse.html" class="tsd-signature-type">ParserResponse</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="prefixes" class="tsd-anchor"></a>
+				<h3>prefixes</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">prefixes<span class="tsd-signature-symbol">(</span>seq1<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span>, seq2<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L223">src/lib/keyseq.ts:223</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>True if seq1 is a prefix or equal to seq2</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>seq1: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>seq2: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="splitnumericprefix" class="tsd-anchor"></a>
+				<h3>split<wbr>Numeric<wbr>Prefix</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">split<wbr>Numeric<wbr>Prefix<span class="tsd-signature-symbol">(</span>keyseq<span class="tsd-signature-symbol">: </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L142">src/lib/keyseq.ts:142</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyseq: <a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../classes/_src_lib_keyseq_.minimalkey.html" class="tsd-signature-type">MinimalKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="striponlymodifiers" class="tsd-anchor"></a>
+				<h3>strip<wbr>Only<wbr>Modifiers</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">strip<wbr>Only<wbr>Modifiers<span class="tsd-signature-symbol">(</span>keyseq<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L166">src/lib/keyseq.ts:166</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>keyseq: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="updatebaselayout" class="tsd-anchor"></a>
+				<h3>update<wbr>Base<wbr>Layout</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">update<wbr>Base<wbr>Layout<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L522">src/lib/keyseq.ts:522</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Object literals</h2>
+			<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-module">
+				<a name="commandkey2jskey" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> command<wbr>Key2js<wbr>Key</h3>
+				<div class="tsd-signature tsd-kind-icon">command<wbr>Key2js<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L379">src/lib/keyseq.ts:379</a></li>
+					</ul>
+				</aside>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.comma" class="tsd-anchor"></a>
+					<h3>Comma</h3>
+					<div class="tsd-signature tsd-kind-icon">Comma<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;,&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L380">src/lib/keyseq.ts:380</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.down" class="tsd-anchor"></a>
+					<h3>Down</h3>
+					<div class="tsd-signature tsd-kind-icon">Down<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ArrowDown&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L383">src/lib/keyseq.ts:383</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.left" class="tsd-anchor"></a>
+					<h3>Left</h3>
+					<div class="tsd-signature tsd-kind-icon">Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ArrowLeft&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L384">src/lib/keyseq.ts:384</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.period" class="tsd-anchor"></a>
+					<h3>Period</h3>
+					<div class="tsd-signature tsd-kind-icon">Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;.&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L381">src/lib/keyseq.ts:381</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.right" class="tsd-anchor"></a>
+					<h3>Right</h3>
+					<div class="tsd-signature tsd-kind-icon">Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ArrowRight&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L385">src/lib/keyseq.ts:385</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.space" class="tsd-anchor"></a>
+					<h3>Space</h3>
+					<div class="tsd-signature tsd-kind-icon">Space<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot; &quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L386">src/lib/keyseq.ts:386</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+					<a name="commandkey2jskey.up" class="tsd-anchor"></a>
+					<h3>Up</h3>
+					<div class="tsd-signature tsd-kind-icon">Up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ArrowUp&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/keyseq.ts#L382">src/lib/keyseq.ts:382</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

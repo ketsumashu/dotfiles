@@ -1,0 +1,1339 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/lib/dom&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-enum tsd-parent-kind-module">
+			<a href="../enums/_src_lib_dom_.tabtarget.html" class="tsd-kind-icon">Tab<wbr>Target</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#elementfilter" class="tsd-kind-icon">Element<wbr>Filter</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_anchor_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>anchor_<wbr>selectors</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_filter_by_text_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>filter_<wbr>by_<wbr>text_<wbr>selectors</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_img_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>img_<wbr>selectors</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_killable_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>killable_<wbr>selectors</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_saveable" class="tsd-kind-icon">HINTTAGS_<wbr>saveable</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hinttags_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>selectors</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#last_used_input" class="tsd-kind-icon">LAST_<wbr>USED_<wbr>INPUT</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hintworthy_js_elems" class="tsd-kind-icon">hintworthy_<wbr>js_<wbr>elems</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#logger" class="tsd-kind-icon">logger</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#anchors" class="tsd-kind-icon">anchors</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#compareelementarea" class="tsd-kind-icon">compare<wbr>Element<wbr>Area</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#deepestshadowroot" class="tsd-kind-icon">deepest<wbr>Shadow<wbr>Root</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#elementsbyxpath" class="tsd-kind-icon">elements<wbr>ByXPath</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#elementswithtext" class="tsd-kind-icon">elements<wbr>With<wbr>Text</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#focus" class="tsd-kind-icon">focus</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getabsolutecentre" class="tsd-kind-icon">get<wbr>Absolute<wbr>Centre</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getalldocumentframes" class="tsd-kind-icon">get<wbr>All<wbr>Document<wbr>Frames</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getelementcentre" class="tsd-kind-icon">get<wbr>Element<wbr>Centre</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getelemsbyselector" class="tsd-kind-icon">get<wbr>Elems<wbr>BySelector</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getlastusedinput" class="tsd-kind-icon">get<wbr>Last<wbr>Used<wbr>Input</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getnthelement" class="tsd-kind-icon">get<wbr>Nth<wbr>Element</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#getselector" class="tsd-kind-icon">get<wbr>Selector</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#getshadowelementsbyselector" class="tsd-kind-icon">get<wbr>Shadow<wbr>Elements<wbr>BySelector</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#heightmatters" class="tsd-kind-icon">height<wbr>Matters</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#hijackpagefocusfunction" class="tsd-kind-icon">hijack<wbr>Page<wbr>Focus<wbr>Function</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#hijackpagelistenerfunctions" class="tsd-kind-icon">hijack<wbr>Page<wbr>Listener<wbr>Functions</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#iseditablehtmlinput" class="tsd-kind-icon">is<wbr>EditableHTMLInput</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#issubstantial" class="tsd-kind-icon">is<wbr>Substantial</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#istexteditable" class="tsd-kind-icon">is<wbr>Text<wbr>Editable</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#isvisible" class="tsd-kind-icon">is<wbr>Visible</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#isvisiblefilter" class="tsd-kind-icon">is<wbr>Visible<wbr>Filter</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#mouseevent" class="tsd-kind-icon">mouse<wbr>Event</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#onpagefocus" class="tsd-kind-icon">on<wbr>Page<wbr>Focus</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#registerevlisteneraction" class="tsd-kind-icon">register<wbr>EvListener<wbr>Action</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#setinput" class="tsd-kind-icon">set<wbr>Input</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#setupfocushandler" class="tsd-kind-icon">setup<wbr>Focus<wbr>Handler</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#simulateclick" class="tsd-kind-icon">simulate<wbr>Click</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_dom_.html#widthmatters" class="tsd-kind-icon">width<wbr>Matters</a>
+		</li>
+		<li class=" tsd-kind-object-literal tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_dom_.html#tabtargettomodifierkey" class="tsd-kind-icon">tab<wbr>Target<wbr>ToModifier<wbr>Key</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Enumerations</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_src_lib_dom_.tabtarget.html" class="tsd-kind-icon">Tab<wbr>Target</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Type aliases</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#elementfilter" class="tsd-kind-icon">Element<wbr>Filter</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_anchor_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>anchor_<wbr>selectors</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_filter_by_text_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>filter_<wbr>by_<wbr>text_<wbr>selectors</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_img_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>img_<wbr>selectors</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_killable_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>killable_<wbr>selectors</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_saveable" class="tsd-kind-icon">HINTTAGS_<wbr>saveable</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hinttags_selectors" class="tsd-kind-icon">HINTTAGS_<wbr>selectors</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#last_used_input" class="tsd-kind-icon">LAST_<wbr>USED_<wbr>INPUT</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_src_lib_dom_.html#hintworthy_js_elems" class="tsd-kind-icon">hintworthy_<wbr>js_<wbr>elems</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#logger" class="tsd-kind-icon">logger</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#anchors" class="tsd-kind-icon">anchors</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#compareelementarea" class="tsd-kind-icon">compare<wbr>Element<wbr>Area</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#deepestshadowroot" class="tsd-kind-icon">deepest<wbr>Shadow<wbr>Root</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#elementsbyxpath" class="tsd-kind-icon">elements<wbr>ByXPath</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#elementswithtext" class="tsd-kind-icon">elements<wbr>With<wbr>Text</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#focus" class="tsd-kind-icon">focus</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getabsolutecentre" class="tsd-kind-icon">get<wbr>Absolute<wbr>Centre</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getalldocumentframes" class="tsd-kind-icon">get<wbr>All<wbr>Document<wbr>Frames</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getelementcentre" class="tsd-kind-icon">get<wbr>Element<wbr>Centre</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getelemsbyselector" class="tsd-kind-icon">get<wbr>Elems<wbr>BySelector</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getlastusedinput" class="tsd-kind-icon">get<wbr>Last<wbr>Used<wbr>Input</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getnthelement" class="tsd-kind-icon">get<wbr>Nth<wbr>Element</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#getselector" class="tsd-kind-icon">get<wbr>Selector</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#getshadowelementsbyselector" class="tsd-kind-icon">get<wbr>Shadow<wbr>Elements<wbr>BySelector</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#heightmatters" class="tsd-kind-icon">height<wbr>Matters</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#hijackpagefocusfunction" class="tsd-kind-icon">hijack<wbr>Page<wbr>Focus<wbr>Function</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#hijackpagelistenerfunctions" class="tsd-kind-icon">hijack<wbr>Page<wbr>Listener<wbr>Functions</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#iseditablehtmlinput" class="tsd-kind-icon">is<wbr>EditableHTMLInput</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#issubstantial" class="tsd-kind-icon">is<wbr>Substantial</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#istexteditable" class="tsd-kind-icon">is<wbr>Text<wbr>Editable</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#isvisible" class="tsd-kind-icon">is<wbr>Visible</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#isvisiblefilter" class="tsd-kind-icon">is<wbr>Visible<wbr>Filter</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#mouseevent" class="tsd-kind-icon">mouse<wbr>Event</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#onpagefocus" class="tsd-kind-icon">on<wbr>Page<wbr>Focus</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#registerevlisteneraction" class="tsd-kind-icon">register<wbr>EvListener<wbr>Action</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#setinput" class="tsd-kind-icon">set<wbr>Input</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#setupfocushandler" class="tsd-kind-icon">setup<wbr>Focus<wbr>Handler</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#simulateclick" class="tsd-kind-icon">simulate<wbr>Click</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_dom_.html#widthmatters" class="tsd-kind-icon">width<wbr>Matters</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Object literals</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-object-literal tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_dom_.html#tabtargettomodifierkey" class="tsd-kind-icon">tab<wbr>Target<wbr>ToModifier<wbr>Key</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+				<a name="elementfilter" class="tsd-anchor"></a>
+				<h3>Element<wbr>Filter</h3>
+				<div class="tsd-signature tsd-kind-icon">Element<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L148">src/lib/dom.ts:148</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Type for functions that can filter element arrays</p>
+					</div>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>element: <span class="tsd-signature-type">Element</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_anchor_selectors" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>anchor_<wbr>selectors</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>anchor_<wbr>selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"[id],[name]"</span><span class="tsd-signature-symbol"> = &#x60;[id],[name]&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L649">src/lib/dom.ts:649</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_filter_by_text_selectors" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>filter_<wbr>by_<wbr>text_<wbr>selectors</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>filter_<wbr>by_<wbr>text_<wbr>selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"input:not([type&#x3D;hidden]):not([disabled]),a,textarea,button,select,[class*&#x3D;&#x27;button&#x27;]"</span><span class="tsd-signature-symbol"> = &#x60;input:not([type&#x3D;hidden]):not([disabled]),a,textarea,button,select,[class*&#x3D;&#x27;button&#x27;]&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L635">src/lib/dom.ts:635</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_img_selectors" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>img_<wbr>selectors</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>img_<wbr>selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"img,[src]"</span><span class="tsd-signature-symbol"> = &#x60;img,[src]&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L644">src/lib/dom.ts:644</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_killable_selectors" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>killable_<wbr>selectors</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>killable_<wbr>selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"header,footer,nav,span,div,iframe,img,button,article,summary"</span><span class="tsd-signature-symbol"> = &#x60;header,footer,nav,span,div,iframe,img,button,article,summary&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L654">src/lib/dom.ts:654</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_saveable" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>saveable</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>saveable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"[href]:not([href&#x3D;&#x27;#&#x27;])"</span><span class="tsd-signature-symbol"> = &#x60;[href]:not([href&#x3D;&#x27;#&#x27;])&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L669">src/lib/dom.ts:669</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>CSS selector for elements which point to a saveable resource</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hinttags_selectors" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> HINTTAGS_<wbr>selectors</h3>
+				<div class="tsd-signature tsd-kind-icon">HINTTAGS_<wbr>selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"input:not([type&#x3D;hidden]):not([disabled]),a,area,button,details,iframe,label,select,summary,textarea,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[role&#x3D;&#x27;link&#x27;],[role&#x3D;&#x27;button&#x27;],[role&#x3D;&#x27;checkbox&#x27;],[role&#x3D;&#x27;combobox&#x27;],[role&#x3D;&#x27;listbox&#x27;],[role&#x3D;&#x27;listitem&#x27;],[role&#x3D;&#x27;menuitem&#x27;],[role&#x3D;&#x27;menuitemcheckbox&#x27;],[role&#x3D;&#x27;menuitemradio&#x27;],[role&#x3D;&#x27;option&#x27;],[role&#x3D;&#x27;radio&#x27;],[role&#x3D;&#x27;scrollbar&#x27;],[role&#x3D;&#x27;slider&#x27;],[role&#x3D;&#x27;spinbutton&#x27;],[role&#x3D;&#x27;tab&#x27;],[role&#x3D;&#x27;textbox&#x27;],[role&#x3D;&#x27;treeitem&#x27;],[class*&#x3D;&#x27;button&#x27;],[tabindex]"</span><span class="tsd-signature-symbol"> = &#x60;input:not([type&#x3D;hidden]):not([disabled]),a,area,button,details,iframe,label,select,summary,textarea,[onclick],[onmouseover],[onmousedown],[onmouseup],[oncommand],[role&#x3D;&#x27;link&#x27;],[role&#x3D;&#x27;button&#x27;],[role&#x3D;&#x27;checkbox&#x27;],[role&#x3D;&#x27;combobox&#x27;],[role&#x3D;&#x27;listbox&#x27;],[role&#x3D;&#x27;listitem&#x27;],[role&#x3D;&#x27;menuitem&#x27;],[role&#x3D;&#x27;menuitemcheckbox&#x27;],[role&#x3D;&#x27;menuitemradio&#x27;],[role&#x3D;&#x27;option&#x27;],[role&#x3D;&#x27;radio&#x27;],[role&#x3D;&#x27;scrollbar&#x27;],[role&#x3D;&#x27;slider&#x27;],[role&#x3D;&#x27;spinbutton&#x27;],[role&#x3D;&#x27;tab&#x27;],[role&#x3D;&#x27;textbox&#x27;],[role&#x3D;&#x27;treeitem&#x27;],[class*&#x3D;&#x27;button&#x27;],[tabindex]&#x60;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L596">src/lib/dom.ts:596</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="last_used_input" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagLet">Let</span> LAST_<wbr>USED_<wbr>INPUT</h3>
+				<div class="tsd-signature tsd-kind-icon">LAST_<wbr>USED_<wbr>INPUT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> = null</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L529">src/lib/dom.ts:529</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>DOM reference to the last used Input field</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+				<a name="hintworthy_js_elems" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> hintworthy_<wbr>js_<wbr>elems</h3>
+				<div class="tsd-signature tsd-kind-icon">hintworthy_<wbr>js_<wbr>elems<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Set()</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L409">src/lib/dom.ts:409</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="logger" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> logger</h3>
+				<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_logging_.logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> = new Logging.Logger(&quot;dom&quot;)</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L12">src/lib/dom.ts:12</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="anchors" class="tsd-anchor"></a>
+				<h3>anchors</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">anchors<span class="tsd-signature-symbol">(</span>includeInvisible<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L676">src/lib/dom.ts:676</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get array of &quot;anchors&quot;: elements which have id or name and can be addressed
+								with the hash/fragment in the URL</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> includeInvisible: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="compareelementarea" class="tsd-anchor"></a>
+				<h3>compare<wbr>Element<wbr>Area</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">compare<wbr>Element<wbr>Area<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L402">src/lib/dom.ts:402</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Comparison function by offsetWidth/Height, used for sorting elements by their
+								area on the page</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>a: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+							<li>
+								<h5>b: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="deepestshadowroot" class="tsd-anchor"></a>
+				<h3>deepest<wbr>Shadow<wbr>Root</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">deepest<wbr>Shadow<wbr>Root<span class="tsd-signature-symbol">(</span>sr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShadowRoot</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ShadowRoot</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L743">src/lib/dom.ts:743</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Recursively resolves an active shadow DOM element.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>sr: <span class="tsd-signature-type">ShadowRoot</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ShadowRoot</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="elementsbyxpath" class="tsd-anchor"></a>
+				<h3>elements<wbr>ByXPath</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">elements<wbr>ByXPath<span class="tsd-signature-symbol">(</span>xpath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, parent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L134">src/lib/dom.ts:134</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Iterable of elements that match xpath.</p>
+							</div>
+							<p>Adapted from stackoverflow</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>xpath: <span class="tsd-signature-type">any</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> parent: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="elementswithtext" class="tsd-anchor"></a>
+				<h3>elements<wbr>With<wbr>Text</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">elements<wbr>With<wbr>Text<span class="tsd-signature-symbol">(</span>includeInvisible<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L123">src/lib/dom.ts:123</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> includeInvisible: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="focus" class="tsd-anchor"></a>
+				<h3>focus</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">focus<span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L507">src/lib/dom.ts:507</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Focuses an input element and makes sure the cursor is put at the end of the input</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>e: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getabsolutecentre" class="tsd-anchor"></a>
+				<h3>get<wbr>Absolute<wbr>Centre</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Absolute<wbr>Centre<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L757">src/lib/dom.ts:757</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>el: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getalldocumentframes" class="tsd-anchor"></a>
+				<h3>get<wbr>All<wbr>Document<wbr>Frames</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Document<wbr>Frames<span class="tsd-signature-symbol">(</span>doc<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLFrameElement</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L295">src/lib/dom.ts:295</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Return all frames that belong to the document (frames that belong to
+								extensions are ignored).</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> doc: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> = document</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The document the frames should be fetched from</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLFrameElement</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getelementcentre" class="tsd-anchor"></a>
+				<h3>get<wbr>Element<wbr>Centre</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Element<wbr>Centre<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L752">src/lib/dom.ts:752</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>el: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getelemsbyselector" class="tsd-anchor"></a>
+				<h3>get<wbr>Elems<wbr>BySelector</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Elems<wbr>BySelector<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, filters<span class="tsd-signature-symbol">: </span><a href="_src_lib_dom_.html#elementfilter" class="tsd-signature-type">ElementFilter</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L353">src/lib/dom.ts:353</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get all elements that match the given selector</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>selector: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>`the CSS selector to choose elements with</p>
+								</div>
+							</li>
+							<li>
+								<h5>filters: <a href="_src_lib_dom_.html#elementfilter" class="tsd-signature-type">ElementFilter</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>filter to use (in thre given order) to further chose
+									items, or [] for all</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getlastusedinput" class="tsd-anchor"></a>
+				<h3>get<wbr>Last<wbr>Used<wbr>Input</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Last<wbr>Used<wbr>Input<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L531">src/lib/dom.ts:531</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLElement</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getnthelement" class="tsd-anchor"></a>
+				<h3>get<wbr>Nth<wbr>Element</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Nth<wbr>Element<span class="tsd-signature-symbol">(</span>selectors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filters<span class="tsd-signature-symbol">: </span><a href="_src_lib_dom_.html#elementfilter" class="tsd-signature-type">ElementFilter</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L381">src/lib/dom.ts:381</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the nth input element on a page</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>selectors: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>nth: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>the element index, can be negative to start at the end</p>
+								</div>
+							</li>
+							<li>
+								<h5>filters: <a href="_src_lib_dom_.html#elementfilter" class="tsd-signature-type">ElementFilter</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>filter to use (in thre given order) to further chose
+									items, or [] for all</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLElement</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="getselector" class="tsd-anchor"></a>
+				<h3>get<wbr>Selector</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Selector<span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L317">src/lib/dom.ts:317</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Computes the unique CSS selector of a specific HTMLElement</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>e: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="getshadowelementsbyselector" class="tsd-anchor"></a>
+				<h3>get<wbr>Shadow<wbr>Elements<wbr>BySelector</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Shadow<wbr>Elements<wbr>BySelector<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L337">src/lib/dom.ts:337</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>selector: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="heightmatters" class="tsd-anchor"></a>
+				<h3>height<wbr>Matters</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">height<wbr>Matters<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CSSStyleDeclaration</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L173">src/lib/dom.ts:173</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>This function decides whether the height attribute contained in a
+									ComputedStyle matters.  For example, the height attribute doesn&#39;t matter for
+									elements that have &quot;display: inline&quot; because their height is overriden by
+								the height of the node they are in.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>style: <span class="tsd-signature-type">CSSStyleDeclaration</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="hijackpagefocusfunction" class="tsd-anchor"></a>
+				<h3>hijack<wbr>Page<wbr>Focus<wbr>Function</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">hijack<wbr>Page<wbr>Focus<wbr>Function<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L565">src/lib/dom.ts:565</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Replaces the page&#39;s HTMLElement.prototype.focus with our own, onPageFocus</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="hijackpagelistenerfunctions" class="tsd-anchor"></a>
+				<h3>hijack<wbr>Page<wbr>Listener<wbr>Functions</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">hijack<wbr>Page<wbr>Listener<wbr>Functions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L480">src/lib/dom.ts:480</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Replace the page&#39;s addEventListener with a closure containing a reference
+									to the original addEventListener and <a href="_src_lib_dom_.html#registerevlisteneraction">registerEvListenerAction</a>. Do the
+								same with removeEventListener.</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="iseditablehtmlinput" class="tsd-anchor"></a>
+				<h3>is<wbr>EditableHTMLInput</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>EditableHTMLInput<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L71">src/lib/dom.ts:71</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Returns whether the passed HTML input element is editable</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>element: <span class="tsd-signature-type">HTMLInputElement</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="issubstantial" class="tsd-anchor"></a>
+				<h3>is<wbr>Substantial</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Substantial<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L154">src/lib/dom.ts:154</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Is the element of &quot;substantial&quot; size and shown on the page. The element
+									doesn&#39;t need to be in the viewport. This is useful when you want to
+								scroll to something, but still want to exclude tiny and useless items</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>element: <span class="tsd-signature-type">Element</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="istexteditable" class="tsd-anchor"></a>
+				<h3>is<wbr>Text<wbr>Editable</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Text<wbr>Editable<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L25">src/lib/dom.ts:25</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Given a DOM element, returns true if you can edit it with key presses or
+									if the element is of a type that should handle its own keypresses
+									(e.g. role=application for google docs/sheets)
+									TODO: work on case sensitivity
+								consider all the possible cases</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>element: <span class="tsd-signature-type">Element</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="isvisible" class="tsd-anchor"></a>
+				<h3>is<wbr>Visible</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Visible<span class="tsd-signature-symbol">(</span>thing<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L224">src/lib/dom.ts:224</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>is the element within a rect and not obscured by another element?</p>
+							</div>
+							<p>From: <a href="https://github.com/lusakasa/saka-key/blob/9f560b3a718a9efda809dcb794de14b4e675b35a/src/modes/hints/client/findHints.js#L97">https://github.com/lusakasa/saka-key/blob/9f560b3a718a9efda809dcb794de14b4e675b35a/src/modes/hints/client/findHints.js#L97</a>
+							Based on <a href="https://github.com/guyht/vimari/blob/master/vimari.safariextension/linkHints.js">https://github.com/guyht/vimari/blob/master/vimari.safariextension/linkHints.js</a></p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>thing: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="isvisiblefilter" class="tsd-anchor"></a>
+				<h3>is<wbr>Visible<wbr>Filter</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Visible<wbr>Filter<span class="tsd-signature-symbol">(</span>includeInvisible<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L209">src/lib/dom.ts:209</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>includeInvisible: <span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>_: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Range</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="mouseevent" class="tsd-anchor"></a>
+				<h3>mouse<wbr>Event</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">mouse<wbr>Event<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"hover"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"unhover"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"click"</span>, modifierKeys<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L95">src/lib/dom.ts:95</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Dispatch a mouse event to the target element
+								based on cVim&#39;s implementation</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>element: <span class="tsd-signature-type">Element</span></h5>
+							</li>
+							<li>
+								<h5>type: <span class="tsd-signature-type">"hover"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"unhover"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"click"</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> modifierKeys: <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
+								<ul class="tsd-parameters">
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="onpagefocus" class="tsd-anchor"></a>
+				<h3>on<wbr>Page<wbr>Focus</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">on<wbr>Page<wbr>Focus<span class="tsd-signature-symbol">(</span>elem<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L543">src/lib/dom.ts:543</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>WARNING: This function can potentially recieve malicious input! For the
+									whole discussion about this, see
+								<a href="https://github.com/tridactyl/tridactyl/pull/225">https://github.com/tridactyl/tridactyl/pull/225</a></p>
+							</div>
+							<p> Remember to check whether WebComponents change anything security-wise:
+								<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements</a>
+							<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1406825">https://bugzilla.mozilla.org/show_bug.cgi?id=1406825</a></p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>elem: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="registerevlisteneraction" class="tsd-anchor"></a>
+				<h3>register<wbr>EvListener<wbr>Action</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">register<wbr>EvListener<wbr>Action<span class="tsd-signature-symbol">(</span>elem<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventTarget</span>, add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L432">src/lib/dom.ts:432</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Adds or removes an element from the hintworthy_js_elems array of the
+								current tab.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>elem: <span class="tsd-signature-type">EventTarget</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The element add/removeEventListener is called on</p>
+								</div>
+							</li>
+							<li>
+								<h5>add: <span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>true when called from addEventListener,
+									false from removeEventListener</p>
+								</div>
+							</li>
+							<li>
+								<h5>event: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The event name given to add/removeEventListener</p>
+									<p> This function must be security reviewed when Custom Elements land in Firefox
+									<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1406825">https://bugzilla.mozilla.org/show_bug.cgi?id=1406825</a></p>
+									<p> This function is exported to the web content window but should only be
+										callable from our modified add/removeEventListener because we remove the
+										reference to it before web content runs (if added afterwards a
+										mutationobserver on the window object would probably capture a reference to
+									this function).</p>
+									<p> Just in case web content does get a direct reference or the built-in
+										add/removeEventListener code doesn&#39;t validate elem correctly, this function
+									must assume that its inputs are potentially malicious.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+				<a name="setinput" class="tsd-anchor"></a>
+				<h3>set<wbr>Input</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Input<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L554">src/lib/dom.ts:554</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>el: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="setupfocushandler" class="tsd-anchor"></a>
+				<h3>setup<wbr>Focus<wbr>Handler</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">setup<wbr>Focus<wbr>Handler<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L579">src/lib/dom.ts:579</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="simulateclick" class="tsd-anchor"></a>
+				<h3>simulate<wbr>Click</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">simulate<wbr>Click<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, tabTarget<span class="tsd-signature-symbol">?: </span><a href="../enums/_src_lib_dom_.tabtarget.html" class="tsd-signature-type">TabTarget</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L697">src/lib/dom.ts:697</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>if <code>target === _blank</code> clicking the link is treated as opening a popup and is blocked. Use webext API to avoid that.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>target: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> tabTarget: <a href="../enums/_src_lib_dom_.tabtarget.html" class="tsd-signature-type">TabTarget</a><span class="tsd-signature-symbol"> = TabTarget.CurrentTab</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="widthmatters" class="tsd-anchor"></a>
+				<h3>width<wbr>Matters</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">width<wbr>Matters<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CSSStyleDeclaration</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L190">src/lib/dom.ts:190</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>style: <span class="tsd-signature-type">CSSStyleDeclaration</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Object literals</h2>
+			<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-module tsd-is-not-exported">
+				<a name="tabtargettomodifierkey" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> tab<wbr>Target<wbr>ToModifier<wbr>Key</h3>
+				<div class="tsd-signature tsd-kind-icon">tab<wbr>Target<wbr>ToModifier<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L689">src/lib/dom.ts:689</a></li>
+					</ul>
+				</aside>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+					<a name="tabtargettomodifierkey._tabtarget_currenttab_" class="tsd-anchor"></a>
+					<h3>[<wbr>Tab<wbr>Target.<wbr>Current<wbr>Tab]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Tab<wbr>Target.<wbr>Current<wbr>Tab]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L690">src/lib/dom.ts:690</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+					<a name="tabtargettomodifierkey._tabtarget_newbackgroundtab_" class="tsd-anchor"></a>
+					<h3>[<wbr>Tab<wbr>Target.<wbr>New<wbr>Background<wbr>Tab]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Tab<wbr>Target.<wbr>New<wbr>Background<wbr>Tab]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L692">src/lib/dom.ts:692</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tabtargettomodifierkey._tabtarget_newbackgroundtab_.ctrlkey" class="tsd-anchor"></a>
+						<h3>ctrl<wbr>Key</h3>
+						<div class="tsd-signature tsd-kind-icon">ctrl<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L692">src/lib/dom.ts:692</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+					<a name="tabtargettomodifierkey._tabtarget_newtab_" class="tsd-anchor"></a>
+					<h3>[<wbr>Tab<wbr>Target.<wbr>New<wbr>Tab]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Tab<wbr>Target.<wbr>New<wbr>Tab]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L691">src/lib/dom.ts:691</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tabtargettomodifierkey._tabtarget_newtab_.ctrlkey-1" class="tsd-anchor"></a>
+						<h3>ctrl<wbr>Key</h3>
+						<div class="tsd-signature tsd-kind-icon">ctrl<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L691">src/lib/dom.ts:691</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tabtargettomodifierkey._tabtarget_newtab_.shiftkey" class="tsd-anchor"></a>
+						<h3>shift<wbr>Key</h3>
+						<div class="tsd-signature tsd-kind-icon">shift<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L691">src/lib/dom.ts:691</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal tsd-is-not-exported">
+					<a name="tabtargettomodifierkey._tabtarget_newwindow_" class="tsd-anchor"></a>
+					<h3>[<wbr>Tab<wbr>Target.<wbr>New<wbr>Window]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Tab<wbr>Target.<wbr>New<wbr>Window]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L693">src/lib/dom.ts:693</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="tabtargettomodifierkey._tabtarget_newwindow_.shiftkey-1" class="tsd-anchor"></a>
+						<h3>shift<wbr>Key</h3>
+						<div class="tsd-signature tsd-kind-icon">shift<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/dom.ts#L693">src/lib/dom.ts:693</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

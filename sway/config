@@ -7,10 +7,8 @@ set $right l
 set $term wezterm
 set $menu "rofi -show drun"
 ### startups
-exec_always autotiling-rs
-exec_always ~/.azotebg
+exec_always ~/bin/wall
 exec "yaskkserv2 --google-suggest ~/dotfiles/libskk/dict.yaskkserv2"
-exec "fcitx5 -rd"
 exec discord-screenaudio
 exec sway-audio-idle-inhibit
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
@@ -44,8 +42,7 @@ for_window [class="^steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 ### Output configuration
-output DP-1 mode --custom 1920x1080@60hz
-output HDMI-A-1 resolution 1920x1080@60Hz scale 1
+output HDMI-A-1 resolution 2560x1440@144Hz scale 1
 
 ### Idle configuration
 exec swayidle -w \
@@ -202,7 +199,7 @@ client.background       #d8dee9
 # Status Bar:
 #
 #bar {
-#    position top
+#    position left
 #    status_command waybar
 #    font pango:Fira Code,Blobmoji 12px
 #    tray_output *

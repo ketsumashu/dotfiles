@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="TridactylOwnNamespace">
+    <head>
+        <meta charset="utf-8">
+        <title>Tridactyl Tutorial</title>
+        <link rel="stylesheet" href="../css/newtab.css">
+        <link rel="stylesheet" href="../css/content.css">
+        <link rel="stylesheet" href="../css/hint.css">
+        <link rel="stylesheet" href="../css/viewsource.css">
+        <link rel="shortcut icon" href="../logo/Tridactyl_64px.png">
+    </head>
+    <body>
+<h1 id="non-qwerty-layouts-and-tridactyl-internationalisation">Non-QWERTY layouts and Tridactyl (&quot;internationalisation&quot;)</h1>
+<p>Tridactyl&#39;s default keybinds are designed to be ergonomic on a QWERTY keyboard layout. On many other layouts - such as DVORAK or BÉPO - they are extremely unergonomic.</p>
+<p>If you only use one keyboard layout, you could quite reasonably decide to rebind all of Tridactyl&#39;s binds manually to make it more ergonomic, or you could use <code>:keymap</code> to make your layout as seen to Tridactyl be more like QWERTY or whatever other layout you desire.</p>
+<p>However, if you use multiple keyboard layouts, we recommend that you <code>:set keyboardlayoutforce true</code>. This setting intercepts all key presses and checks the keyboard layout-agnostic key codes and then translates those keycodes into the US ANSI QWERTY layout by default. This means that Tridactyl behaviour depends on the physical keys you press rather than the layout you are currently using, except in text fields. The major downside to this is that binding new commands becomes a bit mind bending since when you are writing the bind you must press the key that corresponds in your layout to the forced layout, rather than the physical key.</p>
+<p>To counteract this, we have added a binding wizard/helper called <code>:bindwizard</code> which starts <code>gobble</code>, accepting physical key presses until Enter is pressed, at which point it prefills the command line with the key sequence which corresponds to your keys in the forced layout. Your binds will then be bound to the same keys no matter which software layout you use.</p>
+<p>You can change the forced layout - see <code>:help keyboardlayoutbase</code> - if, for example, you would prefer the forced layout to be the UK QWERTY.</p>
+<p>At the time of writing, it is not possible to use <code>:setmode</code> with <code>keyboardlayoutforce</code>, which means it also applies to hint mode and hint characters, which may be surprising.</p>
+<p>The <a href="./9-help.html">next and final page</a> of this tutorial is about getting help. <a href='./8-marks.html' rel="prev"></a></p>
+
+    </body>
+    <script src="../../content.js"></script>
+</html>

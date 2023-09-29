@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/lib/requests&quot; | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
+			<a href="../classes/_src_lib_requests_.defaultmap.html" class="tsd-kind-icon">Default<wbr>Map</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_lib_requests_.html#logger" class="tsd-kind-icon">logger</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="_src_lib_requests_.html#clobbercsp" class="tsd-kind-icon">clobberCSP</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Classes</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="../classes/_src_lib_requests_.defaultmap.html" class="tsd-kind-icon">Default<wbr>Map</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_src_lib_requests_.html#logger" class="tsd-kind-icon">logger</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="_src_lib_requests_.html#clobbercsp" class="tsd-kind-icon">clobberCSP</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+				<a name="logger" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> logger</h3>
+				<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../classes/_src_lib_logging_.logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol"> = new Logger(&quot;requests&quot;)</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/requests.ts#L4">src/lib/requests.ts:4</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="clobbercsp" class="tsd-anchor"></a>
+				<h3>clobberCSP</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">clobberCSP<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>responseHeaders<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/lib/requests.ts#L30">src/lib/requests.ts:30</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Reduce CSP safety to permit tridactyl to run correctly</p>
+							</div>
+							<p>style-src needs &#39;unsafe-inline&#39; (hinting styles) and &#39;self&#39; (mode indicator hiding)
+								script-src needs &#39;unsafe-eval&#39; (event hijacking)
+								- but that&#39;s pretty dangerous, so maybe we shouldn&#39;t just clobber it?
+							sandbox must not be set</p>
+							<p>This only needs to happen because of a Firefox bug and we should stop doing
+							it when they fix the bug.</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>response: <span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>responseHeaders<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>

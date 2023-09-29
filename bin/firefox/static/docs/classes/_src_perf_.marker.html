@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="minimal no-js TridactylOwnNamespace">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Marker | tridactyl</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/content.js"></script>
+	<script src="/help.js"></script>
+	<link rel="stylesheet" href="/static/css/content.css">
+	<link rel="stylesheet" href="/static/css/hint.css">
+	<link rel="stylesheet" href="/static/css/viewsource.css">
+	<link rel="stylesheet" href="/static/typedoc/assets/css/main.css">
+</head>
+<body>
+<nav class="tsd-navigation secondary scroller">
+	<ul>
+		<li class="current tsd-kind-class tsd-parent-kind-module">
+			<a href="_src_perf_.marker.html" class="tsd-kind-icon">Marker</a>
+			<ul>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class">
+					<a href="_src_perf_.marker.html#constructor" class="tsd-kind-icon">constructor</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="_src_perf_.marker.html#active" class="tsd-kind-icon">active</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="_src_perf_.marker.html#metricname" class="tsd-kind-icon">metric<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="_src_perf_.marker.html#end" class="tsd-kind-icon">end</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="_src_perf_.marker.html#start" class="tsd-kind-icon">start</a>
+				</li>
+			</ul>
+		</li>
+		<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+			<a href="_src_perf_.metricname.html" class="tsd-kind-icon">Metric<wbr>Name</a>
+		</li>
+		<li class=" tsd-kind-class tsd-parent-kind-module">
+			<a href="_src_perf_.statsfilter.html" class="tsd-kind-icon">Stats<wbr>Filter</a>
+		</li>
+		<li class=" tsd-kind-class tsd-parent-kind-module">
+			<a href="_src_perf_.statslogger.html" class="tsd-kind-icon">Stats<wbr>Logger</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../interfaces/_src_perf_.metricnameinfo.html" class="tsd-kind-icon">Metric<wbr>Name<wbr>Info</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+			<a href="../modules/_src_perf_.html#statsfilterconfig" class="tsd-kind-icon">Stats<wbr>Filter<wbr>Config</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#tri_performance_name_prefix" class="tsd-kind-icon">TRI_<wbr>PERFORMANCE_<wbr>NAME_<wbr>PREFIX</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#extractregexp" class="tsd-kind-icon">extract<wbr>Reg<wbr>Exp</a>
+		</li>
+		<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#logger" class="tsd-kind-icon">logger</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#extractmetricname" class="tsd-kind-icon">extract<wbr>Metric<wbr>Name</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="../modules/_src_perf_.html#listenforcounters" class="tsd-kind-icon">listen<wbr>For<wbr>Counters</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="../modules/_src_perf_.html#measured" class="tsd-kind-icon">measured</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="../modules/_src_perf_.html#measuredasync" class="tsd-kind-icon">measured<wbr>Async</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#performanceapiavailable" class="tsd-kind-icon">performance<wbr>Api<wbr>Available</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="../modules/_src_perf_.html#renderstatshistogram" class="tsd-kind-icon">render<wbr>Stats<wbr>Histogram</a>
+		</li>
+		<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+			<a href="../modules/_src_perf_.html#sendstats" class="tsd-kind-icon">send<wbr>Stats</a>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main scroller">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Convenience object for collecting timing information. Create it and
+						call start() to create a mark entry for the start of the duration
+						to measure. Later, call end() to create a mark entry for the end of
+						the duration and a measure entry for the duration from the start
+						mark to the end mark. Marks are given a unique identifier to ensure
+					that async, multi-threaded, or reentrant code doesn&#39;t have collisions.</p>
+				</div>
+				<p>WARNING! Will SILENTLY DEACTIVATE ITSELF if the &quot;perfcounters&quot;
+					config option is not set to &quot;true&quot;! This is done to minimize the
+					performance overhead of instrumentation when performance counters
+				are turned off.</p>
+				<p>The ownerName and functionName are encoded into the name of the
+					performance entry in a way that allows entries to be retrieved
+				using StatsFilters.</p>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">Marker</span>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Constructors</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_src_perf_.marker.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_src_perf_.marker.html#active" class="tsd-kind-icon">active</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_src_perf_.marker.html#metricname" class="tsd-kind-icon">metric<wbr>Name</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_perf_.marker.html#end" class="tsd-kind-icon">end</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_perf_.marker.html#start" class="tsd-kind-icon">start</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Marker<span class="tsd-signature-symbol">(</span>ownerName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, active<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, metricName<span class="tsd-signature-symbol">?: </span><a href="_src_perf_.metricname.html" class="tsd-signature-type">MetricName</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_perf_.marker.html" class="tsd-signature-type">Marker</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/perf.ts#L100">src/perf.ts:100</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>ownerName: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>functionName: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> active: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = performanceApiAvailable() &amp;&amp;config.get(&quot;perfcounters&quot;) &#x3D;&#x3D;&#x3D; &quot;true&quot;</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> metricName: <a href="_src_perf_.metricname.html" class="tsd-signature-type">MetricName</a><span class="tsd-signature-symbol"> = new MetricName(ownerName,functionName,)</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="_src_perf_.marker.html" class="tsd-signature-type">Marker</a></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="active" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> active</h3>
+				<div class="tsd-signature tsd-kind-icon">active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/perf.ts#L104">src/perf.ts:104</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="metricname" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> metric<wbr>Name</h3>
+				<div class="tsd-signature tsd-kind-icon">metric<wbr>Name<span class="tsd-signature-symbol">:</span> <a href="_src_perf_.metricname.html" class="tsd-signature-type">MetricName</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/perf.ts#L106">src/perf.ts:106</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="end" class="tsd-anchor"></a>
+				<h3>end</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/perf.ts#L122">src/perf.ts:122</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="start" class="tsd-anchor"></a>
+				<h3>start</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/tridactyl/tridactyl/blob/89a7e613/src/perf.ts#L112">src/perf.ts:112</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+</div>
+</body>
+</html>
