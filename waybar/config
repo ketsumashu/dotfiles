@@ -34,7 +34,7 @@
     },
 
     "tray": {
-        "spacing": 5
+        "spacing": 10
     },
 
     "clock": {
