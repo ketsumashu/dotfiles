@@ -1,8 +1,9 @@
 {
     "layer": "top",
     "position": "left",
+    "output": ["HDMI-A-2", "HDMI-A-1"],
     //"height": 1440,
-    "width": 54,
+    "width": 60,
     "margin-right": 0,
     "spacing": 15,
 
@@ -14,7 +15,8 @@
         "format": "{name}",
         "all-outputs": false,
         "persistent_workspaces" : {
-            "*": 6,
+            "HDMI-A-2": [ 1, 2, 4, 6],
+            "HDMI-A-1": [ 3, 5, 7, 9],
         },
         "on-scroll-up"  : "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1"
@@ -45,7 +47,7 @@
     },
 
     "network": {
-        "interface": "enp2s0",
+        "interface": "enp4s0",
         "interval": 1,
         "format": "{bandwidthDownBits} \n{bandwidthUpBits}",
         "format-disconnected": "OFFLINE",

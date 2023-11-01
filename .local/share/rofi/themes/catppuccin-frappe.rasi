@@ -9,7 +9,7 @@
     grey: #737994;
 
     width: 720;
-    font: "Cozette 11";
+    font: "CozetteHiDpi 13";
 }
 
 element-text, element-icon , mode-switcher {

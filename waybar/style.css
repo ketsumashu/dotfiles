@@ -85,7 +85,6 @@ window#waybar.chromium {
 }
 
 #memory,
-#network,
 #pulseaudio,
 #cpu,
 #temperature{
@@ -114,6 +113,7 @@ window#waybar.chromium {
     margin-right: 0;
 }
 
+#network,
 #clock {
     color: #659ea2;
     font-size: 13px;
