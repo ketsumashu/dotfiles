@@ -2,11 +2,13 @@
 set update.lastchecktime 1695218778379
 set update.nag true
 set update.nagwait 7
+set update.lastnaggedversion 1.14.0
+set update.checkintervalsecs 86400
 set configversion 2.0
 set theme substrata
-colorscheme substrata
 set smoothscroll true
 set editorcmd wezterm start nvim %f
+set newtab about:newtab
 
 " Binds
 bind J tabnext
@@ -167,11 +169,44 @@ bind @o fillcmdline bmarks
 bind gnP tabopen moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
 bind goP open moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
 bind gwP winopen moz-extension://24644b7b-4518-4361-9cd7-0be80d522aaa/static/newtab.html
+bind yq text2qr --timeout 5
+bind ;d hint -W tabopen --discard
+bind ;gd hint -qW tabopen --discard
 bindurl img.2chan.net --mode=ignore r reload
 unbindurl img.2chan.net r
 bindurl https://img.2chan.net --mode=ignore r reload
+bindurl ^https://web.whatsapp.com f hint -c [tabindex]:not(.two)>div,a
+bindurl ^https://web.whatsapp.com F hint -bc [tabindex]:not(.two)>div,a
 bind --mode=ex <C-n> ex.next_completion
 bind --mode=ex <C-p> ex.nprev_completion
+bind --mode=ex <Enter> ex.accept_line
+bind --mode=ex <C-Enter> ex.execute_ex_on_completion
+bind --mode=ex <C-j> ex.accept_line
+bind --mode=ex <C-m> ex.accept_line
+bind --mode=ex <Escape> ex.hide_and_clear
+bind --mode=ex <C-[> ex.hide_and_clear
+bind --mode=ex <ArrowUp> ex.prev_history
+bind --mode=ex <ArrowDown> ex.next_history
+bind --mode=ex <S-Delete> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <A-b> text.backward_word
+bind --mode=ex <A-f> text.forward_word
+bind --mode=ex <C-e> text.end_of_line
+bind --mode=ex <A-d> text.kill_word
+bind --mode=ex <S-Backspace> text.backward_kill_word
+bind --mode=ex <C-u> text.backward_kill_line
+bind --mode=ex <C-k> text.kill_line
+bind --mode=ex <C-f> ex.complete
+bind --mode=ex <Tab> ex.next_completion
+bind --mode=ex <S-Tab> ex.prev_completion
+bind --mode=ex <Space> ex.insert_space_or_completion
+bind --mode=ex <C-Space> ex.insert_space
+bind --mode=ex <C-o>yy ex.execute_ex_on_completion_args clipboard yank
+bind --mode=ex <C-o>t ex.execute_ex_on_completion_args tabopen -b
+bind --mode=ex <C-o>w ex.execute_ex_on_completion_args winopen
+
+" Subconfig Settings
+seturl www.google.com followpagepatterns.next Next
+seturl www.google.com followpagepatterns.prev Previous
 
 " Aliases
 alias fixamo_quiet jsb tri.excmds.setpref("privacy.resistFingerprinting.block_mozAddonManager", "true").then(tri.excmds.setpref("extensions.webextensions.restrictedDomains", '""'))
@@ -256,6 +291,9 @@ alias prefremove removepref
 alias tabclosealltoright tabcloseallto right
 alias tabclosealltoleft tabcloseallto left
 alias reibadailty jumble
+
+" Removed settings
+setnull searchurls
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl

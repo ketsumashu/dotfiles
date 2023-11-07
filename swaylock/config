@@ -9,12 +9,12 @@ timestr=%I:%M %p
 datestr=
 indicator-caps-lock
 indicator-caps-lock
-effect-vignette=0.8:2
-effect-blur=10x3
+effect-vignette=0.9:4
+effect-blur=10x5
 font=CozettehiDpi
 font-size=26
 indicator-radius=160
-indicator-thickness=5
+indicator-thickness=7
 bs-hl-color=889bb4
 key-hl-color=77adb1
 caps-lock-bs-hl-color=889bb4
