@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 pkill swaybg
-swaybg -o 'HDMI-A-2' -i ~/Downloads/girl.png  -m fit -o 'HDMI-A-1' -c#191c25  -m fit &
+swaybg -o 'HDMI-A-2' -i ~/Pictures/transcend.png  -m fill -o 'DP-1' -i ~/Pictures/transcend.png -m fill &

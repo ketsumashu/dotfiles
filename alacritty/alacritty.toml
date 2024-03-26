@@ -1,0 +1,53 @@
+[colors.bright]
+black = "#666b7f"
+blue = "#afc5de"
+cyan = "#94cdd1"
+green = "#94cdd1"
+magenta = "#cdb6dd"
+red = "#cdb6dd"
+white = "#f0ecfe"
+yellow = "#f0ecfe"
+
+[colors.cursor]
+cursor = "#c5c4d4"
+text = "#191c25"
+
+[colors.normal]
+black = "#525566"
+blue = "#889bb4"
+cyan = "#77adb1"
+green = "#77adb1"
+magenta = "#a994b8"
+red = "#a994b8"
+white = "#bfbed0"
+yellow = "#bfbed0"
+
+[colors.primary]
+background = "#191c25"
+foreground = "#c5c4d4"
+
+[font]
+builtin_box_drawing = true
+size = 11.0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "Cozette12plus"
+
+[font.offset]
+x = 2
+y = 3
+
+[shell]
+args = ["--login"]
+program = "/bin/fish"
+
+[window]
+opacity = 0.88
+
+[window.padding]
+x = 14
+y = 15

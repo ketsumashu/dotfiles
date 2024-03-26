@@ -1,8 +1,9 @@
 local wezterm = require 'wezterm'
 return {
     default_prog = { '/usr/bin/fish', '-l' },
-    window_background_opacity = 0.84,
-    color_scheme = "Substrata",
+    window_background_opacity = 1,
+    enable_wayland = true,
+    color_scheme = "Rosé Pine (base16)",
     use_ime = true,
     warn_about_missing_glyphs = false,
     hide_tab_bar_if_only_one_tab = true,

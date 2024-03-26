@@ -11,7 +11,6 @@ local options = {
     ignorecase = true,
     showmode = false,
     termguicolors = true,
-    background = "dark",
     smartcase = true,
     smartindent = true,
     swapfile = false,

@@ -19,6 +19,7 @@ return {
             vim.g.substrata_transparent = true
             vim.g.substrata_variant = "brighter"
             vim.cmd [[colorscheme substrata]]
+            vim.cmd [[highlight FloatBorder guibg=NONE]]
         end
     },
     {

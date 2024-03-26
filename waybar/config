@@ -3,8 +3,9 @@
     "position": "left",
     "output": ["HDMI-A-2", "DP-1"],
     //"height": 1440,
-    "width": 60,
-    "margin-right": 0,
+    "width": 59,
+    "margin-top": 5,
+    "margin-bottom": 5,
     "spacing": 15,
 
     "modules-left": ["hyprland/window"],
@@ -15,8 +16,8 @@
         "format": "{name}",
         "all-outputs": false,
         "persistent_workspaces" : {
-            "HDMI-A-2": [ 1, 2, 4, 6],
-            "HDMI-A-1": [ 3, 5, 7, 9],
+            "HDMI-A-2": [ 1, 2, 3, 4],
+            "DP-1": [ 5, 6, 7, 8,9],
         },
         "on-scroll-up"  : "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1"
@@ -81,6 +82,13 @@
         },
         "rotate": 0,
         "on-click": "pavucontrol"
+    },
+    "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "ON",
+        "deactivated": "OFF"
+    }
     },
 }
 

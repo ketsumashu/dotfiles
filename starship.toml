@@ -1,10 +1,10 @@
 [character]
-success_symbol = "[>](bold fg:#cdb6dd)"
-error_symbol = "[x](bold fg:#d59076)"
-
+success_symbol = "[>](fg:#cdb6dd)"
+error_symbol = "[x](fg:#d59076)"
+vimcmd_symbol = "[<](fg:#d59076)"
 [time]
 disabled = false
-style = "bold blue"
+style = "blue"
 format = "[$time]($style) "
 
 [git_commit]

@@ -2,7 +2,7 @@ configuration{
     modi: "drun";
     icon-theme: "Adwaita";
     show-icons: false;
-    terminal: "wezterm";
+    terminal: "alacritty";
     drun-display-format: "{name}";
     location: 0;
     disable-history: false;
@@ -12,4 +12,4 @@ configuration{
 
 //@theme "catppuccin-frappe"
 
-@theme "/home/mashu/.local/share/rofi/themes/catppuccin-frappe.rasi"
+@theme "/home/mashu/dotfiles/.local/share/rofi/themes/rosepinekai.rasi"

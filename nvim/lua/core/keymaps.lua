@@ -17,7 +17,6 @@ vim.g.mapleader = " "
 -- command --
 -- jj to esc
 keymap("c", "jj", "<ESC>", opts)
-
 -- Terminal --
 keymap("t", "jj", "<C-\\><C-n>", term_opts)
 
@@ -58,7 +57,7 @@ keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 -- Insert --
 -- jj to esc
 keymap("i", "jj", "<ESC>", opts)
-
+keymap("i", "jk", "<ESC>", opts)
 -- activate SKK
 keymap("i", "<C-j>", "<Plug>(skkeleton-toggle)", opts)
 keymap("c", "<C-j>", "<Plug>(skkeleton-toggle)", opts)

@@ -1,0 +1,11 @@
+#header{
+    position: fixed;
+}
+
+#app {
+    font-weight: 500;
+}
+
+#browser.linux {
+    font-family: "FiraCode Nerd Font", "Noto Sans CJK JP";
+}

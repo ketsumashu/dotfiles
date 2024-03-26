@@ -50,9 +50,12 @@ return {
         end
     },
     {
-        'williamboman/mason.nvim'
+        'williamboman/mason.nvim',
+
+        event = "BufReadPre",
     },
     {
-        'williamboman/mason-lspconfig.nvim'
+        'williamboman/mason-lspconfig.nvim',
+        event = "BufReadPre",
     },
 }
