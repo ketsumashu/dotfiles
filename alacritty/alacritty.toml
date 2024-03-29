@@ -9,7 +9,7 @@ white = "#f0ecfe"
 yellow = "#f0ecfe"
 
 [colors.cursor]
-cursor = "#c5c4d4"
+cursor = "#bfbed0"
 text = "#191c25"
 
 [colors.normal]
@@ -19,12 +19,12 @@ cyan = "#77adb1"
 green = "#77adb1"
 magenta = "#a994b8"
 red = "#a994b8"
-white = "#bfbed0"
-yellow = "#bfbed0"
+white = "#c5c4d4"
+yellow = "#c5c4d4"
 
 [colors.primary]
 background = "#191c25"
-foreground = "#c5c4d4"
+foreground = "#bfbed0"
 
 [font]
 builtin_box_drawing = true
@@ -35,10 +35,10 @@ x = 0
 y = 0
 
 [font.normal]
-family = "Cozette12plus"
+family = "Cozette"
 
 [font.offset]
-x = 2
+x = 1
 y = 3
 
 [shell]
@@ -46,7 +46,7 @@ args = ["--login"]
 program = "/bin/fish"
 
 [window]
-opacity = 0.88
+opacity = 0.87
 
 [window.padding]
 x = 14
