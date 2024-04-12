@@ -1,7 +1,7 @@
 :root {
     /* Generic */
-    --tridactyl-font-family: "Fira Code Nerd Font";
-    --tridactyl-font-family-sans: "Fira Code Nerd Font";
+    --tridactyl-font-family: "Cozette","mplus12";
+    --tridactyl-font-family-sans: "Cozette","mplus12";
     --tridactyl-font-size: 13px;
     --tridactyl-small-font-size: 13px;
     --tridactyl-bg: #191c25;
@@ -50,7 +50,7 @@
     --tridactyl-cmdl-bg: var(--tridactyl-bg);
     --tridactyl-cmdl-fg: var(--tridactyl-fg);
     --tridactyl-cmdl-line-height: 1.5;
-    --tridactyl-cmdl-font-family: "Fira Code Nerd Font";
+    --tridactyl-cmdl-font-family: "Cozette","mplus12";
     --tridactyl-cmdl-font-size: 13px;
 
     /*completions*/
@@ -59,7 +59,7 @@
     --tridactyl-cmplt-fg: var(--tridactyl-fg);
     --tridactyl-cmplt-bg: var(--tridactyl-bg);
     --tridactyl-cmplt-font-size: 13px;
-    --tridactyl-cmplt-font-family: "Fira Code Nerd Font";
+    --tridactyl-cmplt-font-family: "Cozette","mplus12";
     /* i don't think 0.5px is redered */
     --tridactyl-cmplt-border-top: 0.5px solid grey;
 

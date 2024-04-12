@@ -2,7 +2,7 @@ configuration{
     modi: "drun";
     icon-theme: "Adwaita";
     show-icons: false;
-    terminal: "alacritty";
+    terminal: "foot";
     drun-display-format: "{name}";
     location: 0;
     disable-history: false;
