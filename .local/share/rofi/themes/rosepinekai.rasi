@@ -1,16 +1,16 @@
 * {
-    bg-col:  #191c2599;
+    bg-col:  #191c25;
     bg-col-light: #191c25;
-    border-col: #191c25;
+    border-col: #5de4c7;
 
-    selected-col: #191c25aa;
+    selected-col: #191c25;
     blue: #a18daf;
     fg-col: #b5b4c9;
     fg-col2: #77adb1;
     grey: #5b5f71aa;
 
     width: 700;
-    font: "Cozette,mplus12 9";
+    font: "FiraCode Nerd Font Medium 11";
 }
 
 element-text, element-icon , mode-switcher {
@@ -20,7 +20,7 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 320px;
-    border: 3px;
+    border: 2px;
     border-radius: 6px;
     border-color: @border-col;
     background-color: @bg-col;

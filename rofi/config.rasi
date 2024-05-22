@@ -10,6 +10,4 @@ configuration{
     display-drun: " Apps ";
 }
 
-//@theme "catppuccin-frappe"
-
 @theme "/home/mashu/dotfiles/.local/share/rofi/themes/rosepinekai.rasi"

@@ -1,13 +1,14 @@
 * {
-    font-family: "CozetteHiDpi","mplus12";
+    font-family: "FiraCode Nerd Font", "Noto Sans CJK JP";
+    font-weight: Bold;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(25,28,37,0.88);
-    border-top-right-radius:12px;
-    border-bottom-right-radius:12px;
+    background-color: rgba(25, 28, 37, 1);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 window#waybar.hidden {
@@ -15,13 +16,13 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    padding:  10px 0px;
+    padding: 10px 0px;
     background-color: transparent;
     color: #e0def4;
 }
 
 #workspaces button.persistent {
-    padding:  10px 0px;
+    padding: 10px 0px;
     background-color: transparent;
     color: #e0def4;
 }
@@ -49,25 +50,26 @@ window#waybar.hidden {
 #memory,
 #pulseaudio,
 #cpu,
-#temperature{
+#temperature {
     padding: 0 0px;
-    color:#a994b8;
+    color: #a994b8;
     /*font-weight:bold;*/
 }
 
-#window{
-    color:#c5c4d4;
+#window {
+    color: #c5c4d4;
     padding: 100px 20px;
 }
+
 #workspaces {
     margin: 0 0px;
 }
 
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -96,6 +98,7 @@ label:focus {
 
 #pulseaudio {
     color: #77adb1;
+    padding: 0 0px;
 }
 
 #pulseaudio.muted {
@@ -105,7 +108,7 @@ label:focus {
 
 #tray {
     color: #f5f5f5;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
 #idle_inhibitor {
@@ -116,4 +119,3 @@ label:focus {
     background-color: #ecf0f1;
     color: #2d3436;
 }
-

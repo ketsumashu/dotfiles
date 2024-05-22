@@ -1,3 +1,6 @@
-[[sink_whitelist]]
-  name = "HyperX Quadcast S Analog Stereo"
+verbosity = "WARN"
+media_minimum_duration = 5
+idle_inhibitor = "wayland"
+sink_whitelist = [
+]
 

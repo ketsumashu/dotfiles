@@ -8,17 +8,14 @@ return {
         event = 'VimEnter',
     },
     {
-        'kvrohit/substrata.nvim',
+        'olivercederborg/poimandres.nvim',
         event = 'VimEnter',
         config = function()
-            vim.g.substrata_italic_functions = false
-            vim.g.substrata_italic_keywords = false
-            vim.g.substrata_italic_booleans = false
-            vim.g.substrata_italic_comments = false
-            vim.g.substrata_italic_variables = false
-            vim.g.substrata_transparent = true
-            --vim.g.substrata_variant = "brighter"
-            vim.cmd [[colorscheme substrata]]
+            require 'poimandres'.setup {
+                disable_italics = true,
+                disable_background = true,
+            }
+            vim.cmd [[colorscheme poimandres]]
             vim.cmd [[highlight FloatBorder guibg=NONE]]
         end
     },
@@ -32,7 +29,7 @@ return {
         event = "bufRead",
         config = function()
             require 'nvim-treesitter.configs'.setup {
-                ensure_installed = { "c", "lua", "rust" },
+                ensure_installed = { "c", "lua", "rust", "css" },
                 highlight = {
                     enable = true,
                 },
