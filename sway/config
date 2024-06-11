@@ -4,30 +4,32 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term wezterm
+set $term kitty
 set $menu "rofi -show drun"
 ### startups
-exec_always ~/bin/wall
+exec swww-daemon
+exec fcitx5 -rd
+exec waybar -c ~/dotfiles/waybar/config_swayfx
 exec "yaskkserv2 --google-suggest ~/dotfiles/libskk/dict.yaskkserv2"
-exec discord-screenaudio
-exec sway-audio-idle-inhibit
-exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+exec vesktop
+exec_always autotiling-rs
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 bindsym $mod+b exec firefox
-bindsym $mod+ctrl+l exec swaylock
+bindsym $mod+ctrl+l exec hyprlock
 
 gaps outer 2
 gaps inner 4
-default_border pixel 2
-font pango:Noto Sans CJK JP 0
+corner_radius 12
+default_border pixel 3
 titlebar_border_thickness 2
-titlebar_padding 2
+titlebar_padding 15
 ### floating setting
 for_window [app_id="pavucontrol"] floating enable
 for_window [class="fcitx5-config-qt"] floating enable
 for_window [title="Firefox — Sharing Indicator"] kill
 for_window [title="Firefox — Sharing Indicator"] kill
 for_window [title = "About Mozilla Firefox"] floating enable
+for_window [title = "拡張機能: (Bitwarden Password Manager) - Bitwarden — Mozilla Firefox"] floating enable
 for_window [window_role = "About"] floating enable
 for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
 
@@ -42,20 +44,13 @@ for_window [class="^steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 ### Output configuration
-output HDMI-A-1 resolution 2560x1440@144Hz scale 1
-
-### Idle configuration
-exec swayidle -w \
-	timeout 395 'swaylock' \
-	timeout 410 'swaymsg "output * dpms off"' \
-	    resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock'
-
+output HDMI-A-1 pos 0 0 resolution 2560x1440@144Hz scale 1
+output HDMI-A-2 pos 2560 -600 resolution 2560x1440@100Hz scale 1 transform 270
 
 ### Input configuration
    input "*" {
    	xkb_layout "us"
-	repeat_delay 400
+	repeat_delay 270
 	repeat_rate 50
     xkb_options ctrl:nocaps
    }
@@ -148,7 +143,23 @@ exec swayidle -w \
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+ctrl+space floating toggle
+    bindsym $mod+v floating toggle
+    # Define outputs
+    set $output-primary HDMI-A-1
+    set $output-secondary HDMI-A-2
+
+    # workspace to displays
+    workspace 1 output $output-primary
+    workspace 2 output $output-primary
+    workspace 3 output $output-primary
+    workspace 4 output $output-primary
+    workspace 5 output $output-secondary
+    workspace 6 output $output-secondary
+
+    workspace 7 output $output-secondary
+    workspace 8 output $output-secondary
+    workspace 9 output $output-secondary
+    workspace 10 output $output-secondary
 
 #
 # Scratchpad:
@@ -187,13 +198,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #cdb6dd #191c25 #D8DEE9 #cdb6dd   #cdb6dd
-client.focused_inactive #191c25 #191c25 #D8DEE9 #484E50   #191c25
-client.unfocused        #2E3440 #191c25 #D8DEE9 #292D2E   #222222
+client.focused          #5de4c7 #1b1c28 #a6accd #5de4c7   #5de4c7
+client.focused_inactive #1b1c28 #1b1c28 #a6accd #484E50   #191c25
+client.unfocused        #2E3440 #1b1c28 #a6accd #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
-client.background       #d8dee9
+client.background       #000000
 
 #
 # Status Bar:
@@ -215,6 +226,5 @@ client.background       #d8dee9
 #    	binding_mode       #2E3440 #BF616A #191c25
 #    }
 #}
-bar swaybar_command waybar
 
 include /etc/sway/config.d/*

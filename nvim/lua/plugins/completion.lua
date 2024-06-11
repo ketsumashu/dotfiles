@@ -114,4 +114,34 @@ return {
             require 'luasnip.loaders.from_vscode'.lazy_load()
         end,
     },
+    {
+        'vim-skk/skkeleton',
+        dependencies = "vim-denops/denops.vim",
+        config = function()
+            vim.cmd [[
+            call skkeleton#config({
+            \  'eggLikeNewline': v:true,
+            \  'globalDictionaries': ["/home/mashu/dotfiles/libskk/SKK-JISYO.L"],
+            \  'markerHenkan': ">",
+            \  'markerHenkanSelect': ">>",
+            \  'sources': ["skk_dictionary","google_japanese_input"]
+            \})
+            call skkeleton#register_keymap('input', ';', 'henkanPoint')
+            ]]
+        end,
+        event = 'VimEnter',
+    },
+    {
+        'delphinus/skkeleton_indicator.nvim',
+        config = function ()
+            require 'skkeleton_indicator'.setup{
+                hiraText = "hl",
+                kataText = "kt",
+                eijiText = "ej",
+                hankataText = "hnk",
+                zenkakuText = "zen",
+            }
+        end,
+        event = 'VimEnter'
+    }
 }

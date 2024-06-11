@@ -2,5 +2,6 @@ verbosity = "WARN"
 media_minimum_duration = 5
 idle_inhibitor = "wayland"
 sink_whitelist = [
+{ name = "HyperX QuadCast S Digital Stereo" }
 ]
 
